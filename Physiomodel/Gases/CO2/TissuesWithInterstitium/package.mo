@@ -1,0 +1,3 @@
+within Physiomodel.Gases.CO2;
+package TissuesWithInterstitium
+end TissuesWithInterstitium;
