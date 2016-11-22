@@ -1,0 +1,3 @@
+within Physiomodel.Electrolytes.Sodium;
+package expandableConnectorPatch
+end expandableConnectorPatch;
