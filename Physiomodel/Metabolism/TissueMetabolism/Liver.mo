@@ -122,10 +122,10 @@ within Physiomodel.Metabolism.TissueMetabolism;
                 color={200,0,0},
                 thickness=1,
                 smooth=Smooth.None));
-                connect(Fuel_FractUseDelay, Fuel_FractUseDelay) annotation (Line(
-                points={{-40,0},{-44,0},{-44,0},{-40,0}},
-                color={0,0,127},
-                smooth=Smooth.None));
+                /* connect(Fuel_FractUseDelay, Fuel_FractUseDelay) annotation (Line( */
+                /* points={{-40,0},{-44,0},{-44,0},{-40,0}}, */
+                /* color={0,0,127}, */
+                /* smooth=Smooth.None)); */
                 connect(glucoseDelivery.FuelFractUseDelay, min.u[2]) annotation (Line(
                 points={{-68,-41},{-68,-44},{-58,-44},{-58,0.4},{-52.8,0.4}},
                 color={0,0,127},

@@ -575,11 +575,11 @@ equation
     points={{80,46},{80,26},{26,26},{26,78},{22,78}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(AminoAcids, AminoAcids) annotation (Line(
-    points={{86,-24},{81,-24},{81,-24},{86,-24}},
-    color={107,45,134},
-    thickness=1,
-    smooth=Smooth.None));
+    /* connect(AminoAcids, AminoAcids) annotation (Line( */
+    /* points={{86,-24},{81,-24},{81,-24},{86,-24}}, */
+    /* color={107,45,134}, */
+    /* thickness=1, */
+    /* smooth=Smooth.None)); */
     connect(concentrationMeasure1.concentration, AminoAcidEffect.u)
     annotation (Line(
     points={{96,-8},{96,2},{90,2}},
