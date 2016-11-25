@@ -11,15 +11,15 @@ model NutrientsAndMetabolism
      {{60,60},{100,100}})));
     Physiomodel.Metabolism.LiverMetabolism liverMetabolism
     annotation (Placement(transformation(extent={{-66,-12},{-26,28}})));
-    Physiomodel.Metabolism.Glucose Glucose
+    Physiomodel.Metabolism.Glucose glucose
     annotation (Placement(transformation(extent={{0,-4},{20,16}})));
-    Physiomodel.Metabolism.KetoAcids KetoAcids
+    Physiomodel.Metabolism.KetoAcids ketoAcids
     annotation (Placement(transformation(extent={{0,24},{20,44}})));
     QHP.Metabolism.GILumenLeptinDriven GILumen
     annotation (Placement(transformation(extent={{46,-80},{72,-54}})));
-    QHP.Metabolism.Urea Urea
+    QHP.Metabolism.Urea urea
     annotation (Placement(transformation(extent={{-74,-52},{-54,-32}})));
-    QHP.Metabolism.Lipids Lipids
+    QHP.Metabolism.Lipids lipids
     annotation (Placement(transformation(extent={{0,54},{20,74}})));
     Lactate lactate
     annotation (Placement(transformation(extent={{2,-30},{22,-10}})));
@@ -56,17 +56,17 @@ equation
           color={0,0,255},
           thickness=0.5,
           smooth=Smooth.None));
-        connect(busConnector, Glucose.busConnector)     annotation (Line(
+        connect(busConnector, glucose.busConnector)     annotation (Line(
           points={{80,80},{-4,80},{-4,5.8},{1,5.8}},
           color={0,0,255},
           thickness=0.5,
           smooth=Smooth.None));
-        connect(KetoAcids.q_out, tissuesMetabolism.ketoAcids) annotation (Line(
+        connect(ketoAcids.q_out, tissuesMetabolism.ketoAcids) annotation (Line(
           points={{10,28},{28,28},{28,17.6364},{50,17.6364}},
           color={200,0,0},
           thickness=1,
           smooth=Smooth.None));
-        connect(liverMetabolism.Glucose, Glucose.q_out) annotation (Line(
+        connect(liverMetabolism.Glucose, glucose.q_out) annotation (Line(
           points={{-26,-4},{-8,-4},{-8,12},{10,12}},
           color={200,0,0},
           thickness=1,
@@ -77,32 +77,32 @@ equation
           thickness=0.5,
           smooth=Smooth.None));
 
-        connect(KetoAcids.q_out, liverMetabolism.Ketoacids) annotation (Line(
+        connect(ketoAcids.q_out, liverMetabolism.Ketoacids) annotation (Line(
           points={{10,28},{-10,28},{-10,8},{-26,8}},
           color={200,0,0},
           thickness=1,
           smooth=Smooth.None));
-        connect(Urea.ureaFromMetabolism, liverMetabolism.Urea) annotation (Line(
+        connect(urea.ureaFromMetabolism, liverMetabolism.Urea) annotation (Line(
           points={{-58,-32},{-58,-12}},
           color={200,0,0},
           thickness=1,
           smooth=Smooth.None));
-        connect(Urea.busConnector, busConnector) annotation (Line(
+        connect(urea.busConnector, busConnector) annotation (Line(
           points={{-72,-38},{-86,-38},{-86,-92},{96,-92},{96,80},{80,80}},
           color={0,0,255},
           thickness=0.5,
           smooth=Smooth.None));
-        connect(KetoAcids.busConnector, busConnector) annotation (Line(
+        connect(ketoAcids.busConnector, busConnector) annotation (Line(
           points={{1,44},{-4,44},{-4,80},{80,80}},
           color={0,0,255},
           thickness=0.5,
           smooth=Smooth.None));
-        connect(busConnector, Lipids.busConnector) annotation (Line(
+        connect(busConnector, lipids.busConnector) annotation (Line(
           points={{80,80},{-4,80},{-4,60.2},{2,60.2}},
           color={0,0,255},
           thickness=0.5,
           smooth=Smooth.None));
-        connect(Lipids.FattyAcids, tissuesMetabolism.fattyAcids) annotation (Line(
+        connect(lipids.FattyAcids, tissuesMetabolism.fattyAcids) annotation (Line(
           points={{10,64},{40,64},{40,26.7273},{50,26.7273}},
           color={200,0,0},
           thickness=1,
@@ -134,18 +134,18 @@ equation
           color={200,0,0},
           thickness=1,
           smooth=Smooth.None));
-        connect(Lipids.toTriglicerides, GILumen.Fat_Absorption) annotation (Line(
+        connect(lipids.toTriglicerides, GILumen.Fat_Absorption) annotation (Line(
           points={{10,56},{78,56},{78,-67},{72,-67}},
           color={200,0,0},
           thickness=1,
           smooth=Smooth.None));
-        connect(Lipids.toTriglicerides, liverMetabolism.triglicerides)
+        connect(lipids.toTriglicerides, liverMetabolism.triglicerides)
         annotation (Line(
           points={{10,56},{-14,56},{-14,20},{-26,20}},
           color={200,0,0},
           thickness=1,
           smooth=Smooth.None));
-        connect(Lipids.FattyAcids, liverMetabolism.fattyAcids) annotation (Line(
+        connect(lipids.FattyAcids, liverMetabolism.fattyAcids) annotation (Line(
           points={{10,64},{-20,64},{-20,28},{-26,28}},
           color={200,0,0},
           thickness=1,
@@ -187,7 +187,7 @@ equation
           color={0,0,255},
           thickness=0.5,
           smooth=Smooth.None));
-        connect(molarFlowMeasure.q_in, Glucose.q_out) annotation (Line(
+        connect(molarFlowMeasure.q_in, glucose.q_out) annotation (Line(
         points={{24,10},{18,10},{18,12},{10,12}},
         color={107,45,134},
         thickness=1,
@@ -217,7 +217,7 @@ equation
         points={{82,-30},{42,-30},{42,-33.6},{47.2,-33.6}},
         color={0,0,127},
         smooth=Smooth.None));
-        connect(add.y, busConnector.Glucose_TotalBurn) annotation (Line(
+        connect(add.y, busConnector.glucose_TotalBurn) annotation (Line(
         points={{56.4,-36},{98,-36},{98,80},{80,80}},
         color={0,0,127},
         smooth=Smooth.None), Text(
