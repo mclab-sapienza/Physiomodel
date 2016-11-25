@@ -28,7 +28,7 @@ model Tissues
     QHP.Water.TissuesVolume.Kidney kidney(FractIFV=4.71608978940247e-003,
     FractOrganH2O=4.71608978940247e-003)
     annotation (Placement(transformation(extent={{52,-34},{72,-14}})));
-    QHP.Water.TissuesVolume.GITract GITract(FractIFV=2.34991370540916e-002,
+    QHP.Water.TissuesVolume.GITract gITract(FractIFV=2.34991370540916e-002,
     FractOrganH2O=2.34991370540916e-002)
     annotation (Placement(transformation(extent={{52,-2},{72,18}})));
     Physiolibrary.Types.BusConnector busConnector
@@ -65,7 +65,7 @@ equation
         string="%first",
         index=-1,
         extent={{-5,2},{-5,2}}));
-    connect(busConnector.InterstitialWater_Vol, GITract.InterstitialWater_Vol)
+    connect(busConnector.InterstitialWater_Vol, gITract.InterstitialWater_Vol)
       annotation (Line(
         points={{-88,92},{6,92},{6,16},{52,16}},
         color={0,127,0},
@@ -162,7 +162,7 @@ equation
         string="%first",
         index=-1,
         extent={{-5,2},{-5,2}}));
-    connect(busConnector.CellH2O_Vol, GITract.CellH2O_Vol)
+    connect(busConnector.CellH2O_Vol, gITract.CellH2O_Vol)
       annotation (Line(
         points={{-88,92},{6,92},{6,12},{52,12}},
         color={0,127,0},
@@ -259,7 +259,7 @@ equation
         string="%second",
         index=1,
         extent={{5,2},{5,2}}));
-    connect(GITract.LiquidVol, busConnector.GITract_LiquidVol)
+    connect(gITract.LiquidVol, busConnector.GITract_LiquidVol)
       annotation (Line(
         points={{72,16},{98,16},{98,92},{-88,92}},
         color={0,127,0},
@@ -445,7 +445,7 @@ equation
         string="%second",
         index=1,
         extent={{5,2},{5,2}}));
-    connect(GITract.OrganH2O, busConnector.GITract_CellH2OVol)
+    connect(gITract.OrganH2O, busConnector.GITract_CellH2OVol)
       annotation (Line(
         points={{72,12},{98,12},{98,92},{-88,92}},
         color={0,127,0},
@@ -542,7 +542,7 @@ equation
         string="%second",
         index=1,
         extent={{5,2},{5,2}}));
-    connect(GITract.InterstitialWater, busConnector.GITract_InterstitialWater)
+    connect(gITract.InterstitialWater, busConnector.GITract_InterstitialWater)
       annotation (Line(
         points={{72,8},{98,8},{98,92},{-88,92}},
         color={0,127,0},
