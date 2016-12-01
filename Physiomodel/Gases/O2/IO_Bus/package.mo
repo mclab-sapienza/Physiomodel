@@ -75,28 +75,28 @@ extends Physiolibrary.Types.IO_Bus;
         T.Fraction skin_sO2(varName="skin_sO2")
         annotation (Placement(transformation(extent={{114,288},{120,294}})));
     equation
-        connect(Bone_PO2.y, busConnector.bone.pO2) annotation (Line(
+        connect(Bone_PO2.y, busConnector.bone_pO2) annotation (Line(
          points={{-57.7,-117},{90,-117},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(Brain_PO2.y, busConnector.brain.pO2) annotation (Line(
+        connect(Brain_PO2.y, busConnector.brain_pO2) annotation (Line(
          points={{-57.7,-87},{90,-87},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(Fat_PO2.y, busConnector.fat.pO2) annotation (Line(
+        connect(Fat_PO2.y, busConnector.fat_pO2) annotation (Line(
          points={{-57.7,-37},{90,-37},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(GITract_PO2.y, busConnector.GITract.pO2) annotation (Line(
+        connect(GITract_PO2.y, busConnector.GITract_pO2) annotation (Line(
          points={{-57.7,-17},{90,-17},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(
@@ -124,14 +124,14 @@ extends Physiolibrary.Types.IO_Bus;
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(OtherTissue_PO2.y, busConnector.otherTissue.pO2) annotation (Line(
+        connect(OtherTissue_PO2.y, busConnector.otherTissue_pO2) annotation (Line(
          points={{-57.7,73},{90,73},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(RespiratoryMuscle_PO2.y, busConnector.respiratoryMuscle.pO2) annotation (Line(
+        connect(RespiratoryMuscle_PO2.y, busConnector.respiratoryMuscle_pO2) annotation (Line(
          points={{-57.7,93},{90,93},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(
@@ -145,7 +145,7 @@ extends Physiolibrary.Types.IO_Bus;
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(SkeletalMuscle_PO2.y, busConnector.skeletalMuscle.pO2) annotation (Line(
+        connect(SkeletalMuscle_PO2.y, busConnector.skeletalMuscle_pO2) annotation (Line(
          points={{-57.7,143},{90,143},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(

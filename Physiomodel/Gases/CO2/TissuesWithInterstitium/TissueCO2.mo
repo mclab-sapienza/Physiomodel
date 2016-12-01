@@ -89,10 +89,10 @@ model TissueCO2
     annotation (Placement(transformation(extent={{34,36},{42,44}})));
 equation
 
-    connect(arty, arty) annotation (Line(
-      points={{86,-56},{86,-56}},
-      color={200,0,0},
-      smooth=Smooth.None));
+    /* connect(arty, arty) annotation (Line( */
+    /*   points={{86,-56},{86,-56}}, */
+    /*   color={200,0,0}, */
+    /*   smooth=Smooth.None)); */
     connect(arty, tissueFlow.q_in) annotation (Line(
       points={{86,-56},{52,-56}},
       color={200,0,0},

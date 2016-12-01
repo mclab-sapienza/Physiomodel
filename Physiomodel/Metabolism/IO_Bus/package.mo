@@ -1088,21 +1088,21 @@ within Physiomodel.Metabolism;
             string="%second",
             index=1,
             extent={{6,3},{6,3}}));
-            connect(Bone_O2Need.y, busConnector.bone.O2Need) annotation (Line(
+            connect(Bone_O2Need.y, busConnector.bone_O2Need) annotation (Line(
             points={{-91.7,-49},{90,-49},{90,-2}},
             color={0,0,127},
             smooth=Smooth.None), Text(
             string="%second",
             index=1,
             extent={{6,3},{6,3}}));
-            connect(Brain_O2Need.y, busConnector.brain.O2Need) annotation (Line(
+            connect(Brain_O2Need.y, busConnector.brain_O2Need) annotation (Line(
             points={{-91.7,-57},{90,-57},{90,-2}},
             color={0,0,127},
             smooth=Smooth.None), Text(
             string="%second",
             index=1,
             extent={{6,3},{6,3}}));
-            connect(SkeletalMuscle_O2Need2.y, busConnector.skeletalMuscle.O2Need) annotation (
+            connect(SkeletalMuscle_O2Need2.y, busConnector.skeletalMuscle_O2Need) annotation (
             Line(
             points={{-91.7,-63},{90,-63},{90,-2}},
             color={0,0,127},
@@ -1110,7 +1110,7 @@ within Physiomodel.Metabolism;
             string="%second",
             index=1,
             extent={{6,3},{6,3}}));
-            connect(RespiratoryMuscle_O2Need.y, busConnector.respiratoryMuscle.O2Need) annotation (
+            connect(RespiratoryMuscle_O2Need.y, busConnector.respiratoryMuscle_O2Need) annotation (
             Line(
             points={{-91.7,-69},{90,-69},{90,-2}},
             color={0,0,127},
@@ -1118,21 +1118,21 @@ within Physiomodel.Metabolism;
             string="%second",
             index=1,
             extent={{6,3},{6,3}}));
-            connect(OtherTissue_O2Need.y, busConnector.otherTissue.O2Need) annotation (Line(
+            connect(OtherTissue_O2Need.y, busConnector.otherTissue_O2Need) annotation (Line(
             points={{-91.7,-77},{90,-77},{90,-2}},
             color={0,0,127},
             smooth=Smooth.None), Text(
             string="%second",
             index=1,
             extent={{6,3},{6,3}}));
-            connect(GITract_O2Need5.y, busConnector.GITract.O2Need) annotation (Line(
+            connect(GITract_O2Need5.y, busConnector.GITract_O2Need) annotation (Line(
             points={{-91.7,-83},{90,-83},{90,-2}},
             color={0,0,127},
             smooth=Smooth.None), Text(
             string="%second",
             index=1,
             extent={{6,3},{6,3}}));
-            connect(Fat_O2Need.y, busConnector.fat.O2Need) annotation (Line(
+            connect(Fat_O2Need.y, busConnector.fat_O2Need) annotation (Line(
             points={{-91.7,-43},{90,-43},{90,-2}},
             color={0,0,127},
             smooth=Smooth.None), Text(

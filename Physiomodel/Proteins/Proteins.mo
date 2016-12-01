@@ -270,7 +270,7 @@ equation
     points={{-34,-25.8},{-34,14},{92,14}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(UpperTorso.solutionVolume, busConnector.UT.InterstitialWater_Vol)
+    connect(UpperTorso.solutionVolume, busConnector.UT_InterstitialWater_Vol)
     annotation (Line(
     points={{70,78},{92,78},{92,14}},
     color={0,0,127},
@@ -278,7 +278,7 @@ equation
     string="%second",
     index=1,
     extent={{6,3},{6,3}}));
-    connect(busConnector.UT.InterstitialProtein_Mass,UpperTorso. solute) annotation (
+    connect(busConnector.UT_InterstitialProtein_Mass,UpperTorso. solute) annotation (
       Line(
       points={{92,14},{92,70},{60,70},{60,64}},
       color={0,0,127},
@@ -286,7 +286,7 @@ equation
     string="%first",
     index=-1,
     extent={{-6,3},{-6,3}}));
-    connect(MiddleTorso.solutionVolume, busConnector.MT.InterstitialWater_Vol)
+    connect(MiddleTorso.solutionVolume, busConnector.MT_InterstitialWater_Vol)
     annotation (Line(
     points={{68,34},{92,34},{92,14}},
     color={0,0,127},
@@ -294,7 +294,7 @@ equation
     string="%second",
     index=1,
     extent={{6,3},{6,3}}));
-    connect(busConnector.MT.InterstitialProtein_Mass,MiddleTorso. solute) annotation (
+    connect(busConnector.MT_InterstitialProtein_Mass,MiddleTorso. solute) annotation (
       Line(
       points={{92,14},{58,14},{58,20}},
       color={0,0,127},
@@ -302,7 +302,7 @@ equation
     string="%first",
     index=-1,
     extent={{-6,3},{-6,3}}));
-    connect(LowerTorso.solutionVolume, busConnector.LT.InterstitialWater_Vol)
+    connect(LowerTorso.solutionVolume, busConnector.LT_InterstitialWater_Vol)
     annotation (Line(
     points={{72,-8},{92,-8},{92,14}},
     color={0,0,127},
@@ -310,7 +310,7 @@ equation
     string="%second",
     index=1,
     extent={{6,3},{6,3}}));
-    connect(busConnector.LT.InterstitialProtein_Mass,LowerTorso. solute) annotation (
+    connect(busConnector.LT_InterstitialProtein_Mass,LowerTorso. solute) annotation (
       Line(
       points={{92,14},{92,-22},{62,-22}},
       color={0,0,127},
@@ -318,21 +318,21 @@ equation
     string="%first",
     index=-1,
     extent={{-6,3},{-6,3}}));
-    connect(busConnector.UT.LymphFlow, UT_Lymph.solutionFlow) annotation (Line(
+    connect(busConnector.UT_LymphFlow, UT_Lymph.solutionFlow) annotation (Line(
     points={{92,14},{18,14},{18,54},{6,54},{6,65.5},{5,65.5}},
     color={0,0,127},
     smooth=Smooth.None), Text(
     string="%first",
     index=-1,
     extent={{-6,3},{-6,3}}));
-    connect(busConnector.MT.LymphFlow, MT_Lymph.solutionFlow) annotation (Line(
+    connect(busConnector.MT_LymphFlow, MT_Lymph.solutionFlow) annotation (Line(
     points={{92,14},{6,14},{6,19.5},{5,19.5}},
     color={0,0,127},
     smooth=Smooth.None), Text(
     string="%first",
     index=-1,
     extent={{-6,3},{-6,3}}));
-    connect(busConnector.LT.LymphFlow, LT_Lymph.solutionFlow) annotation (Line(
+    connect(busConnector.LT_LymphFlow, LT_Lymph.solutionFlow) annotation (Line(
     points={{92,14},{14,14},{14,-26},{6,-26},{6,-20.5},{5,-20.5}},
     color={0,0,127},
     smooth=Smooth.None), Text(

@@ -623,19 +623,19 @@ equation
     color={0,0,127},
     smooth=Smooth.None));
 
-    connect(bone.FunctionFailed, busConnector.bone.Function_Failed) annotation (Line(
+    connect(bone.FunctionFailed, busConnector.bone_Function_Failed) annotation (Line(
     points={{-64,30},{-20,30},{-20,92},{-88,92}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(brain.FunctionFailed, busConnector.brain.Function_Failed) annotation (Line(
+    connect(brain.FunctionFailed, busConnector.brain_Function_Failed) annotation (Line(
     points={{16,28},{-20,28},{-20,92},{-88,92}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(GITract.FunctionFailed, busConnector.GITract.Function_Failed) annotation (Line(
+    connect(GITract.FunctionFailed, busConnector.GITract_Function_Failed) annotation (Line(
     points={{16,-4},{-20,-4},{-20,92},{-88,92}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(fat.FunctionFailed, busConnector.fat.Function_Failed) annotation (Line(
+    connect(fat.FunctionFailed, busConnector.fat_Function_Failed) annotation (Line(
     points={{-64,-60},{-20,-60},{-20,92},{-88,92}},
     color={0,0,127},
     smooth=Smooth.None));
@@ -651,7 +651,7 @@ equation
     points={{16,62},{-20,62},{-20,92},{-88,92}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(otherTissue.FunctionFailed, busConnector.otherTissue.Function_Failed) annotation (Line(
+    connect(otherTissue.FunctionFailed, busConnector.otherTissue_Function_Failed) annotation (Line(
     points={{-64,0},{-20,0},{-20,92},{-88,92}},
     color={0,0,127},
     smooth=Smooth.None));
@@ -659,7 +659,7 @@ equation
     points={{16,-92},{-20,-92},{-20,92},{-88,92}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(respiratoryMuscle.FunctionFailed, busConnector.respiratoryMuscle.Function_Failed) annotation (Line(
+    connect(respiratoryMuscle.FunctionFailed, busConnector.respiratoryMuscle_Function_Failed) annotation (Line(
     points={{-64,-30},{-20,-30},{-20,92},{-88,92}},
     color={0,0,127},
     smooth=Smooth.None));
@@ -667,7 +667,7 @@ equation
     points={{-64,-90},{-20,-90},{-20,92},{-88,92}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(skeletalMuscle.FunctionFailed, busConnector.skeletalMuscle.Function_Failed) annotation (Line(
+    connect(skeletalMuscle.FunctionFailed, busConnector.skeletalMuscle_Function_Failed) annotation (Line(
     points={{-64,62},{-20,62},{-20,92},{-88,92}},
     color={0,0,127},
     smooth=Smooth.None));

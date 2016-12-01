@@ -32,7 +32,7 @@ model TissuesCO2
     QHP.Gases.CO2.TissuesWithInterstitium.KidneyCO2 kidneyCO2(
                                     initialMass=4.1)
     annotation (Placement(transformation(extent={{52,-40},{72,-20}})));
-    QHP.Gases.CO2.TissuesWithInterstitium.GITractCO2 GITractCO2(
+    QHP.Gases.CO2.TissuesWithInterstitium.GITractCO2 gitractCO2(
                                      initialMass=17.6)
     annotation (Placement(transformation(extent={{52,-10},{72,10}})));
     Physiolibrary.Types.BusConnector busConnector
@@ -103,7 +103,7 @@ equation
       color={200,0,0},
       thickness=1,
       smooth=Smooth.None));
-    connect(GITractCO2.arty, q_in) annotation (Line(
+    connect(gitractCO2.arty, q_in) annotation (Line(
       points={{72,1},{72,0},{100,0}},
       color={200,0,0},
       thickness=1,
@@ -178,7 +178,7 @@ equation
       string="%first",
       index=-1,
       extent={{-5,2},{-5,2}}));
-    connect(busConnector.GITract_pH_plasma, GITractCO2.pH_plasma)
+    connect(busConnector.GITract_pH_plasma, gitractCO2.pH_plasma)
     annotation (Line(
       points={{-88,92},{6,92},{6,-2},{53,-2}},
       color={0,127,0},
@@ -276,7 +276,7 @@ equation
       string="%first",
       index=-1,
       extent={{-5,2},{-5,2}}));
-    connect(busConnector.GITract_pH_ery, GITractCO2.pH_ery)
+    connect(busConnector.GITract_pH_ery, gitractCO2.pH_ery)
     annotation (Line(
       points={{-88,92},{6,92},{6,10},{53,10}},
       color={0,127,0},
@@ -373,7 +373,7 @@ equation
       string="%first",
       index=-1,
       extent={{-5,2},{-5,2}}));
-    connect(busConnector.GITract_sO2, GITractCO2.sO2)
+    connect(busConnector.GITract_sO2, gitractCO2.sO2)
     annotation (Line(
       points={{-88,92},{6,92},{6,6},{53,6}},
       color={0,127,0},
@@ -470,7 +470,7 @@ equation
       string="%first",
       index=-1,
       extent={{-5,2},{-5,2}}));
-    connect(busConnector.BloodVol_Hct, GITractCO2.Hct)
+    connect(busConnector.BloodVol_Hct, gitractCO2.Hct)
     annotation (Line(
       points={{-88,92},{6,92},{6,-6},{53,-6}},
       color={0,127,0},
@@ -567,7 +567,7 @@ equation
       string="%second",
       index=1,
       extent={{5,2},{5,2}}));
-    connect(GITractCO2.Tissue_CO2FromMetabolism, busConnector.GITract_CO2FromMetabolism)
+    connect(gitractCO2.Tissue_CO2FromMetabolism, busConnector.GITract_CO2FromMetabolism)
     annotation (Line(
       points={{71,-2},{98,-2},{98,92},{-88,92}},
       color={0,127,0},
@@ -664,7 +664,7 @@ equation
       string="%second",
       index=1,
       extent={{5,2},{5,2}}));
-    connect(GITractCO2.BloodFlow, busConnector.GITract_BloodFlow)
+    connect(gitractCO2.BloodFlow, busConnector.GITract_BloodFlow)
     annotation (Line(
       points={{71,5.4},{98,5.4},{98,92},{-88,92}},
       color={0,127,0},
@@ -753,7 +753,7 @@ equation
       string="%second",
       index=1,
       extent={{5,2},{5,2}}));
-    connect(GITractCO2.T, busConnector.GITract_T)
+    connect(gitractCO2.T, busConnector.GITract_T)
     annotation (Line(
       points={{71,-6},{98,-6},{98,92},{-88,92}},
       color={0,127,0},
@@ -826,22 +826,22 @@ equation
       index=1,
       extent={{5,2},{5,2}}));
 
-    connect(boneCO2.pCO2, busConnector.bone.pCO2)       annotation (
+    connect(boneCO2.pCO2, busConnector.bone_pCO2)       annotation (
      Line(
       points={{-44,35},{6,35},{6,92},{-88,92}},
       color={0,127,0},
       smooth=Smooth.None));
-    connect(brainCO2.pCO2, busConnector.brain.pCO2)
+    connect(brainCO2.pCO2, busConnector.brain_pCO2)
     annotation (Line(
       points={{62,19},{98,19},{98,92},{-88,92}},
       color={0,127,0},
       smooth=Smooth.None));
-    connect(fatCO2.pCO2, busConnector.fat.pCO2)     annotation (
+    connect(fatCO2.pCO2, busConnector.fat_pCO2)     annotation (
       Line(
       points={{-44,-55},{6,-55},{6,92},{-88,92}},
       color={0,127,0},
       smooth=Smooth.None));
-    connect(GITractCO2.pCO2, busConnector.GITract_pCO2)
+    connect(gitractCO2.pCO2, busConnector.GITract_pCO2)
     annotation (Line(
       points={{62,-11},{98,-11},{98,92},{-88,92}},
       color={0,127,0},
@@ -861,12 +861,12 @@ equation
       points={{62,49},{98,49},{98,92},{-88,92}},
       color={0,127,0},
       smooth=Smooth.None));
-    connect(otherTissueCO2.pCO2, busConnector.otherTissue.pCO2)
+    connect(otherTissueCO2.pCO2, busConnector.otherTissue_pCO2)
     annotation (Line(
       points={{-44,5},{6,5},{6,92},{-88,92}},
       color={0,127,0},
       smooth=Smooth.None));
-    connect(respiratoryMuscleCO2.pCO2, busConnector.respiratoryMuscle.pCO2)
+    connect(respiratoryMuscleCO2.pCO2, busConnector.respiratoryMuscle_pCO2)
     annotation (Line(
       points={{-44,-25},{6,-25},{6,92},{-88,92}},
       color={0,127,0},
@@ -881,7 +881,7 @@ equation
       points={{-44,-85},{6,-85},{6,92},{-88,92}},
       color={0,127,0},
       smooth=Smooth.None));
-    connect(skeletalMuscleCO2.pCO2, busConnector.skeletalMuscle.pCO2)
+    connect(skeletalMuscleCO2.pCO2, busConnector.skeletalMuscle_pCO2)
     annotation (Line(
       points={{-44,63},{5.5,63},{5.5,92},{-88,92}},
       color={127,0,0},
@@ -902,7 +902,7 @@ equation
       points={{-44,-55},{6,-55},{6,92},{-88,92}},
       color={0,127,0},
       smooth=Smooth.None));
-    connect(GITractCO2.pCO2, busConnector.GITract.pCO2)
+    connect(gitractCO2.pCO2, busConnector.GITract_pCO2)
     annotation (Line(
       points={{62,-11},{98,-11},{98,92},{-88,92}},
       color={0,127,0},
@@ -963,7 +963,7 @@ equation
       points={{-46,-55},{6,-55},{6,92},{-88,92}},
       color={0,127,0},
       smooth=Smooth.None));
-    connect(GITractCO2.cHCO3, busConnector.GITract_cHCO3)
+    connect(gitractCO2.cHCO3, busConnector.GITract_cHCO3)
     annotation (Line(
       points={{60,-11},{98,-11},{98,92},{-88,92}},
       color={0,127,0},
@@ -1024,7 +1024,7 @@ equation
       points={{-42,-55},{6,-55},{6,92},{-88,92}},
       color={0,127,0},
       smooth=Smooth.None));
-    connect(GITractCO2.cHCO3_interstitial, busConnector.GITract_cHCO3_interstitial)
+    connect(gitractCO2.cHCO3_interstitial, busConnector.GITract_cHCO3_interstitial)
     annotation (Line(
       points={{64,-11},{98,-11},{98,92},{-88,92}},
       color={0,127,0},
@@ -1087,7 +1087,7 @@ equation
       string="%first",
       index=-1,
       extent={{-3,13},{-3,13}}));
-    connect(GITractCO2.vein, liverCO2.portalVein) annotation (Line(
+    connect(gitractCO2.vein, liverCO2.portalVein) annotation (Line(
       points={{52,1},{38,1},{38,80},{64,80},{64,70}},
       color={200,0,0},
       thickness=1,

@@ -282,14 +282,14 @@ package IO_Bus
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(bone_pCO2.y, busConnector.bone.pCO2) annotation (Line(
+        connect(bone_pCO2.y, busConnector.bone_pCO2) annotation (Line(
          points={{-71.7,121},{90,121},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(brain_pCO2.y, busConnector.brain.pCO2) annotation (Line(
+        connect(brain_pCO2.y, busConnector.brain_pCO2) annotation (Line(
          points={{-73.7,141},{90,141},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(
@@ -310,14 +310,14 @@ package IO_Bus
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(fat_pCO2.y, busConnector.fat.pCO2) annotation (Line(
+        connect(fat_pCO2.y, busConnector.fat_pCO2) annotation (Line(
          points={{-73.7,151},{90,151},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(GITract_pCO2.y, busConnector.GITract.pCO2) annotation (Line(
+        connect(GITract_pCO2.y, busConnector.GITract_pCO2) annotation (Line(
          points={{-71.7,111},{90,111},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(
@@ -352,14 +352,14 @@ package IO_Bus
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(otherTissue_pCO2.y, busConnector.otherTissue.pCO2) annotation (Line(
+        connect(otherTissue_pCO2.y, busConnector.otherTissue_pCO2) annotation (Line(
          points={{-73.7,191},{90,191},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(respiratoryMuscle_pCO2.y, busConnector.respiratoryMuscle.pCO2) annotation (Line(
+        connect(respiratoryMuscle_pCO2.y, busConnector.respiratoryMuscle_pCO2) annotation (Line(
          points={{-73.7,201},{90,201},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(
@@ -373,7 +373,7 @@ package IO_Bus
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(skeletalMuscle_pCO2.y, busConnector.skeletalMuscle.pCO2) annotation (Line(
+        connect(skeletalMuscle_pCO2.y, busConnector.skeletalMuscle_pCO2) annotation (Line(
          points={{-73.7,221},{90,221},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(

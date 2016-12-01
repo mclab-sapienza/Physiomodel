@@ -20,7 +20,7 @@ TissuesWithInterstitium.TissuesCO2 CO2Tissues(
   boneCO2(vein(q(start=-7.3))),
   brainCO2(vein(q(start=-18.5364)), tissueVeinsCO2(tCO2_P(start=27.1283))),
   otherTissueCO2(vein(q(start=-8.149))),
-  GITractCO2(vein(q(start=-24.8656))),
+  gitractCO2(vein(q(start=-24.8656))),
   respiratoryMuscleCO2(vein(q(start=-2.26257))),
   kidneyCO2(vein(q(start=-26.7849))),
   fatCO2(vein(q(start=-5.277))),

@@ -1,0 +1,4 @@
+loadModel(Physiolibrary);
+loadModel(Physiomodel);
+loadFile("Test.mo"); getErrorString();
+simulate(Test, stopTime=100, outputFormat="csv"); getErrorString();

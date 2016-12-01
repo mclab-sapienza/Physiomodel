@@ -29,7 +29,7 @@ model TissuesO2
       annotation (Placement(transformation(extent={{52,-70},{72,-50}})));
     Physiomodel.Gases.O2.Tissues.TissueO2_kidney kidneyO2(initialMass=4.1)
       annotation (Placement(transformation(extent={{52,-40},{72,-20}})));
-    Tissues.GITractO2 GITractO2(    initialMass=17.6)
+    Tissues.GITractO2 gitractO2(    initialMass=17.6)
       annotation (Placement(transformation(extent={{52,-10},{72,10}})));
     Physiolibrary.Types.BusConnector busConnector
     annotation (Placement(transformation(extent={{-108,72},{-68,112}})));
@@ -79,7 +79,7 @@ equation
     liverO2.BloodFlow +
     leftHeartO2.BloodFlow +
     kidneyO2.BloodFlow +
-    GITractO2.BloodFlow +
+    gitractO2.BloodFlow +
     skinO2.BloodFlow;
 
     connect(q_out, skeletalMuscleO2.vein) annotation (Line(
@@ -143,7 +143,7 @@ equation
         color={200,0,0},
         thickness=1,
         smooth=Smooth.None));
-    connect(GITractO2.arty, q_in) annotation (Line(
+    connect(gitractO2.arty, q_in) annotation (Line(
         points={{72,2},{86,2},{86,0},{100,0}},
         color={200,0,0},
         thickness=1,
@@ -218,7 +218,7 @@ equation
         string="%first",
         index=-1,
         extent={{-5,2},{-5,2}}));
-    connect(busConnector.cDPG, GITractO2.cDPG)
+    connect(busConnector.cDPG, gitractO2.cDPG)
       annotation (Line(
         points={{-88,92},{6,92},{6,10},{53,10}},
         color={0,127,0},
@@ -315,7 +315,7 @@ equation
         string="%first",
         index=-1,
         extent={{-5,2},{-5,2}}));
-    connect(busConnector.FHbF, GITractO2.FHbF)
+    connect(busConnector.FHbF, gitractO2.FHbF)
       annotation (Line(
         points={{-88,92},{6,92},{6,-6},{53,-6}},
         color={0,127,0},
@@ -388,7 +388,7 @@ equation
         index=-1,
         extent={{-5,2},{-5,2}}));
 
-    connect(busConnector.bone.pCO2, boneO2.pCO2)        annotation (
+    connect(busConnector.bone_pCO2, boneO2.pCO2)        annotation (
        Line(
         points={{-88,92},{-88,36},{-53,36}},
         color={0,127,0},
@@ -396,7 +396,7 @@ equation
         string="%first",
         index=-1,
         extent={{-5,2},{-5,2}}));
-    connect(busConnector.brain.pCO2, brainO2.pCO2)
+    connect(busConnector.brain_pCO2, brainO2.pCO2)
       annotation (Line(
         points={{-88,92},{6,92},{6,20},{53,20}},
         color={0,127,0},
@@ -404,7 +404,7 @@ equation
         string="%first",
         index=-1,
         extent={{-5,2},{-5,2}}));
-    connect(busConnector.fat.pCO2, fatO2.pCO2)      annotation (
+    connect(busConnector.fat_pCO2, fatO2.pCO2)      annotation (
         Line(
         points={{-88,92},{-88,-54},{-53,-54}},
         color={0,127,0},
@@ -412,7 +412,7 @@ equation
         string="%first",
         index=-1,
         extent={{-5,2},{-5,2}}));
-    connect(busConnector.GITract.pCO2, GITractO2.pCO2)
+    connect(busConnector.GITract_pCO2, gitractO2.pCO2)
       annotation (Line(
         points={{-88,92},{6,92},{6,-10},{53,-10}},
         color={0,127,0},
@@ -444,7 +444,7 @@ equation
         string="%first",
         index=-1,
         extent={{-5,2},{-5,2}}));
-    connect(busConnector.otherTissue.pCO2, otherTissueO2.pCO2)
+    connect(busConnector.otherTissue_pCO2, otherTissueO2.pCO2)
       annotation (Line(
         points={{-88,92},{-88,6},{-53,6}},
         color={0,127,0},
@@ -452,7 +452,7 @@ equation
         string="%first",
         index=-1,
         extent={{-5,2},{-5,2}}));
-    connect(busConnector.respiratoryMuscle.pCO2, respiratoryMuscleO2.pCO2)
+    connect(busConnector.respiratoryMuscle_pCO2, respiratoryMuscleO2.pCO2)
       annotation (Line(
         points={{-88,92},{-88,-24},{-53,-24}},
         color={0,127,0},
@@ -476,7 +476,7 @@ equation
         string="%first",
         index=-1,
         extent={{-5,2},{-5,2}}));
-    connect(busConnector.skeletalMuscle.pCO2, skeletalMuscleO2.pCO2)
+    connect(busConnector.skeletalMuscle_pCO2, skeletalMuscleO2.pCO2)
       annotation (Line(
         points={{-88,92},{-87.5,92},{-87.5,64},{-53,64}},
         color={127,0,0},
@@ -509,7 +509,7 @@ equation
         string="%first",
         index=-1,
         extent={{-5,2},{-5,2}}));
-    connect(busConnector.ctHb, GITractO2.ctHb)
+    connect(busConnector.ctHb, gitractO2.ctHb)
       annotation (Line(
         points={{-88,92},{6,92},{6,-2},{53,-2}},
         color={0,127,0},
@@ -606,7 +606,7 @@ equation
         string="%first",
         index=-1,
         extent={{-5,2},{-5,2}}));
-    connect(busConnector.pCO, GITractO2.pCO)
+    connect(busConnector.pCO, gitractO2.pCO)
       annotation (Line(
         points={{-88,92},{6,92},{6,6},{53,6}},
         color={0,127,0},
@@ -703,7 +703,7 @@ equation
         string="%second",
         index=1,
         extent={{5,2},{5,2}}));
-    connect(GITractO2.pH_plasma, busConnector.GITract_pH_plasma)
+    connect(gitractO2.pH_plasma, busConnector.GITract_pH_plasma)
       annotation (Line(
         points={{71,10},{98,10},{98,92},{-88,92}},
         color={0,127,0},
@@ -799,7 +799,7 @@ equation
         string="%second",
         index=1,
         extent={{5,2},{5,2}}));
-    connect(GITractO2.FMetHb, busConnector.FMetHb)
+    connect(gitractO2.FMetHb, busConnector.FMetHb)
       annotation (Line(
         points={{71,6},{98,6},{98,92},{-88,92}},
         color={0,127,0},
@@ -896,7 +896,7 @@ equation
         string="%second",
         index=1,
         extent={{5,2},{5,2}}));
-    connect(GITractO2.Tissue_O2Use, busConnector.GITract_O2Use)
+    connect(gitractO2.Tissue_O2Use, busConnector.GITract_O2Use)
       annotation (Line(
         points={{71,-2},{98,-2},{98,92},{-88,92}},
         color={0,127,0},
@@ -993,7 +993,7 @@ equation
         string="%second",
         index=1,
         extent={{5,2},{5,2}}));
-    connect(GITractO2.BloodFlow, busConnector.GITract_BloodFlow)
+    connect(gitractO2.BloodFlow, busConnector.GITract_BloodFlow)
       annotation (Line(
         points={{71,-10},{98,-10},{98,92},{-88,92}},
         color={0,127,0},
@@ -1082,7 +1082,7 @@ equation
         string="%second",
         index=1,
         extent={{5,2},{5,2}}));
-    connect(GITractO2.T, busConnector.GITract_T)
+    connect(gitractO2.T, busConnector.GITract_T)
       annotation (Line(
         points={{71,-6},{98,-6},{98,92},{-88,92}},
         color={0,127,0},
@@ -1170,7 +1170,7 @@ equation
         points={{-44,-55},{6,-55},{6,92},{-88,92}},
         color={0,127,0},
         smooth=Smooth.None));
-    connect(GITractO2.sO2, busConnector.GITract_sO2)
+    connect(gitractO2.sO2, busConnector.GITract_sO2)
       annotation (Line(
         points={{62,-11},{98,-11},{98,92},{-88,92}},
         color={0,127,0},
@@ -1216,22 +1216,22 @@ equation
         color={127,0,0},
         smooth=Smooth.None));
 
-    connect(boneO2.pO2, busConnector.bone.pO2) annotation (
+    connect(boneO2.pO2, busConnector.bone_pO2) annotation (
        Line(
         points={{-46,35},{6,35},{6,92},{-88,92}},
         color={0,127,0},
         smooth=Smooth.None));
-    connect(brainO2.pO2, busConnector.brain.pO2)
+    connect(brainO2.pO2, busConnector.brain_pO2)
       annotation (Line(
         points={{60,19},{98,19},{98,92},{-88,92}},
         color={0,127,0},
         smooth=Smooth.None));
-    connect(fatO2.pO2, busConnector.fat.pO2) annotation (
+    connect(fatO2.pO2, busConnector.fat_pO2) annotation (
         Line(
         points={{-46,-55},{6,-55},{6,92},{-88,92}},
         color={0,127,0},
         smooth=Smooth.None));
-    connect(GITractO2.pO2, busConnector.GITract.pO2)
+    connect(gitractO2.pO2, busConnector.GITract_pO2)
       annotation (Line(
         points={{60,-11},{98,-11},{98,92},{-88,92}},
         color={0,127,0},
@@ -1251,12 +1251,12 @@ equation
         points={{60,49},{98,49},{98,92},{-88,92}},
         color={0,127,0},
         smooth=Smooth.None));
-    connect(otherTissueO2.pO2, busConnector.otherTissue.pO2)
+    connect(otherTissueO2.pO2, busConnector.otherTissue_pO2)
       annotation (Line(
         points={{-46,5},{6,5},{6,92},{-88,92}},
         color={0,127,0},
         smooth=Smooth.None));
-    connect(respiratoryMuscleO2.pO2, busConnector.respiratoryMuscle.pO2)
+    connect(respiratoryMuscleO2.pO2, busConnector.respiratoryMuscle_pO2)
       annotation (Line(
         points={{-46,-25},{6,-25},{6,92},{-88,92}},
         color={0,127,0},
@@ -1271,7 +1271,7 @@ equation
         points={{-46,-85},{6,-85},{6,92},{-88,92}},
         color={0,127,0},
         smooth=Smooth.None));
-    connect(skeletalMuscleO2.pO2, busConnector.skeletalMuscle.pO2)
+    connect(skeletalMuscleO2.pO2, busConnector.skeletalMuscle_pO2)
       annotation (Line(
         points={{-46,63},{5.5,63},{5.5,92},{-88,92}},
         color={127,0,0},
@@ -1284,7 +1284,7 @@ equation
         string="%second",
         index=1,
         extent={{6,-3},{6,-3}}));
-    connect(GITractO2.vein, q_out) annotation (Line(
+    connect(gitractO2.vein, q_out) annotation (Line(
         points={{52,2},{-24,2},{-24,0},{-100,0}},
         color={107,45,134},
         thickness=1,

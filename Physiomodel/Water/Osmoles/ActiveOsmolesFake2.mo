@@ -23,7 +23,7 @@ equation
     string="%second",
     index=1,
     extent={{6,3},{6,3}}));
-    connect(upperTorsoInterstitialOsmoles.y, busConnector.UT.InterstitialOsmoles)
+    connect(upperTorsoInterstitialOsmoles.y, busConnector.UT_InterstitialOsmoles)
     annotation (Line(
     points={{53.5,-9.5},{92,-9.5},{92,1},{-14,1},{-14,38}},
     color={0,0,127},
@@ -31,7 +31,7 @@ equation
     string="%second",
     index=1,
     extent={{6,3},{6,3}}));
-    connect(middleTorsoInterstitialOsmoles.y, busConnector.MT.InterstitialOsmoles)
+    connect(middleTorsoInterstitialOsmoles.y, busConnector.MT_InterstitialOsmoles)
     annotation (Line(
     points={{53.5,-29.5},{92,-29.5},{92,-19},{-14,-19},{-14,38}},
     color={0,0,127},
@@ -39,7 +39,7 @@ equation
     string="%second",
     index=1,
     extent={{6,3},{6,3}}));
-    connect(lowerTorsoInterstitialOsmoles.y, busConnector.LT.InterstitialOsmoles)
+    connect(lowerTorsoInterstitialOsmoles.y, busConnector.LT_InterstitialOsmoles)
     annotation (Line(
     points={{53.5,-51.5},{92,-51.5},{92,-41},{-14,-41},{-14,38}},
     color={0,0,127},

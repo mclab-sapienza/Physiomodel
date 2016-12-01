@@ -135,7 +135,7 @@ equation
     index=-1,
     extent={{-5,2},{-5,2}}));
 
-    connect(busConnector.bone.pCO2, bone.pCO2)        annotation (
+    connect(busConnector.bone_pCO2, bone.pCO2)        annotation (
     Line(
     points={{-88,92},{-88,54},{-53,54}},
     color={0,127,0},
@@ -143,7 +143,7 @@ equation
     string="%first",
     index=-1,
     extent={{-5,2},{-5,2}}));
-    connect(busConnector.brain.pCO2, brain.pCO2)
+    connect(busConnector.brain_pCO2, brain.pCO2)
     annotation (Line(
     points={{-88,92},{6,92},{6,46},{53,46}},
     color={0,127,0},
@@ -151,7 +151,7 @@ equation
     string="%first",
     index=-1,
     extent={{-5,2},{-5,2}}));
-    connect(busConnector.fat.pCO2, fat.pCO2)      annotation (
+    connect(busConnector.fat_pCO2, fat.pCO2)      annotation (
     Line(
     points={{-88,92},{-88,-36},{-53,-36}},
     color={0,127,0},
@@ -159,7 +159,7 @@ equation
     string="%first",
     index=-1,
     extent={{-5,2},{-5,2}}));
-    connect(busConnector.GITract.pCO2, GITract.pCO2)
+    connect(busConnector.GITract_pCO2, GITract.pCO2)
     annotation (Line(
     points={{-88,92},{6,92},{6,16},{53,16}},
     color={0,127,0},
@@ -191,7 +191,7 @@ equation
     string="%first",
     index=-1,
     extent={{-5,2},{-5,2}}));
-    connect(busConnector.otherTissue.pCO2, otherTissue.pCO2)
+    connect(busConnector.otherTissue_pCO2, otherTissue.pCO2)
     annotation (Line(
     points={{-88,92},{-88,24},{-53,24}},
     color={0,127,0},
@@ -199,7 +199,7 @@ equation
     string="%first",
     index=-1,
     extent={{-5,2},{-5,2}}));
-    connect(busConnector.respiratoryMuscle.pCO2, respiratoryMuscle.pCO2)
+    connect(busConnector.respiratoryMuscle_pCO2, respiratoryMuscle.pCO2)
     annotation (Line(
     points={{-88,92},{-88,-6},{-53,-6}},
     color={0,127,0},
@@ -223,7 +223,7 @@ equation
     string="%first",
     index=-1,
     extent={{-5,2},{-5,2}}));
-    connect(busConnector.skeletalMuscle.pCO2, skeletalMuscle.pCO2)
+    connect(busConnector.skeletalMuscle_pCO2, skeletalMuscle.pCO2)
     annotation (Line(
     points={{-88,92},{-87.5,92},{-87.5,84},{-53,84}},
     color={127,0,0},

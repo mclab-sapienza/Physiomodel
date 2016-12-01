@@ -236,28 +236,28 @@ package IO_Bus
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(Bone_Function_Failed.y, busConnector.bone.Function_Failed) annotation (Line(
+        connect(Bone_Function_Failed.y, busConnector.bone_Function_Failed) annotation (Line(
         points={{-29.7,213},{90,213},{90,-2}},
         color={0,0,127},
         smooth=Smooth.None), Text(
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(Brain_Function_Failed.y, busConnector.brain.Function_Failed) annotation (Line(
+        connect(Brain_Function_Failed.y, busConnector.brain_Function_Failed) annotation (Line(
         points={{-29.7,223},{90,223},{90,-2}},
         color={0,0,127},
         smooth=Smooth.None), Text(
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(Fat_Function_Failed.y, busConnector.fat.Function_Failed) annotation (Line(
+        connect(Fat_Function_Failed.y, busConnector.fat_Function_Failed) annotation (Line(
         points={{-29.7,233},{90,233},{90,-2}},
         color={0,0,127},
         smooth=Smooth.None), Text(
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(GITract_Function_Failed.y, busConnector.GITract.Function_Failed) annotation (Line(
+        connect(GITract_Function_Failed.y, busConnector.GITract_Function_Failed) annotation (Line(
         points={{-29.7,243},{90,243},{90,-2}},
         color={0,0,127},
         smooth=Smooth.None), Text(
@@ -285,14 +285,14 @@ package IO_Bus
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(OtherTissue_Function_Failed.y, busConnector.otherTissue.Function_Failed) annotation (Line(
+        connect(OtherTissue_Function_Failed.y, busConnector.otherTissue_Function_Failed) annotation (Line(
         points={{-29.7,283},{90,283},{90,-2}},
         color={0,0,127},
         smooth=Smooth.None), Text(
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(RespiratoryMuscle_Function_Failed.y, busConnector.respiratoryMuscle.Function_Failed) annotation (Line(
+        connect(RespiratoryMuscle_Function_Failed.y, busConnector.respiratoryMuscle_Function_Failed) annotation (Line(
         points={{-29.7,293},{90,293},{90,-2}},
         color={0,0,127},
         smooth=Smooth.None), Text(
@@ -306,7 +306,7 @@ package IO_Bus
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(SkeletalMuscle_Function_Failed.y, busConnector.skeletalMuscle.Function_Failed) annotation (Line(
+        connect(SkeletalMuscle_Function_Failed.y, busConnector.skeletalMuscle_Function_Failed) annotation (Line(
         points={{-29.7,313},{90,313},{90,-2}},
         color={0,0,127},
         smooth=Smooth.None), Text(

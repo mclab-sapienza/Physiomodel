@@ -463,7 +463,7 @@ within Physiomodel.Water;
           points={{-71,-42},{-66,-42},{-66,-41.6},{-55.4,-41.6}},
           color={0,0,127},
           smooth=Smooth.None));
-        connect(busConnector.UT.Sweat_H2OOutflow, sweatDuct.u[1]) annotation (
+        connect(busConnector.UT_Sweat_H2OOutflow, sweatDuct.u[1]) annotation (
           Line(
           points={{-6,40},{-6,82},{12.4,82},{12.4,81.9333}},
           color={0,0,255},
@@ -472,7 +472,7 @@ within Physiomodel.Water;
           string="%first",
           index=-1,
           extent={{-6,3},{-6,3}}));
-        connect(busConnector.MT.Sweat_H2OOutflow, sweatDuct.u[2]) annotation (
+        connect(busConnector.MT_Sweat_H2OOutflow, sweatDuct.u[2]) annotation (
           Line(
           points={{-6,40},{-6,83},{12.4,83}},
           color={0,0,255},
@@ -481,7 +481,7 @@ within Physiomodel.Water;
           string="%first",
           index=-1,
           extent={{-6,3},{-6,3}}));
-        connect(busConnector.LT.Sweat_H2OOutflow, sweatDuct.u[3]) annotation (
+        connect(busConnector.LT_Sweat_H2OOutflow, sweatDuct.u[3]) annotation (
           Line(
           points={{-6,40},{-6,84.0667},{12.4,84.0667}},
           color={0,0,255},
@@ -490,7 +490,7 @@ within Physiomodel.Water;
           string="%first",
           index=-1,
           extent={{-6,3},{-6,3}}));
-        connect(busConnector.UT.InsensibleSkin_H2O, insensibleSkin.u[1])
+        connect(busConnector.UT_InsensibleSkin_H2O, insensibleSkin.u[1])
         annotation (Line(
           points={{-6,40},{-6,70},{70,70},{70,74.9333},{70.4,74.9333}},
           color={0,0,255},
@@ -499,7 +499,7 @@ within Physiomodel.Water;
           string="%first",
           index=-1,
           extent={{-6,3},{-6,3}}));
-        connect(busConnector.MT.InsensibleSkin_H2O, insensibleSkin.u[2])
+        connect(busConnector.MT_InsensibleSkin_H2O, insensibleSkin.u[2])
         annotation (Line(
           points={{-6,40},{-6,71},{70,71},{70,76},{70.4,76}},
           color={0,0,255},
@@ -508,7 +508,7 @@ within Physiomodel.Water;
           string="%first",
           index=-1,
           extent={{-6,3},{-6,3}}));
-        connect(busConnector.LT.InsensibleSkin_H2O, insensibleSkin.u[3])
+        connect(busConnector.LT_InsensibleSkin_H2O, insensibleSkin.u[3])
         annotation (Line(
           points={{-6,40},{-6,72},{70,72},{70,77.0667},{70.4,77.0667}},
           color={0,0,255},
@@ -517,7 +517,7 @@ within Physiomodel.Water;
           string="%first",
           index=-1,
           extent={{-6,3},{-6,3}}));
-        connect(busConnector.UT.InterstitialWater_Vol, InterstitialWater.u[1])
+        connect(busConnector.UT_InterstitialWater_Vol, InterstitialWater.u[1])
         annotation (Line(
           points={{-6,40},{24,40},{24,54.5333},{43.2,54.5333}},
           color={0,0,255},
@@ -526,19 +526,19 @@ within Physiomodel.Water;
           string="%first",
           index=-1,
           extent={{-6,3},{-6,3}}));
-        connect(busConnector.MT.InterstitialWater_Vol, InterstitialWater.u[2])
+        connect(busConnector.MT_InterstitialWater_Vol, InterstitialWater.u[2])
         annotation (Line(
           points={{-6,40},{24,40},{24,54},{43.2,54}},
           color={0,0,255},
           thickness=0.5,
           smooth=Smooth.None));
-        connect(busConnector.LT.InterstitialWater_Vol, InterstitialWater.u[3])
+        connect(busConnector.LT_InterstitialWater_Vol, InterstitialWater.u[3])
         annotation (Line(
           points={{-6,40},{24,40},{24,53.4667},{43.2,53.4667}},
           color={0,0,255},
           thickness=0.5,
           smooth=Smooth.None));
-        connect(hydrostatics.RegionalPressure_UpperCapy, busConnector.UT.CapillaryRegionalPressure)
+        connect(hydrostatics.RegionalPressure_UpperCapy, busConnector.UT_CapillaryRegionalPressure)
         annotation (Line(
           points={{-38,77.6},{-6,77.6},{-6,40}},
           color={0,0,127},
@@ -552,31 +552,31 @@ within Physiomodel.Water;
           color={0,0,255},
           thickness=0.5,
           smooth=Smooth.None));
-        connect(busConnector.LT.InterstitialWater_Vol,BodyH2O1. u[2])  annotation (Line(
+        connect(busConnector.LT_InterstitialWater_Vol,BodyH2O1. u[2])  annotation (Line(
           points={{-6,40},{100,40},{100,-46.5333},{74.8,-46.5333}},
           color={0,0,127},
           smooth=Smooth.None));
-        connect(busConnector.MT.InterstitialWater_Vol,BodyH2O1. u[3])  annotation (Line(
+        connect(busConnector.MT_InterstitialWater_Vol,BodyH2O1. u[3])  annotation (Line(
           points={{-6,40},{100,40},{100,-34},{88,-34},{88,-46.3556},{74.8,
             -46.3556}},
           color={0,0,127},
           smooth=Smooth.None));
-        connect(busConnector.UT.InterstitialWater_Vol,BodyH2O1. u[4])  annotation (Line(
+        connect(busConnector.UT_InterstitialWater_Vol,BodyH2O1. u[4])  annotation (Line(
           points={{-6,40},{100,40},{100,-39},{88,-39},{88,-46.1778},{74.8,
             -46.1778}},
           color={0,0,127},
           smooth=Smooth.None));
-        connect(busConnector.LT.Cell_H2O,BodyH2O1. u[7])  annotation (Line(
+        connect(busConnector.LT_Cell_H2O,BodyH2O1. u[7])  annotation (Line(
           points={{-6,40},{100,40},{100,-37},{88,-37},{88,-45.6444},{74.8,
             -45.6444}},
           color={0,0,127},
           smooth=Smooth.None));
-        connect(busConnector.MT.Cell_H2O,BodyH2O1. u[8])  annotation (Line(
+        connect(busConnector.MT_Cell_H2O,BodyH2O1. u[8])  annotation (Line(
           points={{-6,40},{100,40},{100,-49},{88,-49},{88,-45.4667},{74.8,
             -45.4667}},
           color={0,0,127},
           smooth=Smooth.None));
-        connect(busConnector.UT.Cell_H2O,BodyH2O1. u[9])  annotation (Line(
+        connect(busConnector.UT_Cell_H2O,BodyH2O1. u[9])  annotation (Line(
           points={{-6,40},{100,40},{100,-51},{88,-51},{88,-45.2889},{74.8,
             -45.2889}},
           color={0,0,127},
@@ -633,12 +633,12 @@ within Physiomodel.Water;
         string="%first",
         index=-1,
         extent={{-6,3},{-6,3}}));
-        connect(hydrostatics.RegionalPressure_MiddleCapy, busConnector.MT.CapillaryRegionalPressure)
+        connect(hydrostatics.RegionalPressure_MiddleCapy, busConnector.MT_CapillaryRegionalPressure)
         annotation (Line(
           points={{-38,72.8},{-6,72.8},{-6,40}},
           color={0,0,127},
           smooth=Smooth.None));
-        connect(hydrostatics.RegionalPressure_LowerCapy, busConnector.LT.CapillaryRegionalPressure)
+        connect(hydrostatics.RegionalPressure_LowerCapy, busConnector.LT_CapillaryRegionalPressure)
         annotation (Line(
           points={{-38,68},{-6,68},{-6,40}},
           color={0,0,127},

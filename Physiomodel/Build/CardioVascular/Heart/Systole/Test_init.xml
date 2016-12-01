@@ -1,0 +1,336 @@
+<?xml version = "1.0" encoding="UTF-8"?>
+
+<!-- description of the model interface using an extention of the FMI standard -->
+<fmiModelDescription
+  fmiVersion                          = "1.0"
+
+  modelName                           = "Test"
+  modelIdentifier                     = "Test"
+  
+  OPENMODELICAHOME                    = "/usr/local/openmodelica"
+  
+  guid                                = "{8c4e810f-3df3-4a00-8276-176fa3c9f9e0}"
+  
+  description                         = ""
+  generationTool                      = "OpenModelica Compiler v1.9.6"
+  generationDateAndTime               = "2016-11-30T00:44:14Z"
+  
+  variableNamingConvention            = "structured"
+  
+  numberOfEventIndicators             = "1"  cmt_numberOfEventIndicators             = "NG:       number of zero crossings,                           FMI"
+  numberOfTimeEvents                  = "0"  cmt_numberOfTimeEvents                  = "NG_SAM:   number of zero crossings that are samples,          OMC"
+  
+  numberOfInputVariables              = "1"  cmt_numberOfInputVariables              = "NI:       number of inputvar on topmodel,                     OMC"
+  numberOfOutputVariables             = "0"  cmt_numberOfOutputVariables             = "NO:       number of outputvar on topmodel,                    OMC"
+  
+  numberOfExternalObjects             = "0"  cmt_numberOfExternalObjects             = "NEXT:     number of external objects,                         OMC"
+  numberOfFunctions                   = "0"  cmt_numberOfFunctions                   = "NFUNC:    number of functions used by the simulation,         OMC"
+  
+  numberOfContinuousStates            = "0"  cmt_numberOfContinuousStates            = "NX:       number of states,                                   FMI"
+  numberOfRealAlgebraicVariables      = "5"  cmt_numberOfRealAlgebraicVariables      = "NY:       number of real variables,                           OMC"
+  numberOfRealAlgebraicAliasVariables = "5"  cmt_numberOfRealAlgebraicAliasVariables = "NA:       number of alias variables,                          OMC"
+  numberOfRealParameters              = "13"  cmt_numberOfRealParameters              = "NP:       number of parameters,                               OMC"
+  
+  numberOfIntegerAlgebraicVariables   = "0"  cmt_numberOfIntegerAlgebraicVariables   = "NYINT:    number of alg. int variables,                       OMC"
+  numberOfIntegerAliasVariables       = "0"  cmt_numberOfIntegerAliasVariables       = "NAINT:    number of alias int variables,                      OMC"
+  numberOfIntegerParameters           = "0"  cmt_numberOfIntegerParameters           = "NPINT:    number of int parameters,                           OMC"
+  
+  numberOfStringAlgebraicVariables    = "0"  cmt_numberOfStringAlgebraicVariables    = "NYSTR:    number of alg. string variables,                    OMC"
+  numberOfStringAliasVariables        = "0"  cmt_numberOfStringAliasVariables        = "NASTR:    number of alias string variables,                   OMC"
+  numberOfStringParameters            = "0"  cmt_numberOfStringParameters            = "NPSTR:    number of string parameters,                        OMC"
+  
+  numberOfBooleanAlgebraicVariables   = "0"  cmt_numberOfBooleanAlgebraicVariables   = "NYBOOL:   number of alg. bool variables,                      OMC"
+  numberOfBooleanAliasVariables       = "0"  cmt_numberOfBooleanAliasVariables       = "NABOOL:   number of alias bool variables,                     OMC"
+  numberOfBooleanParameters           = "0"  cmt_numberOfBooleanParameters           = "NPBOOL:   number of bool parameters,                          OMC" >
+  
+  
+  <!-- startTime, stopTime, tolerance are FMI specific, all others are OMC specific -->
+  <DefaultExperiment
+    startTime      = "0.0"
+    stopTime       = "1.0"
+    stepSize       = "0.002"
+    tolerance      = "1e-06"
+    solver         = "dassl"
+    outputFormat   = "mat"
+    variableFilter = ".*" />
+    
+  <!-- variables in the model -->
+  <ModelVariables>
+
+  <ScalarVariable
+  name = "contractility"
+  valueReference = "1000"
+  variability = "continuous" isDiscrete = "false"
+  causality = "input" inputIndex="0" isValueChangeable = "false"
+  alias = "noAlias"
+  classIndex = "0" classType = "rAlg"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/Build/CardioVascular/Heart/Systole/Test.mo" startLine = "15" startColumn = "3" endLine = "15" endColumn = "64" fileWritable = "true">
+  <Real useStart="false" fixed="false" useNominal="true" nominal="0.01" unit="1" displayUnit="%" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "outflow.q"
+  valueReference = "1001"
+  description = "Volume flow"
+  variability = "continuous" isDiscrete = "false"
+  causality = "internal" isValueChangeable = "false"
+  alias = "noAlias"
+  classIndex = "1" classType = "rAlg"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiolibrary/Physiolibrary/Hydraulic.mo" startLine = "2155" startColumn = "7" endLine = "2155" endColumn = "48" fileWritable = "true">
+  <Real useStart="false" fixed="false" useNominal="true" nominal="1.666666666666667e-08" unit="m3/s" displayUnit="ml/min" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "step.y"
+  valueReference = "1002"
+  description = "Connector of Real output signal"
+  variability = "continuous" isDiscrete = "false"
+  causality = "internal" isValueChangeable = "false"
+  alias = "noAlias"
+  classIndex = "2" classType = "rAlg"
+  isProtected = "false" hideResult = "false"
+  fileName = "/usr/local/openmodelica/lib/omlibrary/Modelica 3.2.1/Blocks/Interfaces.mo" startLine = "271" startColumn = "5" endLine = "272" endColumn = "68" fileWritable = "true">
+  <Real useStart="true" start="-3.0" fixed="false" useNominal="true" nominal="133.322387415" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "systole.ESV"
+  valueReference = "1003"
+  variability = "continuous" isDiscrete = "false"
+  causality = "internal" isValueChangeable = "false"
+  alias = "noAlias"
+  classIndex = "3" classType = "rAlg"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/CardioVascular/Heart/Systole.mo" startLine = "27" startColumn = "5" endLine = "31" endColumn = "30" fileWritable = "true">
+  <Real useStart="false" fixed="false" useNominal="true" nominal="1e-06" min="0.0" unit="m3" displayUnit="ml" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "systole.outflow.pressure"
+  valueReference = "1004"
+  description = "Pressure"
+  variability = "continuous" isDiscrete = "false"
+  causality = "internal" isValueChangeable = "false"
+  alias = "noAlias"
+  classIndex = "4" classType = "rAlg"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiolibrary/Physiolibrary/Hydraulic.mo" startLine = "2154" startColumn = "7" endLine = "2154" endColumn = "41" fileWritable = "true">
+  <Real useStart="false" fixed="false" useNominal="true" nominal="133.322387415" unit="Pa" displayUnit="mmHg" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "NormalEndSystolicVolume"
+  valueReference = "1005"
+  variability = "parameter" isDiscrete = "true"
+  causality = "internal" isValueChangeable = "false"
+  alias = "noAlias"
+  classIndex = "0" classType = "rPar"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/Build/CardioVascular/Heart/Systole/Test.mo" startLine = "3" startColumn = "3" endLine = "3" endColumn = "121" fileWritable = "true">
+  <Real useStart="false" fixed="true" useNominal="true" nominal="1e-06" min="0.0" unit="m3" displayUnit="ml" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "NormalExternalPressure"
+  valueReference = "1006"
+  variability = "parameter" isDiscrete = "true"
+  causality = "internal" isValueChangeable = "true"
+  alias = "noAlias"
+  classIndex = "1" classType = "rPar"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/Build/CardioVascular/Heart/Systole/Test.mo" startLine = "6" startColumn = "3" endLine = "6" endColumn = "71" fileWritable = "true">
+  <Real useStart="true" start="-446.0" fixed="true" useNominal="true" nominal="133.322387415" unit="Pa" displayUnit="mmHg" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "NormalSystolicPressure"
+  valueReference = "1007"
+  variability = "parameter" isDiscrete = "true"
+  causality = "internal" isValueChangeable = "true"
+  alias = "noAlias"
+  classIndex = "2" classType = "rPar"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/Build/CardioVascular/Heart/Systole/Test.mo" startLine = "2" startColumn = "3" endLine = "2" endColumn = "100" fileWritable = "true">
+  <Real useStart="true" start="15998.68421052631" fixed="true" useNominal="true" nominal="133.322387415" unit="Pa" displayUnit="mmHg" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "additionalPressure_Systolic"
+  valueReference = "1008"
+  variability = "parameter" isDiscrete = "true"
+  causality = "internal" isValueChangeable = "true"
+  alias = "noAlias"
+  classIndex = "3" classType = "rPar"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/Build/CardioVascular/Heart/Systole/Test.mo" startLine = "4" startColumn = "3" endLine = "4" endColumn = "69" fileWritable = "true">
+  <Real useStart="false" fixed="true" useNominal="true" nominal="133.322387415" unit="Pa" displayUnit="mmHg" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "n_Systole"
+  valueReference = "1009"
+  variability = "parameter" isDiscrete = "true"
+  causality = "internal" isValueChangeable = "true"
+  alias = "noAlias"
+  classIndex = "4" classType = "rPar"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/Build/CardioVascular/Heart/Systole/Test.mo" startLine = "5" startColumn = "3" endLine = "5" endColumn = "72" fileWritable = "true">
+  <Real useStart="true" start="0.5" fixed="true" useNominal="true" nominal="0.01" unit="1" displayUnit="1" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "step.height"
+  valueReference = "1010"
+  description = "Height of step"
+  variability = "parameter" isDiscrete = "true"
+  causality = "internal" isValueChangeable = "true"
+  alias = "noAlias"
+  classIndex = "5" classType = "rPar"
+  isProtected = "false" hideResult = "false"
+  fileName = "/usr/local/openmodelica/lib/omlibrary/Modelica 3.2.1/Blocks/Sources.mo" startLine = "310" startColumn = "5" endLine = "310" endColumn = "45" fileWritable = "true">
+  <Real useStart="true" start="0.0" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "step.offset"
+  valueReference = "1011"
+  description = "Offset of output signal y"
+  variability = "parameter" isDiscrete = "true"
+  causality = "internal" isValueChangeable = "true"
+  alias = "noAlias"
+  classIndex = "6" classType = "rPar"
+  isProtected = "false" hideResult = "false"
+  fileName = "/usr/local/openmodelica/lib/omlibrary/Modelica 3.2.1/Blocks/Interfaces.mo" startLine = "452" startColumn = "5" endLine = "452" endColumn = "56" fileWritable = "true">
+  <Real useStart="true" start="-3.0" fixed="true" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "step.startTime"
+  valueReference = "1012"
+  description = "Output y = offset for time &lt; startTime"
+  variability = "parameter" isDiscrete = "true"
+  causality = "internal" isValueChangeable = "true"
+  alias = "noAlias"
+  classIndex = "7" classType = "rPar"
+  isProtected = "false" hideResult = "false"
+  fileName = "/usr/local/openmodelica/lib/omlibrary/Modelica 3.2.1/Blocks/Interfaces.mo" startLine = "453" startColumn = "5" endLine = "453" endColumn = "80" fileWritable = "true">
+  <Real useStart="true" start="600.0" fixed="true" useNominal="false" unit="s" displayUnit="s" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "systole.NormalEndSystolicVolume"
+  valueReference = "1013"
+  description = "= 2.64 ml for left ventricle, parametrization of end systolic volume curve"
+  variability = "parameter" isDiscrete = "true"
+  causality = "internal" isValueChangeable = "false"
+  alias = "noAlias"
+  classIndex = "8" classType = "rPar"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/CardioVascular/Heart/Systole.mo" startLine = "22" startColumn = "5" endLine = "23" endColumn = "85" fileWritable = "true">
+  <Real useStart="false" fixed="true" useNominal="true" nominal="1e-06" min="0.0" unit="m3" displayUnit="ml" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "systole.NormalExternalPressure"
+  valueReference = "1014"
+  description = "Typical value of pericardium cavity pressure (relative to environment ambient pressure)"
+  variability = "parameter" isDiscrete = "true"
+  causality = "internal" isValueChangeable = "false"
+  alias = "noAlias"
+  classIndex = "9" classType = "rPar"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/CardioVascular/Heart/Systole.mo" startLine = "19" startColumn = "5" endLine = "20" endColumn = "98" fileWritable = "true">
+  <Real useStart="false" fixed="true" useNominal="true" nominal="133.322387415" unit="Pa" displayUnit="mmHg" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "systole.NormalSystolicPressure"
+  valueReference = "1015"
+  description = "Typical value of mean arterial pressure (relative to environment ambient pressure)"
+  variability = "parameter" isDiscrete = "true"
+  causality = "internal" isValueChangeable = "false"
+  alias = "noAlias"
+  classIndex = "10" classType = "rPar"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/CardioVascular/Heart/Systole.mo" startLine = "17" startColumn = "5" endLine = "18" endColumn = "93" fileWritable = "true">
+  <Real useStart="false" fixed="true" useNominal="true" nominal="133.322387415" unit="Pa" displayUnit="mmHg" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "systole.additionalPressure_Systolic"
+  valueReference = "1016"
+  description = "parametrization of end systolic volume curve"
+  variability = "parameter" isDiscrete = "true"
+  causality = "internal" isValueChangeable = "false"
+  alias = "noAlias"
+  classIndex = "11" classType = "rPar"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/CardioVascular/Heart/Systole.mo" startLine = "24" startColumn = "5" endLine = "25" endColumn = "55" fileWritable = "true">
+  <Real useStart="false" fixed="true" useNominal="true" nominal="133.322387415" unit="Pa" displayUnit="mmHg" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "systole.n_Systole"
+  valueReference = "1017"
+  description = "parametrization of end diastolic volume curve"
+  variability = "parameter" isDiscrete = "true"
+  causality = "internal" isValueChangeable = "false"
+  alias = "noAlias"
+  classIndex = "12" classType = "rPar"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/CardioVascular/Heart/Systole.mo" startLine = "14" startColumn = "5" endLine = "15" endColumn = "56" fileWritable = "true">
+  <Real useStart="false" fixed="true" useNominal="true" nominal="0.01" unit="1" displayUnit="1" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "busConnector.Pericardium_Pressure"
+  valueReference = "1018"
+  description = "virtual variable in expandable connector"
+  variability = "continuous" isDiscrete = "false"
+  causality = "internal" isValueChangeable = "false"
+  alias = "alias" aliasVariable="step.y"
+  classIndex = "0" classType = "rAli"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/Build/CardioVascular/Heart/Systole/Test.mo" startLine = "22" startColumn = "3" endLine = "22" endColumn = "53" fileWritable = "true">
+  <Real useStart="false" fixed="false" useNominal="false" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "outflow.pressure"
+  valueReference = "1019"
+  description = "Pressure"
+  variability = "continuous" isDiscrete = "false"
+  causality = "internal" isValueChangeable = "false"
+  alias = "alias" aliasVariable="systole.outflow.pressure"
+  classIndex = "1" classType = "rAli"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiolibrary/Physiolibrary/Hydraulic.mo" startLine = "2154" startColumn = "7" endLine = "2154" endColumn = "41" fileWritable = "true">
+  <Real useStart="false" fixed="false" useNominal="true" nominal="133.322387415" unit="Pa" displayUnit="mmHg" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "systole.contractility"
+  valueReference = "1020"
+  description = "heart muscle contractility"
+  variability = "continuous" isDiscrete = "false"
+  causality = "internal" isValueChangeable = "false"
+  alias = "alias" aliasVariable="contractility"
+  classIndex = "2" classType = "rAli"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/CardioVascular/Heart/Systole.mo" startLine = "11" startColumn = "5" endLine = "12" endColumn = "89" fileWritable = "true">
+  <Real useStart="false" fixed="false" useNominal="true" nominal="0.01" unit="1" displayUnit="%" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "systole.externalPressure"
+  valueReference = "1021"
+  description = "pressure around ventricle"
+  variability = "continuous" isDiscrete = "false"
+  causality = "internal" isValueChangeable = "false"
+  alias = "alias" aliasVariable="step.y"
+  classIndex = "3" classType = "rAli"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiomodel/Physiomodel/CardioVascular/Heart/Systole.mo" startLine = "33" startColumn = "5" endLine = "36" endColumn = "41" fileWritable = "true">
+  <Real useStart="false" fixed="false" useNominal="true" nominal="133.322387415" unit="Pa" displayUnit="mmHg" />
+  </ScalarVariable>
+  <ScalarVariable
+  name = "systole.outflow.q"
+  valueReference = "1022"
+  description = "Volume flow"
+  variability = "continuous" isDiscrete = "false"
+  causality = "internal" isValueChangeable = "false"
+  alias = "alias" aliasVariable="outflow.q"
+  classIndex = "4" classType = "rAli"
+  isProtected = "false" hideResult = "false"
+  fileName = "/Users/stefano/Repo/physiology/Physiolibrary/Physiolibrary/Hydraulic.mo" startLine = "2155" startColumn = "7" endLine = "2155" endColumn = "48" fileWritable = "true">
+  <Real useStart="false" fixed="false" useNominal="true" nominal="1.666666666666667e-08" unit="m3/s" displayUnit="ml/min" />
+  </ScalarVariable>
+
+
+
+  </ModelVariables>
+  
+  
+</fmiModelDescription>
+

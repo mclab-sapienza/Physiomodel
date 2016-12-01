@@ -46,7 +46,7 @@ package IO_Bus
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(UT_InterstitialProtein_Mass.y, busConnector.UT.InterstitialProtein_Mass)
+        connect(UT_InterstitialProtein_Mass.y, busConnector.UT_InterstitialProtein_Mass)
         annotation (Line(
         points={{-29.7,29},{90,29},{90,-2}},
         color={0,0,127},
@@ -54,7 +54,7 @@ package IO_Bus
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(MT_InterstitialProtein_Mass.y, busConnector.MT.InterstitialProtein_Mass)
+        connect(MT_InterstitialProtein_Mass.y, busConnector.MT_InterstitialProtein_Mass)
         annotation (Line(
         points={{-29.7,-41},{90,-41},{90,-2}},
         color={0,0,127},
@@ -62,7 +62,7 @@ package IO_Bus
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(LT_InterstitialProtein_Mass.y, busConnector.LT.InterstitialProtein_Mass)
+        connect(LT_InterstitialProtein_Mass.y, busConnector.LT_InterstitialProtein_Mass)
         annotation (Line(
         points={{-31.7,-87},{90,-87},{90,-2}},
         color={0,0,127},

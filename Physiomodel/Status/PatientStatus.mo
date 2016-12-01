@@ -1,6 +1,7 @@
 within Physiomodel.Status;
   model PatientStatus
       extends Physiolibrary.Icons.StatusNormal;
+      inner Modelica.StateGraph.Interfaces.CompositeStepState stateGraphRoot;
       Normal normal
       annotation (Placement(transformation(extent={{-66,34},{-46,54}})));
       Confused confused(                          nOut=2, nIn=2)

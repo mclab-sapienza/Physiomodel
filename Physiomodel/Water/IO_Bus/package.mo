@@ -552,42 +552,42 @@ package IO_Bus
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-            connect(LT_InterstitialWater_Vol.y, busConnector.LT.InterstitialWater_Vol) annotation (Line(
+            connect(LT_InterstitialWater_Vol.y, busConnector.LT_InterstitialWater_Vol) annotation (Line(
             points={{-83.7,125},{90,125},{90,-2}},
                 color={0,0,127},
                 smooth=Smooth.None), Text(
                 string="%second",
                 index=1,
                 extent={{6,3},{6,3}}));
-            connect(UT_LymphFlow.y, busConnector.UT.LymphFlow) annotation (Line(
+            connect(UT_LymphFlow.y, busConnector.UT_LymphFlow) annotation (Line(
             points={{94.3,105},{90,105},{90,-2}},
                 color={0,0,127},
                 smooth=Smooth.None), Text(
                 string="%second",
                 index=1,
                 extent={{6,3},{6,3}}));
-            connect(UT_InterstitialWater_Vol.y, busConnector.UT.InterstitialWater_Vol) annotation (Line(
+            connect(UT_InterstitialWater_Vol.y, busConnector.UT_InterstitialWater_Vol) annotation (Line(
             points={{94.3,95},{90,95},{90,-2}},
                 color={0,0,127},
                 smooth=Smooth.None), Text(
                 string="%second",
                 index=1,
                 extent={{6,3},{6,3}}));
-            connect(MT_LymphFlow.y, busConnector.MT.LymphFlow) annotation (Line(
+            connect(MT_LymphFlow.y, busConnector.MT_LymphFlow) annotation (Line(
             points={{94.3,-95},{90,-95},{90,-2}},
                 color={0,0,127},
                 smooth=Smooth.None), Text(
                 string="%second",
                 index=1,
                 extent={{6,3},{6,3}}));
-            connect(MT_InterstitialWater_Vol.y, busConnector.MT.InterstitialWater_Vol) annotation (Line(
+            connect(MT_InterstitialWater_Vol.y, busConnector.MT_InterstitialWater_Vol) annotation (Line(
             points={{94.3,-105},{90,-105},{90,-2}},
                 color={0,0,127},
                 smooth=Smooth.None), Text(
                 string="%second",
                 index=1,
                 extent={{6,3},{6,3}}));
-            connect(LT_LymphFlow.y, busConnector.LT.LymphFlow) annotation (Line(
+            connect(LT_LymphFlow.y, busConnector.LT_LymphFlow) annotation (Line(
                 points={{-83.7,135},{90,135},{90,-2}},
                 color={0,0,127},
                 smooth=Smooth.None), Text(
