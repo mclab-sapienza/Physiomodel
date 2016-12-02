@@ -6,35 +6,35 @@ model Gases_test_SI
     import Modelica.Utilities.*;
     // constant String OUTPUT_FILE = "setup/output_startValues.txt"; //"setup/output.txt"; //"setup/v2.txt";
 
-    Physiomodel.CardioVascular.IO_Bus.InputFromFile_SI cardioVascularSystem
+    Physiomodel.CardioVascular.IO_Bus.Input cardioVascularSystem
       annotation (Placement(transformation(extent={{40,72},{60,94}})));
-    Physiomodel.Metabolism.IO_Bus.InputFromFile_SI
+    Physiomodel.Metabolism.IO_Bus.Input
                                             nutrientsAndMetabolism
       annotation (Placement(transformation(extent={{-86,60},{-66,80}})));
-    Physiomodel.Electrolytes.IO_Bus.InputFromFile_SI electrolytes
+    Physiomodel.Electrolytes.IO_Bus.Input electrolytes
       annotation (Placement(transformation(extent={{74,-34},{94,-14}})));
-    Physiomodel.Hormones.IO_Bus.InputFromFile_SI hormones
+    Physiomodel.Hormones.IO_Bus.Input hormones
       annotation (Placement(transformation(extent={{40,6},{60,26}})));
-    Physiomodel.Nerves.IO_Bus.InputFromFile_SI nerves
+    Physiomodel.Nerves.IO_Bus.Input nerves
       annotation (Placement(transformation(extent={{74,38},{94,58}})));
-    Physiomodel.Setup.IO_Bus.InputFromFile_SI     setup
+    Physiomodel.Setup.IO_Bus.Input     setup
       annotation (Placement(transformation(extent={{-16,-106},{4,-86}})));
-    Physiomodel.Water.IO_Bus.InputFromFile_SI water
+    Physiomodel.Water.IO_Bus.Input water
       annotation (Placement(transformation(extent={{-86,-6},{-66,14}})));
-    Physiomodel.Proteins.IO_Bus.InputFromFile_SI proteins
+    Physiomodel.Proteins.IO_Bus.Input proteins
       annotation (Placement(transformation(extent={{-48,-28},{-28,-8}})));
-    Physiomodel.Status.IO_Bus.InputFromFile_SI status
+    Physiomodel.Status.IO_Bus.Input status
       annotation (Placement(transformation(extent={{42,-80},{62,-60}})));
     Physiomodel.Gases.Gases gases
       annotation (Placement(transformation(extent={{-78,-64},{-58,-44}})));
-    Physiomodel.Heat.IO_Bus.InputFromFile_SI heat
+    Physiomodel.Heat.IO_Bus.Input heat
       annotation (Placement(transformation(extent={{-28,30},{-48,50}})));
-    Physiomodel.Gases.IO_Bus.OutputComparison_SI
-                                gases_dif
-      annotation (Placement(transformation(extent={{-38,-80},{-18,-60}})));
-    Physiomodel.Gases.IO_Bus.OutputToFile_SI
-                                       gases_varsToFile
-      annotation (Placement(transformation(extent={{-98,-92},{-78,-72}})));
+    /* Physiomodel.Gases.IO_Bus.OutputComparison_SI */
+    /*                             gases_dif */
+    /*   annotation (Placement(transformation(extent={{-38,-80},{-18,-60}}))); */
+    /* Physiomodel.Gases.IO_Bus.OutputToFile_SI */
+    /*                                    gases_varsToFile */
+    /*   annotation (Placement(transformation(extent={{-98,-92},{-78,-72}}))); */
 equation
     connect(setup.busConnector,hormones. busConnector) annotation (Line(
         points={{-6,-96},{-6,16},{50,16}},
@@ -88,17 +88,17 @@ equation
         color={0,0,255},
         thickness=0.5,
         smooth=Smooth.None));
-    connect(gases.busConnector, gases_dif.busConnector) annotation (Line(
-        points={{-60,-46},{-44,-46},{-44,-70},{-28,-70}},
-        color={0,0,255},
-        thickness=0.5,
-        smooth=Smooth.None));
-    connect(gases_varsToFile.busConnector, gases.busConnector) annotation (
-        Line(
-        points={{-88,-82},{-88,-46},{-60,-46}},
-        color={0,0,255},
-        thickness=0.5,
-        smooth=Smooth.None));
+    /* connect(gases.busConnector, gases_dif.busConnector) annotation (Line( */
+    /*     points={{-60,-46},{-44,-46},{-44,-70},{-28,-70}}, */
+    /*     color={0,0,255}, */
+    /*     thickness=0.5, */
+    /*     smooth=Smooth.None)); */
+    /* connect(gases_varsToFile.busConnector, gases.busConnector) annotation ( */
+    /*     Line( */
+    /*     points={{-88,-82},{-88,-46},{-60,-46}}, */
+    /*     color={0,0,255}, */
+    /*     thickness=0.5, */
+    /*     smooth=Smooth.None)); */
     //if terminal() then
 
     /*   Streams.print("cardioVascularSystem.busConnector.Bone_PCO2\n"+String(cardioVascularSystem.busConnector.Bone_PCO2),OUTPUT_FILE);

@@ -11,15 +11,9 @@ package IO_Bus
     T.Fraction BloodVol_PVCrit(varName="BloodVol.PVCrit")
     "Plasma volume fraction = plasma / blood."
     annotation (Placement(transformation(extent={{-36,30},{-30,36}})));
-    T.VolumeFlowRate Bone_BloodFlow(varName="Bone-Flow.BloodFlow")
-    "Bone blood flow."
-    annotation (Placement(transformation(extent={{-36,40},{-30,46}})));
     T.VolumeFlowRate bone_BloodFlow(varName="Bone-Flow.BloodFlow")
     "Bone blood flow."
     annotation (Placement(transformation(extent={{-36,50},{-30,56}})));
-    T.VolumeFlowRate Brain_BloodFlow(varName="Brain-Flow.BloodFlow")
-    "Brain blood flow."
-    annotation (Placement(transformation(extent={{-36,60},{-30,66}})));
     T.VolumeFlowRate brain_BloodFlow(varName="Brain-Flow.BloodFlow")
     "Brain blood flow."
     annotation (Placement(transformation(extent={{-36,70},{-30,76}})));
@@ -29,9 +23,6 @@ package IO_Bus
     T.Pressure CarotidSinusArteryPressure(varName="CarotidSinus.Pressure")
     "Mean blood pressure in carotid sinus artery."
     annotation (Placement(transformation(extent={{-36,90},{-30,96}})));
-    T.VolumeFlowRate Fat_BloodFlow(varName="Fat-Flow.BloodFlow")
-    "Fat blood flow."
-    annotation (Placement(transformation(extent={{-36,100},{-30,106}})));
     T.VolumeFlowRate fat_BloodFlow(varName="Fat-Flow.BloodFlow")
     "Fat blood flow."
     annotation (Placement(transformation(extent={{-36,110},{-30,116}})));
@@ -44,30 +35,18 @@ package IO_Bus
     T.VolumeFlowRate HepaticArty_BloodFlow(varName="HepaticArty.Flow")
     "Hepatic artery blood flow."
     annotation (Placement(transformation(extent={{-36,140},{-30,146}})));
-    T.VolumeFlowRate Kidney_BloodFlow(varName="Kidney-Flow.BloodFlow")
-    "Kidney blood flow."
-    annotation (Placement(transformation(extent={{-36,150},{-30,156}})));
     T.VolumeFlowRate kidney_BloodFlow(varName="Kidney-Flow.BloodFlow")
     "Kidney blood flow."
     annotation (Placement(transformation(extent={{-36,160},{-30,166}})));
-    T.VolumeFlowRate KidneyPlasmaFlow(varName="Kidney-Flow.PlasmaFlow")
-    "Kidney plasma flow."
-    annotation (Placement(transformation(extent={{-36,170},{-30,176}})));
     //Variable LeftAtrium_TMP(varName="LeftAtrium.TMP")
     //    "Left atrium pressure gradient between inside and pericardium."
     //annotation (Placement(transformation(extent={{-36,180},{-30,186}})));
-    T.VolumeFlowRate LeftHeart_BloodFlow(varName="LeftHeart-Flow.BloodFlow")
-    "LeftHeart blood flow."
-    annotation (Placement(transformation(extent={{-36,200},{-30,206}})));
     T.VolumeFlowRate leftHeart_BloodFlow(varName="LeftHeart-Flow.BloodFlow")
     "LeftHeart blood flow."
     annotation (Placement(transformation(extent={{-36,210},{-30,216}})));
     T.VolumeFlowRate AlveolarVentilated_BloodFlow(varName="LungBloodFlow.AlveolarVentilated")
     "Blood flow through ventilated alveoli."
     annotation (Placement(transformation(extent={{-36,220},{-30,226}})));
-    T.VolumeFlowRate OtherTissue_BloodFlow(varName="OtherTissue-Flow.BloodFlow")
-    "OtherTissue blood flow."
-    annotation (Placement(transformation(extent={{-36,230},{-30,236}})));
     T.VolumeFlowRate otherTissue_BloodFlow(varName="OtherTissue-Flow.BloodFlow")
     "OtherTissue blood flow."
     annotation (Placement(transformation(extent={{-36,240},{-30,246}})));
@@ -83,9 +62,6 @@ package IO_Bus
     T.Volume RBCH2O_Vol(varName="RBCH2O.Vol")
     "Intracellular water in erythrocytes."
     annotation (Placement(transformation(extent={{-36,280},{-30,286}})));
-    T.VolumeFlowRate RespiratoryMuscle_BloodFlow(varName="RespiratoryMuscle-Flow.BloodFlow")
-    "RespiratoryMuscle blood flow."
-    annotation (Placement(transformation(extent={{-36,290},{-30,296}})));
     T.VolumeFlowRate respiratoryMuscle_BloodFlow(varName="RespiratoryMuscle-Flow.BloodFlow")
     "RespiratoryMuscle blood flow."
     annotation (Placement(transformation(extent={{-36,300},{-30,306}})));
@@ -95,21 +71,12 @@ package IO_Bus
     //Variable RightAtrium_TMP(varName="RightAtrium.TMP")
     //    "Right atrium pressure gradient between inside and pericardium."
     //annotation (Placement(transformation(extent={{-36,320},{-30,326}})));
-    T.VolumeFlowRate RightHeart_BloodFlow(varName="RightHeart-Flow.BloodFlow")
-    "RightHeart blood flow."
-    annotation (Placement(transformation(extent={{-36,340},{-30,346}})));
     T.VolumeFlowRate rightHeart_BloodFlow(varName="RightHeart-Flow.BloodFlow")
     "RightHeart blood flow."
     annotation (Placement(transformation(extent={{-36,350},{-30,356}})));
-    T.VolumeFlowRate SkeletalMuscle_BloodFlow(varName="SkeletalMuscle-Flow.BloodFlow")
-    "SkeletalMuscle blood flow."
-    annotation (Placement(transformation(extent={{-36,360},{-30,366}})));
     T.VolumeFlowRate skeletalMuscle_BloodFlow(varName="SkeletalMuscle-Flow.BloodFlow")
     "SkeletalMuscle blood flow."
     annotation (Placement(transformation(extent={{-36,370},{-30,376}})));
-    T.VolumeFlowRate Skin_BloodFlow(varName="Skin-Flow.BloodFlow")
-    "Skin blood flow."
-    annotation (Placement(transformation(extent={{-36,380},{-30,386}})));
     T.VolumeFlowRate skin_BloodFlow(varName="Skin-Flow.BloodFlow")
     "Skin blood flow."
     annotation (Placement(transformation(extent={{-36,390},{-30,396}})));
@@ -184,22 +151,8 @@ equation
     string="%second",
     index=1,
     extent={{6,3},{6,3}}));
-    connect(Bone_BloodFlow.y, busConnector.Bone_BloodFlow) annotation (Line(
-    points={{-29.7,43},{90,43},{90,-2}},
-    color={0,0,127},
-    smooth=Smooth.None), Text(
-    string="%second",
-    index=1,
-    extent={{6,3},{6,3}}));
     connect(bone_BloodFlow.y, busConnector.bone_BloodFlow) annotation (Line(
     points={{-29.7,53},{90,53},{90,-2}},
-    color={0,0,127},
-    smooth=Smooth.None), Text(
-    string="%second",
-    index=1,
-    extent={{6,3},{6,3}}));
-    connect(Brain_BloodFlow.y, busConnector.Brain_BloodFlow) annotation (Line(
-    points={{-29.7,63},{90,63},{90,-2}},
     color={0,0,127},
     smooth=Smooth.None), Text(
     string="%second",
@@ -221,13 +174,6 @@ equation
     extent={{6,3},{6,3}}));
     connect(CarotidSinusArteryPressure.y, busConnector.CarotidSinusArteryPressure) annotation (Line(
     points={{-29.7,93},{90,93},{90,-2}},
-    color={0,0,127},
-    smooth=Smooth.None), Text(
-    string="%second",
-    index=1,
-    extent={{6,3},{6,3}}));
-    connect(Fat_BloodFlow.y, busConnector.Fat_BloodFlow) annotation (Line(
-    points={{-29.7,103},{90,103},{90,-2}},
     color={0,0,127},
     smooth=Smooth.None), Text(
     string="%second",
@@ -261,13 +207,6 @@ equation
     string="%second",
     index=1,
     extent={{6,3},{6,3}}));
-    connect(Kidney_BloodFlow.y, busConnector.Kidney_BloodFlow) annotation (Line(
-    points={{-29.7,153},{90,153},{90,-2}},
-    color={0,0,127},
-    smooth=Smooth.None), Text(
-    string="%second",
-    index=1,
-    extent={{6,3},{6,3}}));
     connect(kidney_BloodFlow.y, busConnector.kidney_BloodFlow) annotation (Line(
     points={{-29.7,163},{90,163},{90,-2}},
     color={0,0,127},
@@ -282,13 +221,6 @@ equation
     string="%second",
     index=1,
     extent={{6,3},{6,3}}));
-    connect(LeftHeart_BloodFlow.y, busConnector.LeftHeart_BloodFlow) annotation (Line(
-    points={{-29.7,203},{90,203},{90,-2}},
-    color={0,0,127},
-    smooth=Smooth.None), Text(
-    string="%second",
-    index=1,
-    extent={{6,3},{6,3}}));
     connect(leftHeart_BloodFlow.y, busConnector.leftHeart_BloodFlow) annotation (Line(
     points={{-29.7,213},{90,213},{90,-2}},
     color={0,0,127},
@@ -298,13 +230,6 @@ equation
     extent={{6,3},{6,3}}));
     connect(AlveolarVentilated_BloodFlow.y, busConnector.AlveolarVentilated_BloodFlow) annotation (Line(
     points={{-29.7,223},{90,223},{90,-2}},
-    color={0,0,127},
-    smooth=Smooth.None), Text(
-    string="%second",
-    index=1,
-    extent={{6,3},{6,3}}));
-    connect(OtherTissue_BloodFlow.y, busConnector.OtherTissue_BloodFlow) annotation (Line(
-    points={{-29.7,233},{90,233},{90,-2}},
     color={0,0,127},
     smooth=Smooth.None), Text(
     string="%second",
@@ -345,13 +270,6 @@ equation
     string="%second",
     index=1,
     extent={{6,3},{6,3}}));
-    connect(RespiratoryMuscle_BloodFlow.y, busConnector.RespiratoryMuscle_BloodFlow) annotation (Line(
-    points={{-29.7,293},{90,293},{90,-2}},
-    color={0,0,127},
-    smooth=Smooth.None), Text(
-    string="%second",
-    index=1,
-    extent={{6,3},{6,3}}));
     connect(respiratoryMuscle_BloodFlow.y, busConnector.respiratoryMuscle_BloodFlow) annotation (Line(
     points={{-29.7,303},{90,303},{90,-2}},
     color={0,0,127},
@@ -366,13 +284,6 @@ equation
     string="%second",
     index=1,
     extent={{6,3},{6,3}}));
-    connect(RightHeart_BloodFlow.y, busConnector.RightHeart_BloodFlow) annotation (Line(
-    points={{-29.7,343},{90,343},{90,-2}},
-    color={0,0,127},
-    smooth=Smooth.None), Text(
-    string="%second",
-    index=1,
-    extent={{6,3},{6,3}}));
     connect(rightHeart_BloodFlow.y, busConnector.rightHeart_BloodFlow) annotation (Line(
     points={{-29.7,353},{90,353},{90,-2}},
     color={0,0,127},
@@ -380,22 +291,8 @@ equation
     string="%second",
     index=1,
     extent={{6,3},{6,3}}));
-    connect(SkeletalMuscle_BloodFlow.y, busConnector.SkeletalMuscle_BloodFlow) annotation (Line(
-    points={{-29.7,363},{90,363},{90,-2}},
-    color={0,0,127},
-    smooth=Smooth.None), Text(
-    string="%second",
-    index=1,
-    extent={{6,3},{6,3}}));
     connect(skeletalMuscle_BloodFlow.y, busConnector.skeletalMuscle_BloodFlow) annotation (Line(
     points={{-29.7,373},{90,373},{90,-2}},
-    color={0,0,127},
-    smooth=Smooth.None), Text(
-    string="%second",
-    index=1,
-    extent={{6,3},{6,3}}));
-    connect(Skin_BloodFlow.y, busConnector.Skin_BloodFlow) annotation (Line(
-    points={{-29.7,383},{90,383},{90,-2}},
     color={0,0,127},
     smooth=Smooth.None), Text(
     string="%second",

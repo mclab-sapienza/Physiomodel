@@ -256,19 +256,6 @@ equation
         points={{-25,67},{22,67},{22,50},{46,50}},
         color={0,0,127},
         smooth=Smooth.None));
-    connect(leftCororaryCirculation.BloodFlow, busConnector.LeftHeart_BloodFlow)
-        annotation (Line(
-        points={{7,81},{46,81},{46,50}},
-        color={0,0,127},
-        smooth=Smooth.None), Text(
-        string="%second",
-        index=1,
-        extent={{6,3},{6,3}}));
-    connect(rightCororaryCirculation.BloodFlow, busConnector.RightHeart_BloodFlow)
-        annotation (Line(
-        points={{-25,67},{22,67},{22,50},{46,50}},
-        color={0,0,127},
-        smooth=Smooth.None));
     connect(splanchnicCirculation.busConnector, busConnector) annotation (
         Line(
         points={{-6,-15.5},{-6,50},{46,50}},

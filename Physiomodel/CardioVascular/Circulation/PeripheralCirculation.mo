@@ -190,47 +190,6 @@ equation
         color={0,0,127},
         smooth=Smooth.None));
 
-      connect(bone.BloodFlow, busConnector.Bone_BloodFlow)
-      annotation (Line(
-        points={{-15.9,68.5},{52,68.5},{52,90},{-90,90}},
-        color={0,0,127},
-        smooth=Smooth.None));
-    connect(brain.BloodFlow, busConnector.Brain_BloodFlow)
-      annotation (Line(
-        points={{34.1,50.5},{52,50.5},{52,90},{-90,90}},
-        color={0,0,127},
-        smooth=Smooth.None));
-    connect(fat.BloodFlow, busConnector.Fat_BloodFlow) annotation (
-       Line(
-        points={{-15.9,32.5},{52,32.5},{52,90},{-90,90}},
-        color={0,0,127},
-        smooth=Smooth.None));
-    connect(kidney.BloodFlow, busConnector.Kidney_BloodFlow)
-      annotation (Line(
-        points={{40.1,14.5},{52,14.5},{52,90},{-90,90}},
-        color={0,0,127},
-        smooth=Smooth.None));
-    connect(skin.BloodFlow, busConnector.Skin_BloodFlow)
-      annotation (Line(
-        points={{42.4,-28},{52,-28},{52,90},{-90,90}},
-        color={0,0,127},
-        smooth=Smooth.None));
-    connect(skeletalMuscle.BloodFlow, busConnector.SkeletalMuscle_BloodFlow)
-      annotation (Line(
-        points={{-11.9,-47.5},{52,-47.5},{52,90},{-90,90}},
-        color={0,0,127},
-        smooth=Smooth.None));
-    connect(respiratoryMuscle.BloodFlow, busConnector.RespiratoryMuscle_BloodFlow)
-      annotation (Line(
-        points={{42.1,-71.5},{52,-71.5},{52,90},{-90,90}},
-        color={0,0,127},
-        smooth=Smooth.None));
-    connect(otherTissue.BloodFlow, busConnector.OtherTissue_BloodFlow)
-      annotation (Line(
-        points={{-13.9,-91.5},{52,-91.5},{52,90},{-90,90}},
-        color={0,0,127},
-        smooth=Smooth.None));
-
     connect(kidney.q_out,q_out) annotation (Line(
         points={{18,21},{-84,21},{-84,0},{-100,0}},
         color={0,0,0},

@@ -153,7 +153,7 @@ equation
     color={0,0,127},
     smooth=Smooth.None));
 
-    connect(busConnector.Kidney_BloodFlow, Kidney_clearance.solutionFlow)
+    connect(busConnector.kidney_BloodFlow, Kidney_clearance.solutionFlow)
     annotation (Line(
     points={{-90,28},{-96,28},{-96,-53},{-24,-53}},
     color={0,0,255},
@@ -162,7 +162,7 @@ equation
     string="%first",
     index=-1,
     extent={{-6,3},{-6,3}}));
-    connect(busConnector.OtherTissue_BloodFlow, Other_clearance.solutionFlow)
+    connect(busConnector.otherTissue_BloodFlow, Other_clearance.solutionFlow)
     annotation (Line(
     points={{-90,28},{-96,28},{-96,-83},{-24,-83}},
     color={0,0,255},

@@ -28,7 +28,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             annotation (Placement(transformation(extent={{66,-54},{40,-28}})));
             //   initialLactateMass=2.73208,
 
-            Physiomodel.Metabolism.TissueMetabolism.GITract gITract(
+            Physiomodel.Metabolism.TissueMetabolism.GITract gitract(
             NormalCalsUsed=92.7945,
             initialTissueO2(displayUnit="ml_STP") = 8.0401733111647e-05,
             DC(displayUnit="ml/min") = 3e-06,
@@ -150,8 +150,8 @@ within Physiomodel.Metabolism.TissueMetabolism;
 
             Physiolibrary.Types.MolarFlowRate tissuesO2Use,tissueCO2Produce;
         equation
-            tissuesO2Use = brain.O2Use + fat.O2Use + gITract.O2Use + kidney.O2Use + liver.O2Use + otherTissue.O2Use + respiratoryMuscle.O2Use + leftHeart.O2Use + rightHeart.O2Use + skeletalMuscle.O2Use + skin.O2Use + bone.O2Use;
-            tissueCO2Produce = brain.Tissue_CO2FromMetabolism + fat.Tissue_CO2FromMetabolism + gITract.Tissue_CO2FromMetabolism + kidney.Tissue_CO2FromMetabolism + liver.Tissue_CO2FromMetabolism + otherTissue.Tissue_CO2FromMetabolism + respiratoryMuscle.Tissue_CO2FromMetabolism + leftHeart.Tissue_CO2FromMetabolism + rightHeart.Tissue_CO2FromMetabolism + skeletalMuscle.Tissue_CO2FromMetabolism + skin.Tissue_CO2FromMetabolism + bone.Tissue_CO2FromMetabolism;
+            tissuesO2Use = brain.O2Use + fat.O2Use + gitract.O2Use + kidney.O2Use + liver.O2Use + otherTissue.O2Use + respiratoryMuscle.O2Use + leftHeart.O2Use + rightHeart.O2Use + skeletalMuscle.O2Use + skin.O2Use + bone.O2Use;
+            tissueCO2Produce = brain.Tissue_CO2FromMetabolism + fat.Tissue_CO2FromMetabolism + gitract.Tissue_CO2FromMetabolism + kidney.Tissue_CO2FromMetabolism + liver.Tissue_CO2FromMetabolism + otherTissue.Tissue_CO2FromMetabolism + respiratoryMuscle.Tissue_CO2FromMetabolism + leftHeart.Tissue_CO2FromMetabolism + rightHeart.Tissue_CO2FromMetabolism + skeletalMuscle.Tissue_CO2FromMetabolism + skin.Tissue_CO2FromMetabolism + bone.Tissue_CO2FromMetabolism;
 
             connect(brain.glucose, glucose) annotation (Line(
             points={{-32,114},{-28,114},{-28,12},{-2,12}},
@@ -193,7 +193,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             color={200,0,0},
             smooth=Smooth.None,
             thickness=1));
-            connect(gITract.glucose, glucose) annotation (Line(
+            connect(gitract.glucose, glucose) annotation (Line(
             points={{40,4},{24,4},{24,12},{-2,12}},
             color={200,0,0},
             smooth=Smooth.None,
@@ -253,7 +253,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             color={200,0,0},
             smooth=Smooth.None,
             thickness=1));
-            connect(gITract.lactate, lactate) annotation (Line(
+            connect(gitract.lactate, lactate) annotation (Line(
             points={{40,-6.4},{20,-6.4},{20,66},{0,66}},
             color={200,0,0},
             smooth=Smooth.None,
@@ -303,7 +303,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             color={200,0,0},
             smooth=Smooth.None,
             thickness=1));
-            connect(gITract.fattyAcids, fattyAcids) annotation (Line(
+            connect(gitract.fattyAcids, fattyAcids) annotation (Line(
             points={{40,-16.8},{16,-16.8},{16,-6},{0,-6}},
             color={200,0,0},
             smooth=Smooth.None,
@@ -374,7 +374,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%second",
             index=1,
             extent={{5,0},{5,0}}));
-            connect(gITract.LiquidVol, busConnector.GITract_LiquidVol)  annotation (Line(
+            connect(gitract.LiquidVol, busConnector.GITract_LiquidVol)  annotation (Line(
             points={{64.7,-3.8},{68,-3.8},{68,116},{-82,116}},
             color={0,0,127},
             smooth=Smooth.None), Text(
@@ -411,7 +411,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             index=-1,
             extent={{-5,0},{-5,0}}));
 
-            connect(busConnector.LeftHeart_BloodFlow,leftHeart. BloodFlow)  annotation (
+            connect(busConnector.leftHeart_BloodFlow,leftHeart. BloodFlow)  annotation (
             Line(
             points={{-82,116},{-62,116},{-62,5.2},{-56.6,5.2}},
             color={0,0,255},
@@ -420,7 +420,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%first",
             index=-1,
             extent={{-5,0},{-5,0}}));
-            connect(busConnector.RightHeart_BloodFlow,rightHeart. BloodFlow)  annotation (
+            connect(busConnector.rightHeart_BloodFlow,rightHeart. BloodFlow)  annotation (
             Line(
             points={{-82,116},{-62,116},{-62,39.2},{-58.6,39.2}},
             color={0,0,255},
@@ -429,7 +429,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%first",
             index=-1,
             extent={{-5,0},{-5,0}}));
-            connect(busConnector.Brain_BloodFlow,brain. BloodFlow)  annotation (
+            connect(busConnector.brain_BloodFlow,brain. BloodFlow)  annotation (
             Line(
             points={{-82,116},{-62,116},{-62,111.2},{-58.6,111.2}},
             color={0,0,255},
@@ -438,7 +438,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%first",
             index=-1,
             extent={{-5,0},{-5,0}}));
-            connect(busConnector.RespiratoryMuscle_BloodFlow,respiratoryMuscle. BloodFlow)
+            connect(busConnector.respiratoryMuscle_BloodFlow,respiratoryMuscle. BloodFlow)
             annotation (Line(
             points={{-82,116},{-62,116},{-62,77.2},{-58.6,77.2}},
             color={0,0,255},
@@ -447,7 +447,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%first",
             index=-1,
             extent={{-5,0},{-5,0}}));
-            connect(busConnector.SkeletalMuscle_BloodFlow,skeletalMuscle. BloodFlow)
+            connect(busConnector.skeletalMuscle_BloodFlow,skeletalMuscle. BloodFlow)
             annotation (Line(
             points={{-82,116},{-62,116},{-62,-32.8},{-56.6,-32.8}},
             color={0,0,255},
@@ -456,7 +456,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%first",
             index=-1,
             extent={{-5,0},{-5,0}}));
-            connect(busConnector.Skin_BloodFlow,skin. BloodFlow)  annotation (Line(
+            connect(busConnector.skin_BloodFlow,skin. BloodFlow)  annotation (Line(
             points={{-82,116},{-62,116},{-62,-70.8},{-58.6,-70.8}},
             color={0,0,255},
             thickness=0.5,
@@ -464,21 +464,21 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%first",
             index=-1,
             extent={{-5,0},{-5,0}}));
-            connect(bone.BloodFlow, busConnector.Bone_BloodFlow)  annotation (Line(
+            connect(bone.BloodFlow, busConnector.bone_BloodFlow)  annotation (Line(
             points={{64.7,111.4},{68,111.4},{68,116},{-82,116}},
             color={0,0,127},
             smooth=Smooth.None), Text(
             string="%second",
             index=1,
             extent={{5,0},{5,0}}));
-            connect(kidney.BloodFlow, busConnector.Kidney_BloodFlow)  annotation (Line(
+            connect(kidney.BloodFlow, busConnector.kidney_BloodFlow)  annotation (Line(
             points={{64.7,33.4},{68,33.4},{68,116},{-82,116}},
             color={0,0,127},
             smooth=Smooth.None), Text(
             string="%second",
             index=1,
             extent={{5,0},{5,0}}));
-            connect(gITract.BloodFlow, busConnector.GITract_BloodFlow)  annotation (
+            connect(gitract.BloodFlow, busConnector.GITract_BloodFlow)  annotation (
             Line(
             points={{64.7,1.4},{68,1.4},{68,116},{-82,116}},
             color={0,0,127},
@@ -486,14 +486,14 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%second",
             index=1,
             extent={{5,0},{5,0}}));
-            connect(fat.BloodFlow, busConnector.Fat_BloodFlow)  annotation (Line(
+            connect(fat.BloodFlow, busConnector.fat_BloodFlow)  annotation (Line(
             points={{64.7,-30.6},{68,-30.6},{68,116},{-82,116}},
             color={0,0,127},
             smooth=Smooth.None), Text(
             string="%second",
             index=1,
             extent={{5,0},{5,0}}));
-            connect(otherTissue.BloodFlow, busConnector.OtherTissue_BloodFlow)
+            connect(otherTissue.BloodFlow, busConnector.otherTissue_BloodFlow)
             annotation (Line(
             points={{64.7,-64.6},{68,-64.6},{68,116},{-82,116}},
             color={0,0,127},
@@ -526,7 +526,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%second",
             index=1,
             extent={{5,0},{5,0}}));
-            connect(gITract.Structure_Effect, busConnector.GITract_StructureEffect)
+            connect(gitract.Structure_Effect, busConnector.GITract_StructureEffect)
             annotation (Line(
             points={{64.7,-6.4},{68,-6.4},{68,116},{-82,116}},
             color={0,0,127},
@@ -677,7 +677,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             color={0,0,255},
             thickness=0.5,
             smooth=Smooth.None));
-            connect(gITract.BloodVol_PVCrit, busConnector.BloodVol_PVCrit)  annotation (Line(
+            connect(gitract.BloodVol_PVCrit, busConnector.BloodVol_PVCrit)  annotation (Line(
             points={{64.7,4},{68,4},{68,116},{-82,116}},
             color={0,0,255},
             thickness=0.5,
@@ -738,7 +738,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             color={0,0,255},
             thickness=0.5,
             smooth=Smooth.None));
-            connect(gITract.Thyroxine, busConnector.Thyroxine)  annotation (Line(
+            connect(gitract.Thyroxine, busConnector.Thyroxine)  annotation (Line(
             points={{64.7,-11.6},{68,-11.6},{68,116},{-82,116}},
             color={0,0,255},
             thickness=0.5,
@@ -783,7 +783,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%second",
             index=1,
             extent={{5,0},{5,0}}));
-            connect(gITract.pO2, busConnector.GITract_pO2)
+            connect(gitract.pO2, busConnector.GITract_pO2)
             annotation (Line(
             points={{64.7,-1.2},{68,-1.2},{68,116},{-82,116}},
             color={0,0,127},
@@ -886,7 +886,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%second",
             index=1,
             extent={{5,0},{5,0}}));
-            connect(gITract.T, busConnector.GITract_T)
+            connect(gitract.T, busConnector.GITract_T)
             annotation (Line(
             points={{64.7,-9},{68,-9},{68,116},{-82,116}},
             color={0,0,127},
@@ -980,7 +980,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             points={{56.9,10},{68,10},{68,116},{-82,116}},
             color={0,0,127},
             smooth=Smooth.None));
-            connect(gITract.cLactate, busConnector.GITract_cLactate)
+            connect(gitract.cLactate, busConnector.GITract_cLactate)
             annotation (Line(
             points={{56.9,-22},{68,-22},{68,116},{-82,116}},
             color={0,0,127},
@@ -1047,7 +1047,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             points={{59.5,10},{68,10},{68,116},{-82,116}},
             color={0,0,127},
             smooth=Smooth.None));
-            connect(gITract.Tissue_CO2FromMetabolism, busConnector.GITract_CO2FromMetabolism)
+            connect(gitract.Tissue_CO2FromMetabolism, busConnector.GITract_CO2FromMetabolism)
             annotation (Line(
             points={{59.5,-22},{68,-22},{68,116},{-82,116}},
             color={0,0,127},
@@ -1115,7 +1115,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             points={{49.1,10},{68,10},{68,116},{-82,116}},
             color={0,0,127},
             smooth=Smooth.None));
-            connect(gITract.LactateFromMetabolism, busConnector.GITract_LactateFromMetabolism)
+            connect(gitract.LactateFromMetabolism, busConnector.GITract_LactateFromMetabolism)
             annotation (Line(
             points={{49.1,-22},{68,-22},{68,116},{-82,116}},
             color={0,0,127},
@@ -1184,7 +1184,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             points={{54.3,10},{68,10},{68,116},{-82,116}},
             color={0,0,127},
             smooth=Smooth.None));
-            connect(gITract.O2Use, busConnector.GITract_O2Use)
+            connect(gitract.O2Use, busConnector.GITract_O2Use)
             annotation (Line(
             points={{54.3,-22},{68,-22},{68,116},{-82,116}},
             color={0,0,127},
@@ -1251,7 +1251,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             points={{51.7,10},{68,10},{68,116},{-82,116}},
             color={0,0,127},
             smooth=Smooth.None));
-            connect(gITract.O2Need, busConnector.GITract_O2Need)
+            connect(gitract.O2Need, busConnector.GITract_O2Need)
             annotation (Line(
             points={{51.7,-22},{68,-22},{68,116},{-82,116}},
             color={0,0,127},
@@ -1318,7 +1318,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             points={{62.1,10},{68,10},{68,116},{-82,116}},
             color={0,0,127},
             smooth=Smooth.None));
-            connect(gITract.Fuel_FractUseDelay, busConnector.GITract_Fuel_FractUseDelay)
+            connect(gitract.Fuel_FractUseDelay, busConnector.GITract_Fuel_FractUseDelay)
             annotation (Line(
             points={{62.1,-22},{68,-22},{68,116},{-82,116}},
             color={0,0,127},
@@ -1448,7 +1448,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             points={{46.5,10},{68,10},{68,-92.4667},{79.2,-92.4667}},
             color={0,0,127},
             smooth=Smooth.None));
-            connect(gITract.H2OFromMetabolism, MetabolicH2ORate.u[4])
+            connect(gitract.H2OFromMetabolism, MetabolicH2ORate.u[4])
             annotation (Line(
             points={{46.5,-22},{68,-22},{68,-92.3333},{79.2,-92.3333}},
             color={0,0,127},
@@ -1524,11 +1524,11 @@ within Physiomodel.Metabolism.TissueMetabolism;
             color={200,0,0},
             thickness=1,
             smooth=Smooth.None));
-            connect(gITract.GIT_GluUse,liver. GITract_GlucoseUsed) annotation (Line(
+            connect(gitract.GIT_GluUse,liver. GITract_GlucoseUsed) annotation (Line(
             points={{48.32,4},{48,4},{48,6},{80,6},{80,51.54},{64.7,51.54}},
             color={0,0,127},
             smooth=Smooth.None));
-            connect(gITract.GIT_FatUse,liver. GITract_FatUsed) annotation (Line(
+            connect(gitract.GIT_FatUse,liver. GITract_FatUsed) annotation (Line(
             points={{50.92,4},{82,4},{82,48.68},{64.7,48.68}},
             color={0,0,127},
             smooth=Smooth.None));
@@ -1564,7 +1564,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             points={{43.9,10},{68,10},{68,-98.4364},{79.2,-98.4364}},
             color={0,0,127},
             smooth=Smooth.None));
-            connect(gITract.TotalCalsUsed, CoreHeat.u[4])
+            connect(gitract.TotalCalsUsed, CoreHeat.u[4])
             annotation (Line(
             points={{43.9,-22},{68,-22},{68,-98.2909},{79.2,-98.2909}},
             color={0,0,127},
