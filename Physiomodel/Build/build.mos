@@ -1,4 +1,0 @@
-loadModel(Physiolibrary); getErrorString();
-loadModel(Physiomodel); getErrorString();
-buildModel(Physiomodel.Nerves.IO_Bus.Nerves_test_SI); getErrorString();
-
