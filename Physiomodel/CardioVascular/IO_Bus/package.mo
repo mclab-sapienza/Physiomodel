@@ -38,6 +38,9 @@ package IO_Bus
     T.VolumeFlowRate kidney_BloodFlow(varName="Kidney-Flow.BloodFlow")
     "Kidney blood flow."
     annotation (Placement(transformation(extent={{-36,160},{-30,166}})));
+    T.VolumeFlowRate KidneyPlasmaFlow(varName="Kidney-Flow.PlasmaFlow")
+    "Kidney plasma flow."
+    annotation (Placement(transformation(extent={{-36,170},{-30,176}})));
     //Variable LeftAtrium_TMP(varName="LeftAtrium.TMP")
     //    "Left atrium pressure gradient between inside and pericardium."
     //annotation (Placement(transformation(extent={{-36,180},{-30,186}})));
