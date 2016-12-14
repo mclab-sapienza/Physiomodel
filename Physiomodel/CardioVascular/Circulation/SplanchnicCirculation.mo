@@ -25,7 +25,7 @@ model SplanchnicCirculation
         volume_start=0.00100999,
         Compliance=4.6878848490354e-07)
         annotation (Placement(transformation(extent={{-16,-10},{5,11}})));
-    Microcirculation.TissueBloodFlow GITract(Cond=1.4001149415786e-09)
+    Physiomodel.CardioVascular.Microcirculation.TissueBloodFlow GITract(Cond=1.4001149415786e-09)
         annotation (Placement(transformation(extent={{34,-12},{58,12}})));
     Physiolibrary.Types.Constants.PressureConst ExternalPressure(k=0)
         annotation (Placement(transformation(extent={{24,20},{16,28}})));
@@ -35,11 +35,16 @@ model SplanchnicCirculation
     Physiolibrary.Types.Constants.VolumeConst               V0(k(displayUnit=
           "ml") = 0.0005)
         annotation (Placement(transformation(extent={{-27,11},{-19,19}})));
-    Microcirculation.Liver liver
+    Physiomodel.CardioVascular.Microcirculation.Liver liver
         annotation (Placement(transformation(extent={{-56,34},{-32,58}})));
     Physiolibrary.Hydraulic.Sensors.PressureMeasure pressureMeasure
         annotation (Placement(transformation(extent={{6,-42},{26,-22}})));
+    Physiolibrary.Types.TissueBusConnector gitractConnector;
 equation
+    connect(gitractConnector.pO2, busConnector.gitract_pO2);
+    connect(gitractConnector.O2Need, busConnector.gitract_O2Need);
+    connect(gitractConnector.pCO2, busConnector.gitract_pCO2);
+    connect(gitractConnector.Function_Failed, busConnector.gitract_Function_Failed);
 
     connect(GITract.busConnector,busConnector)           annotation (Line(
         points={{55.6,7.2},{66,7.2},{66,-46}},
@@ -115,7 +120,7 @@ equation
       string="%second",
       index=1,
       extent={{6,3},{6,3}}));
-    connect(GITract.tissueConnector, busConnector.GITract) annotation (
+    connect(GITract.tissueConnector, gitractConnector) annotation (
       Line(
       points={{46,9.6},{66,9.6},{66,-46}},
       color={127,0,0},

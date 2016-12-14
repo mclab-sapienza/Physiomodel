@@ -72,12 +72,12 @@ model SystemicCirculationBase2_Simplified
             extent={{4,-4},{-4,4}},
             rotation=90,
             origin={34,26})));
-    Microcirculation.LeftHeart_Simplified leftCororaryCirculation(
+    Physiomodel.CardioVascolar.Microcirculation.LeftHeart_Simplified leftCororaryCirculation(
         BasicLargeVeselsConductance=50*0.93677109469950528615290800207779,
         BasicSmallVeselsConductance=2.2*0.93677109469950528615290800207779)
       "scaled to normal pressure gradient 94 mmHg"
       annotation (Placement(transformation(extent={{-10,76},{10,96}})));
-    Microcirculation.RightHeart_Simplified rightCororaryCirculation(
+    Physiomodel.CardioVascolar.Microcirculation.RightHeart_Simplified rightCororaryCirculation(
         BasicLargeVeselsConductance=10*0.93677109469950528615290800207779,
         BasicSmallVeselsConductance=0.4*0.93677109469950528615290800207779)
       "scaled to normal pressure gradient 94 mmHg"

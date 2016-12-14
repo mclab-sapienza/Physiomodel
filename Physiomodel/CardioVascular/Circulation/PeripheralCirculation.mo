@@ -37,7 +37,38 @@ model PeripheralCirculation
     "signals of organ bood flow resistence" annotation (Placement(
         transformation(extent={{-100,80},{-80,100}}), iconTransformation(
           extent={{60,10},{78,28}})));
+    Physiolibrary.Types.TissueBusConnector boneConnector;
+    Physiolibrary.Types.TissueBusConnector brainConnector;
+    Physiolibrary.Types.TissueBusConnector fatConnector;
+    Physiolibrary.Types.TissueBusConnector otherTissueConnector;
+    Physiolibrary.Types.TissueBusConnector skeletalMuscleConnector;
+    Physiolibrary.Types.TissueBusConnector respiratoryMuscleConnector;
+    
 equation
+    connect(boneConnector.pO2, busConnector.bone_pO2);
+    connect(boneConnector.O2Need, busConnector.bone_O2Need);
+    connect(boneConnector.pCO2, busConnector.bone_pCO2);
+    connect(boneConnector.Function_Failed, busConnector.bone_Function_Failed);
+    connect(brainConnector.pO2, busConnector.brain_pO2);
+    connect(brainConnector.O2Need, busConnector.brain_O2Need);
+    connect(brainConnector.pCO2, busConnector.brain_pCO2);
+    connect(brainConnector.Function_Failed, busConnector.brain_Function_Failed);
+    connect(fatConnector.pO2, busConnector.fat_pO2);
+    connect(fatConnector.O2Need, busConnector.fat_O2Need);
+    connect(fatConnector.pCO2, busConnector.fat_pCO2);
+    connect(fatConnector.Function_Failed, busConnector.fat_Function_Failed);
+    connect(otherTissueConnector.pO2, busConnector.otherTissue_pO2);
+    connect(otherTissueConnector.O2Need, busConnector.otherTissue_O2Need);
+    connect(otherTissueConnector.pCO2, busConnector.otherTissue_pCO2);
+    connect(otherTissueConnector.Function_Failed, busConnector.otherTissue_Function_Failed);
+    connect(skeletalMuscleConnector.pO2, busConnector.skeletalMuscle_pO2);
+    connect(skeletalMuscleConnector.O2Need, busConnector.skeletalMuscle_O2Need);
+    connect(skeletalMuscleConnector.pCO2, busConnector.skeletalMuscle_pCO2);
+    connect(skeletalMuscleConnector.Function_Failed, busConnector.skeletalMuscle_Function_Failed);
+    connect(respiratoryMuscleConnector.pO2, busConnector.respiratoryMuscle_pO2);
+    connect(respiratoryMuscleConnector.O2Need, busConnector.respiratoryMuscle_O2Need);
+    connect(respiratoryMuscleConnector.pCO2, busConnector.respiratoryMuscle_pCO2);
+    connect(respiratoryMuscleConnector.Function_Failed, busConnector.respiratoryMuscle_Function_Failed);
     connect(bone.q_in, flowMeasure.q_out) annotation (Line(
         points={{-12,75},{68,75},{68,0},{78,0}},
         color={0,0,0},
@@ -200,34 +231,34 @@ equation
         color={0,0,0},
         smooth=Smooth.None,
         thickness=1));
-    connect(bone.tissueConnector, busConnector.bone) annotation (Line(
+    connect(bone.tissueConnector, boneConnector) annotation (Line(
       points={{-25,85.4},{-24.5,85.4},{-24.5,90},{-90,90}},
       color={127,0,0},
       thickness=0.5,
       smooth=Smooth.None));
-    connect(fat.tissueConnector, busConnector.fat) annotation (Line(
+    connect(fat.tissueConnector, fatConnector) annotation (Line(
       points={{-25,49.4},{-48,49.4},{-48,90},{-90,90}},
       color={127,0,0},
       thickness=0.5,
       smooth=Smooth.None));
-    connect(skeletalMuscle.tissueConnector, busConnector.skeletalMuscle)
+    connect(skeletalMuscle.tissueConnector, skeletalMuscleConnector)
     annotation (Line(
       points={{-21,-30.6},{-48,-30.6},{-48,90},{-90,90}},
       color={127,0,0},
       thickness=0.5,
       smooth=Smooth.None));
-    connect(otherTissue.tissueConnector, busConnector.otherTissue)
+    connect(otherTissue.tissueConnector, otherTissueConnector)
     annotation (Line(
       points={{-23,-74.6},{-48,-74.6},{-48,90},{-90,90}},
       color={127,0,0},
       thickness=0.5,
       smooth=Smooth.None));
-    connect(brain.tissueConnector, busConnector.brain) annotation (Line(
+    connect(brain.tissueConnector, brainConnector) annotation (Line(
       points={{25,67.4},{25,90},{-90,90}},
       color={127,0,0},
       thickness=0.5,
       smooth=Smooth.None));
-    connect(respiratoryMuscle.tissueConnector, busConnector.respiratoryMuscle)
+    connect(respiratoryMuscle.tissueConnector, respiratoryMuscleConnector)
     annotation (Line(
       points={{33,-54.6},{34,-54.6},{34,-54},{52,-54},{52,90},{-90,90}},
       color={127,0,0},
