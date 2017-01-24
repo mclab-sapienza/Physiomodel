@@ -154,21 +154,9 @@ end Inputs;
 
 model Test  
   Physiolibrary.Types.BusConnector busConnector;
-  Physiomodel.CardioVascular.Heart.Heart heart;
-  Physiomodel.CardioVascular.Circulation.PulmonaryCirculation pulmonaryCirculation;
-  Physiomodel.CardioVascular.Circulation.SystemicCirculationFullDynamic systemicCirculation;
-  Physiomodel.CardioVascular.Blood.BloodPropertiesBase bloodProperties;
-  Physiomodel.CardioVascular.Blood.RedCells2 redCells(RBCBaseSecretionRate(k(displayUnit="m3/s")));
+  Physiomodel.CardioVascular.CardioVascularSystem cvs;
   Inputs.Input inputs;
 equation
   connect(inputs.busConnector, busConnector);
-  connect(busConnector, heart.busConnector);
-  connect(busConnector, pulmonaryCirculation.busConnector);
-  connect(busConnector, systemicCirculation.busConnector);
-  connect(busConnector, bloodProperties.busConnector);
-  connect(busConnector, redCells.busConnector);
-  connect(heart.fromRightVentricle, pulmonaryCirculation.q_in);
-  connect(pulmonaryCirculation.q_out, heart.leftAtrium); 
-  connect(heart.fromLeftVentricle, systemicCirculation.q_in);
-  connect(systemicCirculation.q_out, heart.rightAtrium);
+  connect(busConnector, cvs.busConnector);
 end Test;
