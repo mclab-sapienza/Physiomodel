@@ -10,8 +10,9 @@ model Posture
       annotation (Placement(transformation(extent={{64,44},{58,50}})));
     Physiolibrary.Types.Constants.DeprecatedUntypedConstant const10(k=0)
       annotation (Placement(transformation(extent={{64,32},{58,38}})));
-    Physiolibrary.Types.Constants.DeprecatedUntypedConstant integerConstant(k=
-          Physiomodel.Water.Hydrostatics.Posture.Lying)
+    Physiolibrary.Types.Constants.DeprecatedUntypedConstant integerConstant(k=0
+          /* Physiomodel.Water.Hydrostatics.Posture.Lying */
+      )
       annotation (Placement(transformation(extent={{18,12},{24,18}})));
 equation
   connect(const36.y,busConnector. LowerTorsoArtyHeight)
