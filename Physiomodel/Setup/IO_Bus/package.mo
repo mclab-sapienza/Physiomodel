@@ -142,7 +142,13 @@ package IO_Bus
       T.Pressure EnvironmentRelativeHumidity_VaporPressure(varName="RelativeHumidity.VaporPressure",
             storeUnit="mmHg")
           annotation (Placement(transformation(extent={{-82,32},{-76,38}})));
+
+      Physiolibrary.Types.Constants.DeprecatedUntypedConstant const7(k=1);
+
     equation
+        
+        connect(const7.y, busConnector.Exercise_MusclePump_Effect);
+        
         connect( Gravity_Gz.y,busConnector.Gravity_Gz)          annotation (Line(
             points={{-73.7,89},{90,89},{90,-2}},
             color={0,0,127},
