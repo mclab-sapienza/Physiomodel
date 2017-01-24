@@ -74,15 +74,6 @@ equation
     color={0,0,127},
     smooth=Smooth.None));
 
-    connect(GILumen.solute, busConnector.GILumenPotasium_Mass) annotation (
-    Line(
-    points={{-2,-36},{-2,-54},{-96,-54},{-96,94},{-88,94}},
-    color={0,0,127},
-    smooth=Smooth.None), Text(
-    string="%second",
-    index=1,
-    extent={{3,1},{3,1}}));
-
     connect(GILumen.solute, busConnector.GILumenPotassium_Mass) annotation (
     Line(
     points={{-2,-36},{-2,-54},{-96,-54},{-96,94},{-88,94}},
