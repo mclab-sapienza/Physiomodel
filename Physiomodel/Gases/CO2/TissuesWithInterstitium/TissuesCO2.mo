@@ -841,7 +841,7 @@ equation
       points={{-44,-55},{6,-55},{6,92},{-88,92}},
       color={0,127,0},
       smooth=Smooth.None));
-    connect(gitractCO2.pCO2, busConnector.GITract_pCO2)
+    connect(gitractCO2.pCO2, busConnector.gitract_pCO2)
     annotation (Line(
       points={{62,-11},{98,-11},{98,92},{-88,92}},
       color={0,127,0},
@@ -886,68 +886,6 @@ equation
       points={{-44,63},{5.5,63},{5.5,92},{-88,92}},
       color={127,0,0},
       smooth=Smooth.None));
-
-    connect(boneCO2.pCO2, busConnector.Bone_PCO2)       annotation (
-     Line(
-      points={{-44,35},{6,35},{6,92},{-88,92}},
-      color={0,127,0},
-      smooth=Smooth.None));
-    connect(brainCO2.pCO2, busConnector.Brain_PCO2)
-    annotation (Line(
-      points={{62,19},{98,19},{98,92},{-88,92}},
-      color={0,127,0},
-      smooth=Smooth.None));
-    connect(fatCO2.pCO2, busConnector.Fat_PCO2)     annotation (
-      Line(
-      points={{-44,-55},{6,-55},{6,92},{-88,92}},
-      color={0,127,0},
-      smooth=Smooth.None));
-    connect(gitractCO2.pCO2, busConnector.GITract_pCO2)
-    annotation (Line(
-      points={{62,-11},{98,-11},{98,92},{-88,92}},
-      color={0,127,0},
-      smooth=Smooth.None));
-    connect(kidneyCO2.pCO2, busConnector.Kidney_PCO2)
-    annotation (Line(
-      points={{62,-41},{98,-41},{98,92},{-88,92}},
-      color={0,127,0},
-      smooth=Smooth.None));
-    connect(leftHeartCO2.pCO2, busConnector.LeftHeart_PCO2)
-    annotation (Line(
-      points={{62,-71},{98,-71},{98,92},{-88,92}},
-      color={0,127,0},
-      smooth=Smooth.None));
-    connect(liverCO2.pCO2, busConnector.Liver_PCO2)
-    annotation (Line(
-      points={{62,49},{98,49},{98,92},{-88,92}},
-      color={0,127,0},
-      smooth=Smooth.None));
-    connect(otherTissueCO2.pCO2, busConnector.OtherTissue_PCO2)
-    annotation (Line(
-      points={{-44,5},{6,5},{6,92},{-88,92}},
-      color={0,127,0},
-      smooth=Smooth.None));
-    connect(respiratoryMuscleCO2.pCO2, busConnector.RespiratoryMuscle_PCO2)
-    annotation (Line(
-      points={{-44,-25},{6,-25},{6,92},{-88,92}},
-      color={0,127,0},
-      smooth=Smooth.None));
-    connect(rightHeartCO2.pCO2, busConnector.RightHeart_PCO2)
-    annotation (Line(
-      points={{62,-101},{98,-101},{98,92},{-88,92}},
-      color={0,127,0},
-      smooth=Smooth.None));
-    connect(skinCO2.pCO2, busConnector.Skin_PCO2)     annotation (
-     Line(
-      points={{-44,-85},{6,-85},{6,92},{-88,92}},
-      color={0,127,0},
-      smooth=Smooth.None));
-    connect(skeletalMuscleCO2.pCO2, busConnector.SkeletalMuscle_PCO2)
-    annotation (Line(
-      points={{-44,63},{5.5,63},{5.5,92},{-88,92}},
-      color={127,0,0},
-      smooth=Smooth.None));
-
     connect(boneCO2.cHCO3, busConnector.bone_cHCO3)       annotation (
      Line(
       points={{-46,35},{6,35},{6,92},{-88,92}},

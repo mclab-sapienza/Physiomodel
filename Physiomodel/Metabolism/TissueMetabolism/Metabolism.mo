@@ -783,7 +783,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%second",
             index=1,
             extent={{5,0},{5,0}}));
-            connect(gITract.pO2, busConnector.GITract_pO2)
+            connect(gITract.pO2, busConnector.gitract_pO2)
             annotation (Line(
             points={{64.7,-1.2},{68,-1.2},{68,116},{-82,116}},
             color={0,0,127},
@@ -1251,7 +1251,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             points={{51.7,10},{68,10},{68,116},{-82,116}},
             color={0,0,127},
             smooth=Smooth.None));
-            connect(gITract.O2Need, busConnector.GITract_O2Need)
+            connect(gITract.O2Need, busConnector.gitract_O2Need)
             annotation (Line(
             points={{51.7,-22},{68,-22},{68,116},{-82,116}},
             color={0,0,127},

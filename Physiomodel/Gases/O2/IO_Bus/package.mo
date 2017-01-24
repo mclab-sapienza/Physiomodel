@@ -96,7 +96,7 @@ extends Physiolibrary.Types.IO_Bus;
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(GITract_PO2.y, busConnector.GITract_pO2) annotation (Line(
+        connect(GITract_PO2.y, busConnector.gitract_pO2) annotation (Line(
          points={{-57.7,-17},{90,-17},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(

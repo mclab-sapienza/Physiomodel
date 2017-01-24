@@ -257,7 +257,7 @@ package IO_Bus
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(GITract_Function_Failed.y, busConnector.GITract_Function_Failed) annotation (Line(
+        connect(GITract_Function_Failed.y, busConnector.gitract_Function_Failed) annotation (Line(
         points={{-29.7,243},{90,243},{90,-2}},
         color={0,0,127},
         smooth=Smooth.None), Text(

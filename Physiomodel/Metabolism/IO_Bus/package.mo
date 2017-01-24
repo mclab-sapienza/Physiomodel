@@ -1125,7 +1125,7 @@ within Physiomodel.Metabolism;
             string="%second",
             index=1,
             extent={{6,3},{6,3}}));
-            connect(GITract_O2Need5.y, busConnector.GITract_O2Need) annotation (Line(
+            connect(GITract_O2Need5.y, busConnector.gitract_O2Need) annotation (Line(
             points={{-91.7,-83},{90,-83},{90,-2}},
             color={0,0,127},
             smooth=Smooth.None), Text(

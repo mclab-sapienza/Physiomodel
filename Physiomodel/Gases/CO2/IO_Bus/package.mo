@@ -317,7 +317,7 @@ package IO_Bus
               string="%second",
               index=1,
               extent={{6,3},{6,3}}));
-        connect(GITract_pCO2.y, busConnector.GITract_pCO2) annotation (Line(
+        connect(GITract_pCO2.y, busConnector.gitract_pCO2) annotation (Line(
          points={{-71.7,111},{90,111},{90,-2}},
               color={0,0,127},
               smooth=Smooth.None), Text(

@@ -412,7 +412,7 @@ equation
         string="%first",
         index=-1,
         extent={{-5,2},{-5,2}}));
-    connect(busConnector.GITract_pCO2, gitractO2.pCO2)
+    connect(busConnector.gitract_pCO2, gitractO2.pCO2)
       annotation (Line(
         points={{-88,92},{6,92},{6,-10},{53,-10}},
         color={0,127,0},
@@ -1231,7 +1231,7 @@ equation
         points={{-46,-55},{6,-55},{6,92},{-88,92}},
         color={0,127,0},
         smooth=Smooth.None));
-    connect(gitractO2.pO2, busConnector.GITract_pO2)
+    connect(gitractO2.pO2, busConnector.gitract_pO2)
       annotation (Line(
         points={{60,-11},{98,-11},{98,92},{-88,92}},
         color={0,127,0},

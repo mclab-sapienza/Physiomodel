@@ -159,7 +159,7 @@ equation
     string="%first",
     index=-1,
     extent={{-5,2},{-5,2}}));
-    connect(busConnector.GITract_pCO2, GITract.pCO2)
+    connect(busConnector.gitract_pCO2, GITract.pCO2)
     annotation (Line(
     points={{-88,92},{6,92},{6,16},{53,16}},
     color={0,127,0},

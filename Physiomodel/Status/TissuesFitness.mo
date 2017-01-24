@@ -631,7 +631,7 @@ equation
     points={{16,28},{-20,28},{-20,92},{-88,92}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(GITract.FunctionFailed, busConnector.GITract_Function_Failed) annotation (Line(
+    connect(GITract.FunctionFailed, busConnector.gitract_Function_Failed) annotation (Line(
     points={{16,-4},{-20,-4},{-20,92},{-88,92}},
     color={0,0,127},
     smooth=Smooth.None));
