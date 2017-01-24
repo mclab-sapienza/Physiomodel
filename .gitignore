@@ -1,7 +1,0 @@
-Build/*/*.csv
-Build/*/*.h
-Build/*/*.makefile
-Build/*/*.o
-Build/*/*.c
-Build/*/*.json
-Build/*/*.xml
