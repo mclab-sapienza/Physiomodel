@@ -16,12 +16,8 @@ model Tissues
         annotation (Placement(transformation(extent={{-88,-26},{-78,-16}})));
     Physiolibrary.Types.Constants.DeprecatedUntypedConstant Constant12(k=1)
       annotation (Placement(transformation(extent={{-90,46},{-84,52}})));
-    Physiolibrary.Types.Constants.DeprecatedUntypedConstant Constant11(k=0)
-      annotation (Placement(transformation(extent={{-90,52},{-84,58}})));
     Physiolibrary.Types.Constants.DeprecatedUntypedConstant Constant1(k=1)
       annotation (Placement(transformation(extent={{-88,22},{-80,30}})));
-    Physiolibrary.Types.Constants.DeprecatedUntypedConstant Constant21(units=
-          "ml", k=31)
       annotation (Placement(transformation(extent={{-86,70},{-78,78}})));
     Physiolibrary.Types.Constants.DeprecatedUntypedConstant Constant2(k=1)
       annotation (Placement(transformation(extent={{-88,10},{-80,18}})));
@@ -50,24 +46,9 @@ equation
       string="%second",
       index=1,
       extent={{6,3},{6,3}}));
-  connect(Constant11.y, busConnector.ExcessLungWater_Volume)
-    annotation (Line(
-      points={{-83.25,55},{-33,55},{-33,-13}},
-      color={0,0,127},
-      smooth=Smooth.None), Text(
-      string="%second",
-      index=1,
-      extent={{6,3},{6,3}}));
   connect(Constant1.y, busConnector.Kidney_NephronCount_Total_xNormal)
     annotation (Line(
       points={{-79,26},{-34,26},{-34,-13},{-33,-13}},
-      color={0,0,127},
-      smooth=Smooth.None), Text(
-      string="%second",
-      index=1,
-      extent={{6,3},{6,3}}));
-  connect(Constant21.y, busConnector.Medulla_Volume)        annotation (Line(
-      points={{-77,74},{-34,74},{-34,-13},{-33,-13}},
       color={0,0,127},
       smooth=Smooth.None), Text(
       string="%second",

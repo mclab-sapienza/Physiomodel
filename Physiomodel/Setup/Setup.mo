@@ -18,8 +18,6 @@ model Setup
     annotation (Placement(transformation(extent={{-76,14},{-56,34}})));
     Drugs drugs
     annotation (Placement(transformation(extent={{-68,-58},{-48,-38}})));
-    Secretion secretion
-    annotation (Placement(transformation(extent={{-50,42},{-30,62}})));
     Anesthesia anesthesia
     annotation (Placement(transformation(extent={{-16,42},{4,62}})));
     Unpaired unpaired
@@ -57,11 +55,6 @@ equation
       smooth=Smooth.None));
   connect(drugs.busConnector, busConnector) annotation (Line(
       points={{-60,-48},{-66,-48},{-66,-14},{64,-14}},
-      color={0,0,255},
-      thickness=0.5,
-      smooth=Smooth.None));
-  connect(secretion.busConnector, busConnector) annotation (Line(
-      points={{-42,52},{-50,52},{-50,-14},{64,-14}},
       color={0,0,255},
       thickness=0.5,
       smooth=Smooth.None));
