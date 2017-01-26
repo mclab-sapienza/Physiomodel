@@ -279,14 +279,6 @@ equation
     points={{-11.6,-38},{-8,-38},{-8,-28},{-5,-28}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(core1.positiveHeatFlow, busConnector.coreHeat) annotation (Line(
-    points={{-25.8,-1.4},{-25.8,-6},{-58,-6},{-58,96},{-94,96}},
-    color={191,0,0},
-    thickness=1,
-    smooth=Smooth.None), Text(
-    string="%second",
-    index=1,
-    extent={{6,3},{6,3}}));
     connect(WindEffect.u, busConnector.WindSpeed) annotation (Line(
     points={{92,-38},{100,-38},{100,96},{-94,96}},
     color={0,0,127},
