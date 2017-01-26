@@ -20,7 +20,9 @@ model Enviroment
     Physiolibrary.Types.Constants.DeprecatedUntypedConstant AmbientTemperature(
         k=22.2)
       annotation (Placement(transformation(extent={{-84,20},{-78,26}})));
+    Physiolibrary.Types.RealTypes.Velocity Wind_MPH(varName="Wind.MPH",storeUnit="MPH", k=0);
 equation
+  connect(Wind_MPH.y, busConnector.WindSpeed);
   connect(busConnector.BarometerPressure,Constant77. y)
     annotation (Line(
       points={{-33,-13},{-33,79},{27.25,79}},
