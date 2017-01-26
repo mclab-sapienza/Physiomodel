@@ -16,8 +16,6 @@ model Exercise
       annotation (Placement(transformation(extent={{-96,-16},{-90,-10}})));
     Physiolibrary.Types.Constants.DeprecatedUntypedConstant const15(k=0.27)
       annotation (Placement(transformation(extent={{-96,-6},{-90,0}})));
-    Physiolibrary.Types.Constants.DeprecatedUntypedConstant const11(k=0)
-      annotation (Placement(transformation(extent={{-80,22},{-76,26}})));
     Physiolibrary.Types.Constants.DeprecatedUntypedConstant const2(k=0)
       annotation (Placement(transformation(extent={{-90,-64},{-84,-58}})));
 equation
@@ -66,23 +64,9 @@ equation
       string="%second",
       index=1,
       extent={{6,3},{6,3}}));
-  connect(const11.y, busConnector.HeatSweating_H2O) annotation (Line(
-      points={{-75.5,24},{-32.9,24},{-32.9,-13},{-33,-13}},
-      color={0,0,127},
-      smooth=Smooth.None), Text(
-      string="%second",
-      index=1,
-      extent={{6,3},{6,3}}));
   connect(const2.y, busConnector.ExerciseMetabolism_TotalWatts) annotation (
      Line(
       points={{-83.25,-61},{-48,-61},{-48,-13},{-33,-13}},
-      color={0,0,127},
-      smooth=Smooth.None), Text(
-      string="%second",
-      index=1,
-      extent={{6,3},{6,3}}));
-  connect(const11.y, busConnector.SweatDuct_H2OOutflow) annotation (Line(
-      points={{-75.5,24},{-33,24},{-33,-13}},
       color={0,0,127},
       smooth=Smooth.None), Text(
       string="%second",
