@@ -431,55 +431,6 @@ equation
     index=1,
     extent={{5,2},{5,2}}));
 
-    connect(bone.StructureEffect, busConnector.bone_StructureEffect) annotation (Line(
-    points={{-68,30},{-20,30},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(brain.StructureEffect, busConnector.brain_StructureEffect) annotation (Line(
-    points={{12,28},{-20,28},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(fat.StructureEffect, busConnector.fat_StructureEffect) annotation (Line(
-    points={{-68,-60},{-20,-60},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(GITract.StructureEffect, busConnector.GITract_StructureEffect) annotation (Line(
-    points={{12,-4},{-20,-4},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(kidney.StructureEffect, busConnector.kidney_StructureEffect) annotation (Line(
-    points={{12,-32},{-20,-32},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(leftHeart.StructureEffect, busConnector.leftHeart_StructureEffect) annotation (Line(
-    points={{12,-62},{-20,-62},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(liver.StructureEffect, busConnector.liver_StructureEffect) annotation (Line(
-    points={{12,62},{-20,62},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(otherTissue.StructureEffect, busConnector.otherTissue_StructureEffect) annotation (Line(
-    points={{-68,0},{-20,0},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(rightHeart.StructureEffect, busConnector.rightHeart_StructureEffect) annotation (Line(
-    points={{12,-92},{-20,-92},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(respiratoryMuscle.StructureEffect, busConnector.respiratoryMuscle_StructureEffect) annotation (Line(
-    points={{-68,-30},{-20,-30},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(skin.StructureEffect, busConnector.skin_StructureEffect) annotation (Line(
-    points={{-68,-90},{-20,-90},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(skeletalMuscle.StructureEffect, busConnector.skeletalMuscle_StructureEffect) annotation (Line(
-    points={{-68,62},{-20,62},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-
     connect(bone.StructureEffect, busConnector.Bone_StructureEffect) annotation (Line(
     points={{-68,30},{-20,30},{-20,92},{-88,92}},
     color={0,0,127},
@@ -570,55 +521,6 @@ equation
     color={0,0,127},
     smooth=Smooth.None));
     connect(skeletalMuscle.FunctionEffect, busConnector.skeletalMuscle_FunctionEffect) annotation (Line(
-    points={{-72,62},{-20,62},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-
-    connect(bone.FunctionEffect, busConnector.BoneFunctionEffect) annotation (Line(
-    points={{-72,30},{-20,30},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(brain.FunctionEffect, busConnector.BrainFunctionEffect) annotation (Line(
-    points={{8,28},{-20,28},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(fat.FunctionEffect, busConnector.FatFunctionEffect) annotation (Line(
-    points={{-72,-60},{-20,-60},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(GITract.FunctionEffect, busConnector.GITractFunctionEffect) annotation (Line(
-    points={{8,-4},{-20,-4},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(kidney.FunctionEffect, busConnector.KidneyFunctionEffect) annotation (Line(
-    points={{8,-32},{-20,-32},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(leftHeart.FunctionEffect, busConnector.LeftHeartFunctionEffect) annotation (Line(
-    points={{8,-62},{-20,-62},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(liver.FunctionEffect, busConnector.LiverFunctionEffect) annotation (Line(
-    points={{8,62},{-20,62},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(otherTissue.FunctionEffect, busConnector.OtherTissueFunctionEffect) annotation (Line(
-    points={{-72,0},{-20,0},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(rightHeart.FunctionEffect, busConnector.RightHeartFunctionEffect) annotation (Line(
-    points={{8,-92},{-20,-92},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(respiratoryMuscle.FunctionEffect, busConnector.RespiratoryMuscleFunctionEffect) annotation (Line(
-    points={{-72,-30},{-20,-30},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(skin.FunctionEffect, busConnector.SkinFunctionEffect) annotation (Line(
-    points={{-72,-90},{-20,-90},{-20,92},{-88,92}},
-    color={0,0,127},
-    smooth=Smooth.None));
-    connect(skeletalMuscle.FunctionEffect, busConnector.SkeletalMuscleFunctionEffect) annotation (Line(
     points={{-72,62},{-20,62},{-20,92},{-88,92}},
     color={0,0,127},
     smooth=Smooth.None));

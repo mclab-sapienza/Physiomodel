@@ -124,7 +124,7 @@ package IO_Bus
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(FatFunctionEffect.y, busConnector.FatFunctionEffect) annotation (Line(
+        connect(FatFunctionEffect.y, busConnector.fat_FunctionEffect) annotation (Line(
         points={{-29.7,43},{90,43},{90,-2}},
         color={0,0,127},
         smooth=Smooth.None), Text(
@@ -138,7 +138,7 @@ package IO_Bus
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(GITractFunctionEffect.y, busConnector.GITractFunctionEffect) annotation (Line(
+        connect(GITractFunctionEffect.y, busConnector.GITract_FunctionEffect) annotation (Line(
         points={{-29.7,63},{90,63},{90,-2}},
         color={0,0,127},
         smooth=Smooth.None), Text(
@@ -152,7 +152,7 @@ package IO_Bus
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(KidneyFunctionEffect.y, busConnector.KidneyFunctionEffect) annotation (Line(
+        connect(KidneyFunctionEffect.y, busConnector.kidney_FunctionEffect) annotation (Line(
         points={{-29.7,83},{90,83},{90,-2}},
         color={0,0,127},
         smooth=Smooth.None), Text(
@@ -173,7 +173,7 @@ package IO_Bus
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(LiverFunctionEffect.y, busConnector.LiverFunctionEffect) annotation (Line(
+        connect(LiverFunctionEffect.y, busConnector.liver_FunctionEffect) annotation (Line(
         points={{-29.7,123},{90,123},{90,-2}},
         color={0,0,127},
         smooth=Smooth.None), Text(
@@ -187,7 +187,7 @@ package IO_Bus
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(OtherTissueFunctionEffect.y, busConnector.OtherTissueFunctionEffect) annotation (Line(
+        connect(OtherTissueFunctionEffect.y, busConnector.otherTissue_FunctionEffect) annotation (Line(
         points={{-29.7,143},{90,143},{90,-2}},
         color={0,0,127},
         smooth=Smooth.None), Text(
@@ -201,7 +201,7 @@ package IO_Bus
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(RespiratoryMuscleFunctionEffect.y, busConnector.RespiratoryMuscleFunctionEffect) annotation (Line(
+        connect(RespiratoryMuscleFunctionEffect.y, busConnector.respiratoryMuscle_FunctionEffect) annotation (Line(
         points={{-29.7,163},{90,163},{90,-2}},
         color={0,0,127},
         smooth=Smooth.None), Text(

@@ -281,22 +281,22 @@ equation
     points={{54,-20},{50,-20}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(busConnector.LiverFunctionEffect, LiverFunctionEffect_Glycogenesis.u)
+    connect(busConnector.liver_FunctionEffect, LiverFunctionEffect_Glycogenesis.u)
     annotation (Line(
     points={{-98,96},{-6,96},{-6,82},{6,82}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(busConnector.LiverFunctionEffect,
+    connect(busConnector.liver_FunctionEffect,
     LiverFunctionEffect_Glycogenolysis.u) annotation (Line(
     points={{-98,96},{-5.9,96},{-5.9,30},{6,30}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(busConnector.LiverFunctionEffect,
+    connect(busConnector.liver_FunctionEffect,
     LiverFunctionEffect_AminoAcids2Glucose.u) annotation (Line(
     points={{-98,96},{-6,96},{-6,-10},{40,-10},{40,-16},{46,-16}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(busConnector.LiverFunctionEffect, LiverFunctionEffect_Glucose2FA.u)
+    connect(busConnector.liver_FunctionEffect, LiverFunctionEffect_Glucose2FA.u)
     annotation (Line(
     points={{-98,96},{-6,96},{-6,-16},{-22,-16}},
     color={0,0,127},
@@ -337,7 +337,7 @@ equation
     points={{-48,-64},{-48,-53},{-35.25,-53}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(busConnector.LiverFunctionEffect, LiverFunctionEffect_Ketogenesis.u)
+    connect(busConnector.liver_FunctionEffect, LiverFunctionEffect_Ketogenesis.u)
     annotation (Line(
     points={{-98,96},{-98,-74},{-56,-74}},
     color={0,0,255},
@@ -435,7 +435,7 @@ equation
     points={{54,-64},{50,-64}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(busConnector.LiverFunctionEffect, LiverFunctionEffect_AminoAcids2FA.u)
+    connect(busConnector.liver_FunctionEffect, LiverFunctionEffect_AminoAcids2FA.u)
     annotation (Line(
     points={{-98,96},{-98,100},{100,100},{100,-60},{62,-60}},
     color={0,0,127},
@@ -724,7 +724,7 @@ equation
     color={0,0,255},
     thickness=0.5,
     smooth=Smooth.None));
-    connect(busConnector.LiverFunctionEffect, LiverFunctionEffect_Glucose2FA1.u)
+    connect(busConnector.liver_FunctionEffect, LiverFunctionEffect_Glucose2FA1.u)
     annotation (Line(
     points={{-98,96},{-32,96},{-32,32},{-48,32}},
     color={0,0,127},

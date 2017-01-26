@@ -116,7 +116,7 @@ equation
       points={{-98,40},{-6,40},{-6,14},{14,14}},
       color={0,0,127},
       smooth=Smooth.None));
-    connect(busConnector.GITractFunctionEffect, FunctionEffect.u) annotation (Line(
+    connect(busConnector.GITract_FunctionEffect, FunctionEffect.u) annotation (Line(
       points={{-98,40},{-5.9,40},{-5.9,6},{14,6}},
       color={0,0,127},
       smooth=Smooth.None));

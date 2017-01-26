@@ -144,7 +144,7 @@ equation
     connect(CarotidSinusHeight.y, busConnector.CarotidSinusHeight);
     connect(LowerTorsoVeinHeight.y, busConnector.LowerTorsoVeinHeight);
     connect(LowerTorsoArtyHeight.y,busConnector. LowerTorsoArtyHeight);
-    connect(KidneyFunctionEffect.y, busConnector.KidneyFunctionEffect);
+    connect(KidneyFunctionEffect.y, busConnector.kidney_FunctionEffect);
     connect(KidneyO2_TubulePO2.y, busConnector.KidneyO2_TubulePO2);
     connect(Kidney_NephronCount_Total_xNormal.y,busConnector.Kidney_NephronCount_Total_xNormal);
     connect(Kidney_Alpha_NA.y, busConnector.Kidney_Alpha_NA);

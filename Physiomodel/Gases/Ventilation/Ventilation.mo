@@ -42,7 +42,7 @@ within Physiomodel.Gases.Ventilation;
                     string="%second",
                     index=1,
                     extent={{6,3},{6,3}}));
-                connect(naturalVentilation.RespiratoryMuscleFunctionEffect,busConnector. RespiratoryMuscleFunctionEffect)
+                connect(naturalVentilation.RespiratoryMuscleFunctionEffect,busConnector. respiratoryMuscle_FunctionEffect)
                   annotation (Line(
                     points={{44.6,16},{76,16},{76,-20}},
                     color={0,0,127},

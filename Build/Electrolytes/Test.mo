@@ -158,7 +158,7 @@ package Inputs
     connect(Medulla_Volume.y, busConnector.Medulla_Volume);
     connect(LH_H2O_Outflow.y, busConnector.LH_H2O_Outflow);
     connect(KidneyAlpha_PT_NA.y, busConnector.KidneyAlpha_PT_NA);
-    connect(KidneyFunctionEffect.y, busConnector.KidneyFunctionEffect);
+    connect(KidneyFunctionEffect.y, busConnector.kidney_FunctionEffect);
     connect(skeletalMuscle_GlucoseToCellStorageFlow.y, busConnector.skeletalMuscle_GlucoseToCellStorageFlow);
     connect(liver_GlucoseToCellStorageFlow.y, busConnector.liver_GlucoseToCellStorageFlow);
     connect(respiratoryMuscle_GlucoseToCellStorageFlow.y, busConnector.respiratoryMuscle_GlucoseToCellStorageFlow);

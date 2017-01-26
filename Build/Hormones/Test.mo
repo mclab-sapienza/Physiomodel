@@ -19,9 +19,9 @@ package Inputs
         connect(ECFV_Vol.y, busConnector.ECFV_Vol);
 		connect(BodyH2O_Vol.y, busConnector.BodyH2O_Vol);
 		connect(Liver_BloodFlow.y, busConnector.Liver_BloodFlow);
-		connect(OtherTissueFunctionEffect.y, busConnector.OtherTissueFunctionEffect);		
+		connect(OtherTissueFunctionEffect.y, busConnector.otherTissue_FunctionEffect);		
 		connect(KPool_per_liter.y, busConnector.KPool);
-		connect(KidneyFunctionEffect.y, busConnector.KidneyFunctionEffect);	
+		connect(KidneyFunctionEffect.y, busConnector.kidney_FunctionEffect);	
 		connect(FurosemidePool_Loss.y, busConnector.FurosemidePool_Loss);
 		connect(MD_Na.y, busConnector.MD_Na);
 		connect(ANPPool_ANP.y,busConnector.ANP);

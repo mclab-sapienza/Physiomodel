@@ -81,7 +81,7 @@ equation
     points={{34,60},{34,58}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(KidneyFunction.u, busConnector. KidneyFunctionEffect) annotation (Line(
+    connect(KidneyFunction.u, busConnector. kidney_FunctionEffect) annotation (Line(
     points={{42,64},{98,64},{98,94},{-88,94}},
     color={0,0,127},
     smooth=Smooth.None), Text(

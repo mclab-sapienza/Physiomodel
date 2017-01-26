@@ -55,7 +55,7 @@ equation
       color={200,0,0},
       thickness=1,
       smooth=Smooth.None));
-    connect(busConnector.FatFunctionEffect, FunctionEffect.u) annotation (Line(
+    connect(busConnector.fat_FunctionEffect, FunctionEffect.u) annotation (Line(
       points={{-88,78},{12.1,78},{12.1,6},{60,6}},
       color={0,0,127},
       smooth=Smooth.None), Text(

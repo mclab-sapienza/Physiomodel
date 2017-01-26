@@ -183,7 +183,7 @@ equation
     points={{8.75,37},{22,37},{22,34}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(A2Effect.yBase, busConnector. KidneyFunctionEffect) annotation (Line(
+    connect(A2Effect.yBase, busConnector. kidney_FunctionEffect) annotation (Line(
     points={{24,68},{24,92},{-92,92}},
     color={0,0,127},
     smooth=Smooth.None), Text(
@@ -268,14 +268,14 @@ equation
     points={{74,68},{74,66}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(busConnector.KidneyFunctionEffect, Furosemide.yBase) annotation (Line(
+    connect(busConnector.kidney_FunctionEffect, Furosemide.yBase) annotation (Line(
     points={{-92,92},{74,92},{74,74}},
     color={0,0,127},
     smooth=Smooth.None), Text(
     string="%first",
     index=-1,
     extent={{-6,3},{-6,3}}));
-    connect(FurosemideEffect.yBase, busConnector. KidneyFunctionEffect) annotation (Line(
+    connect(FurosemideEffect.yBase, busConnector. kidney_FunctionEffect) annotation (Line(
     points={{86,60},{86,92},{-92,92}},
     color={0,0,127},
     smooth=Smooth.None), Text(
@@ -339,7 +339,7 @@ equation
     points={{12,-44},{12,-46}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(ANPEffect2.yBase, busConnector. KidneyFunctionEffect) annotation (Line(
+    connect(ANPEffect2.yBase, busConnector. kidney_FunctionEffect) annotation (Line(
     points={{12,-38},{12,-36},{48,-36},{48,92},{-92,92}},
     color={0,0,127},
     smooth=Smooth.None), Text(
@@ -434,7 +434,7 @@ equation
     string="%second",
     index=1,
     extent={{6,3},{6,3}}));
-    connect(busConnector.KidneyFunctionEffect, AldoEffect1.yBase) annotation (
+    connect(busConnector.kidney_FunctionEffect, AldoEffect1.yBase) annotation (
     Line(
     points={{-92,92},{48,92},{48,-26},{64,-26}},
     color={0,0,255},

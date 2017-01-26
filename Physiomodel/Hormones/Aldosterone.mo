@@ -96,7 +96,7 @@ equation
     points={{-34,-26},{-34,-49},{-6.6,-49}},
     color={0,0,127},
     smooth=Smooth.None));
-    connect(FunctionEffect.u, busConnector. OtherTissueFunctionEffect) annotation (Line(
+    connect(FunctionEffect.u, busConnector. otherTissue_FunctionEffect) annotation (Line(
       points={{48,18},{12,18},{12,90},{-90,90}},
       color={0,0,127},
       smooth=Smooth.None), Text(

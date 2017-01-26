@@ -66,7 +66,7 @@ equation
         string="%first",
         index=-1,
         extent={{-6,3},{-6,3}}));
-    connect(busConnector.OtherTissueFunctionEffect, epinephrine.OtherTissueFunctionEffect)
+    connect(busConnector.otherTissue_FunctionEffect, epinephrine.OtherTissueFunctionEffect)
       annotation (Line(
         points={{-78,88},{-78,61},{-29,61}},
         color={0,0,255},
@@ -75,7 +75,7 @@ equation
         string="%first",
         index=-1,
         extent={{-6,3},{-6,3}}));
-    connect(busConnector.OtherTissueFunctionEffect, norepinephrine.OtherTissueFunctionEffect)
+    connect(busConnector.otherTissue_FunctionEffect, norepinephrine.OtherTissueFunctionEffect)
       annotation (Line(
         points={{-78,88},{-78,21},{-29,21}},
         color={0,0,255},

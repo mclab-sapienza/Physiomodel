@@ -234,7 +234,7 @@ equation
     string="%second",
     index=1,
     extent={{6,3},{6,3}}));
-    connect(KidneyFunction_Effect.y, busConnector.KidneyFunctionEffect) annotation (Line(
+    connect(KidneyFunction_Effect.y, busConnector.kidney_FunctionEffect) annotation (Line(
     points={{-23.7,29},{29,29},{29,-3}},
     color={0,0,127},
     smooth=Smooth.None), Text(

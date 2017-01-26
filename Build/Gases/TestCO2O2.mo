@@ -123,7 +123,7 @@ equation
     connect(brain_pH_intracellular.y, busConnector.brain_pH_intracellular);
     connect(ExcessLungWater_Volume.y, busConnector.ExcessLungWater_Volume);
     connect(Thorax_LungInflation.y,busConnector.Thorax_LungInflation);
-    connect(RespiratoryMuscleFunctionEffect.y, busConnector.RespiratoryMuscleFunctionEffect);
+    connect(RespiratoryMuscleFunctionEffect.y, busConnector.respiratoryMuscle_FunctionEffect);
     connect(brain_FunctionEffect.y, busConnector.brain_FunctionEffect);
     connect( Exercise_Metabolism_MotionWatts.y,busConnector. Exercise_Metabolism_MotionWatts);
     connect(BarometerPressure.y, busConnector.BarometerPressure);
