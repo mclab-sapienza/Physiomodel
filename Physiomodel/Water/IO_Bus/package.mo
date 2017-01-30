@@ -130,8 +130,6 @@ package IO_Bus
             annotation (Placement(transformation(extent={{88,-28},{94,-22}})));
             T.Volume PlasmaVol(varName="PlasmaVol.Vol") "Plasma volume."
             annotation (Placement(transformation(extent={{88,-18},{94,-12}})));
-            T.Volume PlasmaVol_Vol(varName="PlasmaVol.Vol") "Plasma volume."
-            annotation (Placement(transformation(extent={{88,-8},{94,-2}})));
             T.Volume respiratoryMuscle_InterstitialWater(varName="RespiratoryMuscle-Size.IFV")
             "RespiratoryMuscle interstitial water volume."
             annotation (Placement(transformation(extent={{88,2},{94,8}})));
@@ -434,13 +432,6 @@ package IO_Bus
                 extent={{6,3},{6,3}}));
             connect(PlasmaVol.y, busConnector.PlasmaVol) annotation (Line(
             points={{94.3,-15},{90,-15},{90,-2}},
-                color={0,0,127},
-                smooth=Smooth.None), Text(
-                string="%second",
-                index=1,
-                extent={{6,3},{6,3}}));
-            connect(PlasmaVol_Vol.y, busConnector.PlasmaVol_Vol) annotation (Line(
-            points={{94.3,-5},{90,-5},{90,-2}},
                 color={0,0,127},
                 smooth=Smooth.None), Text(
                 string="%second",

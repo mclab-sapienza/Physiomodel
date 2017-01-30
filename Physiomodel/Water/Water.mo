@@ -171,10 +171,6 @@ within Physiomodel.Water;
         points={{-11,-5},{-89,-5},{-89,90}},
         color={0,0,127},
         smooth=Smooth.None));
-        connect(plasma.volume, busConnector.PlasmaVol_Vol) annotation (Line(
-        points={{-11,-5},{-89,-5},{-89,90}},
-        color={0,0,127},
-        smooth=Smooth.None));
         connect(busConnector, waterProperties.busConnector) annotation (Line(
           points={{-89,90},{-89,-70.9},{-79.9,-70.9}},
           color={0,0,255},

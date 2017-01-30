@@ -25,7 +25,7 @@ package Inputs
     T.Pressure KidneyO2_TubulePO2(varName="Kidney-O2.TubulePO2", k=4666);
     T.Fraction Kidney_NephronCount_Total_xNormal(varName="Kidney-NephronCount.Total(xNormal)", k=1);
     T.Fraction KidneyFunctionEffect(varName="Kidney-Function.Effect", k=1);
-    T.Volume PlasmaVol_Vol(varName="PlasmaVol.Vol", k=0.00302);
+    T.Volume PlasmaVol(varName="PlasmaVol.Vol", k=0.00302);
     T.Position CarotidSinusHeight(varName="Hydrostatics.CarotidCM", k=0);
     T.Position LowerTorsoVeinHeight(varName="Hydrostatics.LowerTorsoCM", k=0);
     T.Position LowerTorsoArtyHeight(varName="Hydrostatics.LowerTorsoCM", k=0);
@@ -148,7 +148,7 @@ equation
     connect(KidneyO2_TubulePO2.y, busConnector.KidneyO2_TubulePO2);
     connect(Kidney_NephronCount_Total_xNormal.y,busConnector.Kidney_NephronCount_Total_xNormal);
     connect(Kidney_Alpha_NA.y, busConnector.Kidney_Alpha_NA);
-    connect(PlasmaVol_Vol.y, busConnector.PlasmaVol_Vol);
+    connect(PlasmaVol.y, busConnector.PlasmaVol);
   end Variables;
 end Inputs;
 

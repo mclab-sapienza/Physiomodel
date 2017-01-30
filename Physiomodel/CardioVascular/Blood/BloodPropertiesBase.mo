@@ -54,7 +54,7 @@ model BloodPropertiesBase
     Modelica.Blocks.Math.Sum ArtysVol(nin=4) "volume of oxygenated blood"
       annotation (Placement(transformation(extent={{-26,-34},{-18,-26}})));
 equation
-        connect(busConnector.PlasmaVol_Vol, BloodVolume.u2)
+        connect(busConnector.PlasmaVol, BloodVolume.u2)
                                                     annotation (Line(
             points={{-94,68},{-94,-68.4},{9.2,-68.4}},
             color={0,0,127},
