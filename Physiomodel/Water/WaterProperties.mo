@@ -77,15 +77,15 @@ within Physiomodel.Water;
           points={{-34,7.6},{-34,28},{-29.2,28}},
           color={0,0,127},
           smooth=Smooth.None));
-        connect(CellH2O.y[1], busConnector.UT_Cell_H2O)  annotation (Line(
+        connect(CellH2O.y[1], busConnector.WaterProperties_UT_Cell_H2O)  annotation (Line(
           points={{-15.4,27.6},{-12,24},{-6,24},{-6,40}},
           color={0,0,127},
           smooth=Smooth.None));
-        connect(CellH2O.y[2], busConnector.MT_Cell_H2O)  annotation (Line(
+        connect(CellH2O.y[2], busConnector.WaterProperties_MT_Cell_H2O)  annotation (Line(
           points={{-15.4,28},{-6,28},{-6,40}},
           color={0,0,127},
           smooth=Smooth.None));
-        connect(CellH2O.y[3], busConnector.LT_Cell_H2O)  annotation (Line(
+        connect(CellH2O.y[3], busConnector.WaterProperties_LT_Cell_H2O)  annotation (Line(
           points={{-15.4,28.4},{-12,32},{-6,32},{-6,40}},
           color={0,0,127},
           smooth=Smooth.None));
