@@ -99,7 +99,37 @@ within Physiomodel.Water;
         annotation (Placement(transformation(extent={{-52,20},{-32,40}})));
         QHP.Water.WaterCompartments.LungEdema_const lungEdema_const
         annotation (Placement(transformation(extent={{72,14},{92,34}})));
+        
+        Physiolibrary.Types.TorsoBusConnector LT;
+        Physiolibrary.Types.TorsoBusConnector MT;
+        Physiolibrary.Types.TorsoBusConnector UT;
     equation
+        connect(LT.Sweat_H2OOutflow, busConnector.LT_Sweat_H2OOutflow);
+        connect(MT.Sweat_H2OOutflow, busConnector.MT_Sweat_H2OOutflow);
+        connect(UT.Sweat_H2OOutflow, busConnector.UT_Sweat_H2OOutflow);
+        connect(LT.InsensibleSkin_H2O, busConnector.LT_InsensibleSkin_H2O);
+        connect(MT.InsensibleSkin_H2O, busConnector.MT_InsensibleSkin_H2O);
+        connect(UT.InsensibleSkin_H2O, busConnector.UT_InsensibleSkin_H2O);
+        connect(LT.InterstitialWater_Vol, busConnector.LT_InterstitialWater_Vol);
+        connect(MT.InterstitialWater_Vol, busConnector.MT_InterstitialWater_Vol);
+        connect(UT.InterstitialWater_Vol, busConnector.UT_InterstitialWater_Vol);
+        connect(LT.InterstitialProtein_Mass, busConnector.LT_InterstitialProtein_Mass);
+        connect(MT.InterstitialProtein_Mass, busConnector.MT_InterstitialProtein_Mass);
+        connect(UT.InterstitialProtein_Mass, busConnector.UT_InterstitialProtein_Mass);
+        connect(LT.LymphFlow, busConnector.LT_LymphFlow);
+        connect(MT.LymphFlow, busConnector.MT_LymphFlow);
+        connect(UT.LymphFlow, busConnector.UT_LymphFlow);
+        connect(LT.CapillaryRegionalPressure, busConnector.LT_CapillaryRegionalPressure);
+        connect(MT.CapillaryRegionalPressure, busConnector.MT_CapillaryRegionalPressure);
+        connect(UT.CapillaryRegionalPressure, busConnector.UT_CapillaryRegionalPressure);
+        connect(LT.Cell_H2O, busConnector.LT_Cell_H2O);
+        connect(MT.Cell_H2O, busConnector.MT_Cell_H2O);
+        connect(UT.Cell_H2O, busConnector.UT_Cell_H2O);
+        connect(LT.InterstitialOsmoles, busConnector.LT_InterstitialOsmoles);
+        connect(MT.InterstitialOsmoles, busConnector.MT_InterstitialOsmoles);
+        connect(UT.InterstitialOsmoles, busConnector.UT_InterstitialOsmoles);
+
+
         //   changePerMin = waterProperties.BodyH2O_Change.y;
         //   stateValue = bodyH2O;
 
@@ -176,7 +206,7 @@ within Physiomodel.Water;
           color={0,0,255},
           thickness=0.5,
           smooth=Smooth.None));
-        connect(UpperTorso.torsoSpecific, busConnector.UT) annotation (Line(
+        connect(UpperTorso.torsoSpecific, UT) annotation (Line(
         points={{35,-19},{65,-19},{65,90},{-89,90}},
         color={170,255,255},
         thickness=0.5,
@@ -189,7 +219,7 @@ within Physiomodel.Water;
         color={0,0,255},
         thickness=0.5,
         smooth=Smooth.None));
-        connect(MiddleTorso.torsoSpecific, busConnector.MT) annotation (Line(
+        connect(MiddleTorso.torsoSpecific, MT) annotation (Line(
         points={{36,-50},{65,-50},{65,90},{-89,90}},
         color={170,255,255},
         thickness=0.5,
@@ -197,7 +227,7 @@ within Physiomodel.Water;
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-        connect(LowerTorso.torsoSpecific, busConnector.LT) annotation (Line(
+        connect(LowerTorso.torsoSpecific, LT) annotation (Line(
         points={{35,-78},{65,-78},{65,90},{-89,90}},
         color={170,255,255},
         thickness=0.5,
