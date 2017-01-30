@@ -30,14 +30,6 @@ equation
     string="%first",
     index=-1,
     extent={{-6,3},{-6,3}}));
-    connect(flowMeasure.volumeFlowRate, busConnector.BladerVoidFlow)
-    annotation (Line(
-      points={{-32,6},{22,6},{22,79},{-90,79}},
-      color={0,0,127},
-      smooth=Smooth.None), Text(
-      string="%second",
-      index=1,
-      extent={{6,3},{6,3}}));
     connect(con, bladder.q_in[1]) annotation (Line(
       points={{-64,38},{-16,38}},
       color={127,127,0},
