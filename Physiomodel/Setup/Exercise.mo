@@ -12,13 +12,17 @@ model Exercise
       annotation (Placement(transformation(extent={{-90,-48},{-84,-42}})));
     Physiolibrary.Types.Constants.DeprecatedUntypedConstant const19(k=1)
       annotation (Placement(transformation(extent={{-90,-36},{-84,-30}})));
-    Physiolibrary.Types.Constants.DeprecatedUntypedConstant const14(k=0.37)
-      annotation (Placement(transformation(extent={{-96,-16},{-90,-10}})));
-    Physiolibrary.Types.Constants.DeprecatedUntypedConstant const15(k=0.27)
-      annotation (Placement(transformation(extent={{-96,-6},{-90,0}})));
     Physiolibrary.Types.Constants.DeprecatedUntypedConstant const2(k=0)
       annotation (Placement(transformation(extent={{-90,-64},{-84,-58}})));
+    Physiolibrary.Types.Constants.DeprecatedUntypedConstant GILumenVomitus_H2OTarget(k=0);
+    Physiolibrary.Types.Constants.DeprecatedUntypedConstant GILumenDiarrhea_H2OTarget(k=0);
+    Physiolibrary.Types.Constants.DeprecatedUntypedConstant GILumenFiber(k=0.043);
+    Physiolibrary.Types.Constants.DeprecatedUntypedConstant DialyzerActivity_UltrafiltrationRate(k=0);
 equation
+  connect(GILumenVomitus_H2OTarget.y, busConnector.GILumenVomitus_H2OTarget);
+  connect(GILumenDiarrhea_H2OTarget.y, busConnector.GILumenDiarrhea_H2OTarget);
+  connect(GILumenFiber.y, busConnector.GILumenFiber_Mass);
+  connect(DialyzerActivity_UltrafiltrationRate.y, busConnector.DialyzerActivity_UltrafiltrationRate);
   connect(const7.y,busConnector. Exercise_MusclePump_Effect) annotation (
       Line(
       points={{-83.25,-85},{-48,-85},{-48,-13},{-33,-13}},
@@ -45,20 +49,6 @@ equation
       extent={{6,3},{6,3}}));
   connect(const19.y, busConnector.LegMusclePump_Effect) annotation (Line(
       points={{-83.25,-33},{-47.85,-33},{-47.85,-13},{-33,-13}},
-      color={0,0,127},
-      smooth=Smooth.None), Text(
-      string="%second",
-      index=1,
-      extent={{6,3},{6,3}}));
-  connect(const14.y, busConnector.HeatInsensibleSkin_H2O)  annotation (Line(
-      points={{-89.25,-13},{-33,-13}},
-      color={0,0,127},
-      smooth=Smooth.None), Text(
-      string="%second",
-      index=1,
-      extent={{6,3},{6,3}}));
-  connect(const15.y, busConnector.HeatInsensibleLung_H2O)  annotation (Line(
-      points={{-89.25,-3},{-48.9,-3},{-48.9,-13},{-33,-13}},
       color={0,0,127},
       smooth=Smooth.None), Text(
       string="%second",

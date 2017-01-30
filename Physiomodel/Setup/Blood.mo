@@ -49,7 +49,7 @@ within Physiomodel.Setup;
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-    connect(const22.y, busConnector.Transfusion_PlasmaRate)
+    connect(const22.y, busConnector.Transfusion_H2ORate)
                                                            annotation (Line(
         points={{-85.5,-22},{-33,-22},{-33,-13}},
         color={0,0,127},
@@ -57,7 +57,7 @@ within Physiomodel.Setup;
         string="%second",
         index=1,
         extent={{6,3},{6,3}}));
-    connect(const16.y, busConnector.Hemorrhage_PlasmaRate)
+    connect(const16.y, busConnector.Hemorrhage_H2ORate)
                                                           annotation (Line(
         points={{-85.5,-60},{-33,-60},{-33,-13}},
         color={0,0,127},

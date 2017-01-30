@@ -14,14 +14,15 @@ model Enviroment
       annotation (Placement(transformation(extent={{76,90},{68,98}})));
     Physiolibrary.Types.Constants.DeprecatedUntypedConstant Gravity_Gz(k=1)
       annotation (Placement(transformation(extent={{14,28},{8,34}})));
-    Physiolibrary.Types.Constants.FractionConst EnvironmentRelativeHumidity(k=
-          0.7000000000000001)
+    Physiolibrary.Types.Constants.FractionConst EnvironmentRelativeHumidity(k=0.7000000000000001);
+    Physiolibrary.Types.Constants.FractionConst EnvironmentRelativeHumidity_VaporPressure(k=0.7000000000000001);
       annotation (Placement(transformation(extent={{-84,12},{-78,18}})));
     Physiolibrary.Types.Constants.DeprecatedUntypedConstant AmbientTemperature(
         k=22.2)
       annotation (Placement(transformation(extent={{-84,20},{-78,26}})));
     Physiolibrary.Types.RealTypes.Velocity Wind_MPH(varName="Wind.MPH",storeUnit="MPH", k=0);
 equation
+  connect(EnvironmentRelativeHumidity_VaporPressure.y, busConnector.EnviromentRelativeHumidity_VaporPressure);
   connect(Wind_MPH.y, busConnector.WindSpeed);
   connect(busConnector.BarometerPressure,Constant77. y)
     annotation (Line(
