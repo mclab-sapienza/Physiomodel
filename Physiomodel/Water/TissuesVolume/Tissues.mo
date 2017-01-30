@@ -235,30 +235,6 @@ equation
         index=-1,
         extent={{-5,2},{-5,2}}));
 
-    connect(bone.LiquidVol, busConnector.bone_LiquidVol)       annotation (
-       Line(
-        points={{-34,54},{6,54},{6,92},{-88,92}},
-        color={0,127,0},
-        smooth=Smooth.None), Text(
-        string="%second",
-        index=1,
-        extent={{5,2},{5,2}}));
-    connect(brain.LiquidVol, busConnector.brain_LiquidVol)
-      annotation (Line(
-        points={{72,46},{98,46},{98,92},{-88,92}},
-        color={0,127,0},
-        smooth=Smooth.None), Text(
-        string="%second",
-        index=1,
-        extent={{5,2},{5,2}}));
-    connect(fat.LiquidVol, busConnector.fat_LiquidVol)     annotation (
-        Line(
-        points={{-34,-36},{6,-36},{6,92},{-88,92}},
-        color={0,127,0},
-        smooth=Smooth.None), Text(
-        string="%second",
-        index=1,
-        extent={{5,2},{5,2}}));
     connect(gITract.LiquidVol, busConnector.GITract_LiquidVol)
       annotation (Line(
         points={{72,16},{98,16},{98,92},{-88,92}},
@@ -267,71 +243,6 @@ equation
         string="%second",
         index=1,
         extent={{5,2},{5,2}}));
-    connect(kidney.LiquidVol, busConnector.kidney_LiquidVol)
-      annotation (Line(
-        points={{72,-16},{98,-16},{98,92},{-88,92}},
-        color={0,127,0},
-        smooth=Smooth.None), Text(
-        string="%second",
-        index=1,
-        extent={{5,2},{5,2}}));
-    connect(leftHeart.LiquidVol, busConnector.leftHeart_LiquidVol)
-      annotation (Line(
-        points={{72,-44},{98,-44},{98,92},{-88,92}},
-        color={0,127,0},
-        smooth=Smooth.None), Text(
-        string="%second",
-        index=1,
-        extent={{5,2},{5,2}}));
-    connect(liver.LiquidVol, busConnector.liver_LiquidVol)
-      annotation (Line(
-        points={{72,76},{98,76},{98,92},{-88,92}},
-        color={0,127,0},
-        smooth=Smooth.None), Text(
-        string="%second",
-        index=1,
-        extent={{5,2},{5,2}}));
-    connect(otherTissue.LiquidVol, busConnector.otherTissue_LiquidVol)
-      annotation (Line(
-        points={{-34,26},{6,26},{6,92},{-88,92}},
-        color={0,127,0},
-        smooth=Smooth.None), Text(
-        string="%second",
-        index=1,
-        extent={{5,2},{5,2}}));
-    connect(respiratoryMuscle.LiquidVol, busConnector.respiratoryMuscle_LiquidVol)
-      annotation (Line(
-        points={{-34,-6},{6,-6},{6,92},{-88,92}},
-        color={0,127,0},
-        smooth=Smooth.None), Text(
-        string="%second",
-        index=1,
-        extent={{5,2},{5,2}}));
-    connect(rightHeart.LiquidVol, busConnector.rightHeart_LiquidVol)
-      annotation (Line(
-        points={{72,-74},{98,-74},{98,92},{-88,92}},
-        color={0,127,0},
-        smooth=Smooth.None), Text(
-        string="%second",
-        index=1,
-        extent={{5,2},{5,2}}));
-    connect(skin.LiquidVol, busConnector.skin_LiquidVol)     annotation (
-       Line(
-        points={{-34,-66},{6,-66},{6,92},{-88,92}},
-        color={0,127,0},
-        smooth=Smooth.None), Text(
-        string="%second",
-        index=1,
-        extent={{5,2},{5,2}}));
-    connect(skeletalMuscle.LiquidVol, busConnector.skeletalMuscle_LiquidVol)
-      annotation (Line(
-        points={{-34,80},{5.5,80},{5.5,92},{-88,92}},
-        color={127,0,0},
-        smooth=Smooth.None), Text(
-        string="%second",
-        index=1,
-        extent={{5,2},{5,2}}));
-
     connect(bone.LiquidVol, busConnector.Bone_LiquidVol)       annotation (
        Line(
         points={{-34,54},{6,54},{6,92},{-88,92}},
