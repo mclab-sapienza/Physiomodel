@@ -62,22 +62,22 @@ package Inputs
     T.MolarFlowRate PT_Na_Reab(varName="PT_Na.Reab", k=0.000170592);
     T.MolarFlowRate LH_Na_Reab(varName="LH_Na.Reab", k=9.09167e-005);
     T.MolarFlowRate DT_Na_Reab(varName="DT_Na.Reab", k=2.28508e-005);
-    T.pH BloodPh_ArtysPh(varName="BloodPh.ArtysPh");
+    T.pH BloodPh_ArtysPh(varName="BloodPh.ArtysPh", k=7.4);
     T.VolumeDensityOfCharge BloodCations(varName="BloodIons.Cations", k=1.42544e+007);
     T.VolumeDensityOfCharge BloodIons_ProteinAnions(varName="BloodIons.Protein", k=1.45534e+006);
     //Gases
-    T.Pressure Bone_PO2(varName="Bone-Flow.PO2");
-    T.Pressure Brain_PO2(varName="Brain-Flow.PO2");
-    T.Pressure Fat_PO2(varName="Fat-Flow.PO2");
-    T.Pressure GITract_PO2(varName="GITract-Flow.PO2");
-    T.Pressure Kidney_PO2(varName="Kidney-O2.VeinPO2");
-    T.Pressure LeftHeart_PO2(varName="LeftHeart-Flow.PO2");
-    T.Pressure Liver_PO2(varName="Liver-O2.PO2");
-    T.Pressure OtherTissue_PO2(varName="OtherTissue-Flow.PO2");
-    T.Pressure RespiratoryMuscle_PO2(varName="RespiratoryMuscle-Flow.PO2");
-    T.Pressure RightHeart_PO2(varName="RightHeart-Flow.PO2");
-    T.Pressure SkeletalMuscle_PO2(varName="SkeletalMuscle-Flow.PO2");
-    T.Pressure Skin_PO2(varName="Skin-Flow.PO2");
+    T.Pressure Bone_PO2(varName="Bone-Flow.PO2", k=5638.7);
+    T.Pressure Brain_PO2(varName="Brain-Flow.PO2", k=5382.22);
+    T.Pressure Fat_PO2(varName="Fat-Flow.PO2", k=7093.14);
+    T.Pressure GITract_PO2(varName="GITract-Flow.PO2", k=7846.7);
+    T.Pressure Kidney_PO2(varName="Kidney-O2.VeinPO2", k=8238.14);
+    T.Pressure LeftHeart_PO2(varName="LeftHeart-Flow.PO2", k=2305.94);
+    T.Pressure Liver_PO2(varName="Liver-O2.PO2", k=5930.58);
+    T.Pressure OtherTissue_PO2(varName="OtherTissue-Flow.PO2", k=7585.98);
+    T.Pressure RespiratoryMuscle_PO2(varName="RespiratoryMuscle-Flow.PO2", k=4918.8);
+    T.Pressure RightHeart_PO2(varName="RightHeart-Flow.PO2", k=2230.54);
+    T.Pressure SkeletalMuscle_PO2(varName="SkeletalMuscle-Flow.PO2", k=5559.06);
+    T.Pressure Skin_PO2(varName="Skin-Flow.PO2", k=5792.86);
     //Heat
     T.Temperature bone_T(varName="HeatCore.Temp(C)", k=310.15);
     T.Temperature brain_T(varName="HeatCore.Temp(C)", k=310.15);
@@ -94,8 +94,8 @@ package Inputs
     T.Fraction hypothalamusShivering_NerveActivity(varName="HypothalamusShivering.NerveActivity", storeUnit="1", k=0);
     T.Temperature HeatCore_Temp(varName="HeatCore.Temp(C)", k=310.15);
     //Hormones
-    T.Concentration Epinephrine(varName="EpiPool.[Epi(nMol/L)]", storeUnit="nmol/l");
-    T.Concentration PortalVein_Insulin(varName="PortalVein-Insulin.[Insulin]", storeUnit="uiu/ml");
+    T.Concentration Epinephrine(varName="EpiPool.[Epi(nMol/L)]", storeUnit="namol/l", k=0.217392641398325e-6);
+    T.Concentration PortalVein_Insulin(varName="PortalVein-Insulin.[Insulin]", storeUnit="uiu/ml", k=52.444538843581);
   equation
     //Water
     connect(Brain_LiquidVol.y, busConnector.Brain_LiquidVol);
