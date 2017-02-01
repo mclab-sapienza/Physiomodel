@@ -95,7 +95,6 @@ package Inputs
     T.Temperature HeatCore_Temp(varName="HeatCore.Temp(C)", k=310.15);
     //Hormones
     T.Concentration Epinephrine(varName="EpiPool.[Epi(nMol/L)]", storeUnit="namol/l", k=0.217392641398325e-6);
-    T.Concentration PortalVein_Insulin(varName="PortalVein-Insulin.[Insulin]", storeUnit="uiu/ml", k=52.444538843581);
   equation
     //Water
     connect(Brain_LiquidVol.y, busConnector.Brain_LiquidVol);
@@ -149,7 +148,7 @@ package Inputs
     connect(OtherTissue_StructureEffect.y, busConnector.OtherTissue_StructureEffect);
     connect(Kidney_StructureEffect.y, busConnector.Kidney_StructureEffect);
     connect(Skin_StructureEffect.y, busConnector.Skin_StructureEffect);
-    connect(ExerciseMetabolism_MotionWatts.y, busConnector.Exercise_Metabolism_MotionWatts);
+    connect(ExerciseMetabolism_MotionWatts.y, busConnector.ExerciseMetabolism_MotionWatts);
     connect(LiverFunctionEffect.y, busConnector.liver_FunctionEffect);
     connect(GITractFunctionEffect.y, busConnector.GITract_FunctionEffect);
     connect(brain_FunctionEffect.y, busConnector.brain_FunctionEffect);
@@ -191,7 +190,6 @@ package Inputs
     connect(HeatCore_Temp.y, busConnector.HeatCore_Temp);
     //Hormones
     connect(Epinephrine.y, busConnector.Epinephrine);
-    connect(PortalVein_Insulin.y, busConnector.PortalVein_Insulin);
   end Variables;
 end Inputs;
 
