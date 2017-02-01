@@ -411,7 +411,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             index=-1,
             extent={{-5,0},{-5,0}}));
 
-            connect(busConnector.LeftHeart_BloodFlow,leftHeart. BloodFlow)  annotation (
+            connect(busConnector.leftHeart_BloodFlow,leftHeart. BloodFlow)  annotation (
             Line(
             points={{-82,116},{-62,116},{-62,5.2},{-56.6,5.2}},
             color={0,0,255},
@@ -420,7 +420,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%first",
             index=-1,
             extent={{-5,0},{-5,0}}));
-            connect(busConnector.RightHeart_BloodFlow,rightHeart. BloodFlow)  annotation (
+            connect(busConnector.rightHeart_BloodFlow,rightHeart. BloodFlow)  annotation (
             Line(
             points={{-82,116},{-62,116},{-62,39.2},{-58.6,39.2}},
             color={0,0,255},
@@ -429,7 +429,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%first",
             index=-1,
             extent={{-5,0},{-5,0}}));
-            connect(busConnector.Brain_BloodFlow,brain. BloodFlow)  annotation (
+            connect(busConnector.brain_BloodFlow,brain. BloodFlow)  annotation (
             Line(
             points={{-82,116},{-62,116},{-62,111.2},{-58.6,111.2}},
             color={0,0,255},
@@ -438,7 +438,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%first",
             index=-1,
             extent={{-5,0},{-5,0}}));
-            connect(busConnector.RespiratoryMuscle_BloodFlow,respiratoryMuscle. BloodFlow)
+            connect(busConnector.respiratoryMuscle_BloodFlow,respiratoryMuscle. BloodFlow)
             annotation (Line(
             points={{-82,116},{-62,116},{-62,77.2},{-58.6,77.2}},
             color={0,0,255},
@@ -447,7 +447,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%first",
             index=-1,
             extent={{-5,0},{-5,0}}));
-            connect(busConnector.SkeletalMuscle_BloodFlow,skeletalMuscle. BloodFlow)
+            connect(busConnector.skeletalMuscle_BloodFlow,skeletalMuscle. BloodFlow)
             annotation (Line(
             points={{-82,116},{-62,116},{-62,-32.8},{-56.6,-32.8}},
             color={0,0,255},
@@ -456,7 +456,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%first",
             index=-1,
             extent={{-5,0},{-5,0}}));
-            connect(busConnector.Skin_BloodFlow,skin. BloodFlow)  annotation (Line(
+            connect(busConnector.skin_BloodFlow,skin. BloodFlow)  annotation (Line(
             points={{-82,116},{-62,116},{-62,-70.8},{-58.6,-70.8}},
             color={0,0,255},
             thickness=0.5,
@@ -464,14 +464,14 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%first",
             index=-1,
             extent={{-5,0},{-5,0}}));
-            connect(bone.BloodFlow, busConnector.Bone_BloodFlow)  annotation (Line(
+            connect(bone.BloodFlow, busConnector.bone_BloodFlow)  annotation (Line(
             points={{64.7,111.4},{68,111.4},{68,116},{-82,116}},
             color={0,0,127},
             smooth=Smooth.None), Text(
             string="%second",
             index=1,
             extent={{5,0},{5,0}}));
-            connect(kidney.BloodFlow, busConnector.Kidney_BloodFlow)  annotation (Line(
+            connect(kidney.BloodFlow, busConnector.kidney_BloodFlow)  annotation (Line(
             points={{64.7,33.4},{68,33.4},{68,116},{-82,116}},
             color={0,0,127},
             smooth=Smooth.None), Text(
@@ -486,14 +486,14 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%second",
             index=1,
             extent={{5,0},{5,0}}));
-            connect(fat.BloodFlow, busConnector.Fat_BloodFlow)  annotation (Line(
+            connect(fat.BloodFlow, busConnector.fat_BloodFlow)  annotation (Line(
             points={{64.7,-30.6},{68,-30.6},{68,116},{-82,116}},
             color={0,0,127},
             smooth=Smooth.None), Text(
             string="%second",
             index=1,
             extent={{5,0},{5,0}}));
-            connect(otherTissue.BloodFlow, busConnector.OtherTissue_BloodFlow)
+            connect(otherTissue.BloodFlow, busConnector.otherTissue_BloodFlow)
             annotation (Line(
             points={{64.7,-64.6},{68,-64.6},{68,116},{-82,116}},
             color={0,0,127},
@@ -627,7 +627,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             string="%second",
             index=1,
             extent={{5,0},{5,0}}));
-            connect(busConnector.ExerciseMetabolism_MotionWatts,skeletalMuscle. ExerciseMetabolism_MotionCals)
+            connect(busConnector.Exercise_Metabolism_MotionWatts,skeletalMuscle. ExerciseMetabolism_MotionCals)
             annotation (Line(
             points={{-82,116},{-62,116},{-62,-52.4},{-56.6,-52.4}},
             color={0,0,255},
@@ -1415,7 +1415,7 @@ within Physiomodel.Metabolism.TissueMetabolism;
             points={{-34.2,-58},{-36,-58},{-36,-61},{-73,-61}},
             color={0,0,127},
             smooth=Smooth.None));
-            connect(busConnector.ExerciseMetabolism_MotionWatts, Heat.u2) annotation (Line(
+            connect(busConnector.Exercise_Metabolism_MotionWatts, Heat.u2) annotation (Line(
             points={{-82,116},{-62,116},{-62,-56},{-77,-56},{-77,-57}},
             color={0,0,255},
             thickness=0.5,

@@ -119,18 +119,18 @@ package Inputs
     connect(ICFV_Vol.y, busConnector.ICFV_Vol);
     connect(Medulla_Volume.y, busConnector.Medulla_Volume);
     //CardioVascular
-    connect(Brain_BloodFlow.y, busConnector.Brain_BloodFlow);
-    connect(RespiratoryMuscle_BloodFlow.y, busConnector.RespiratoryMuscle_BloodFlow);
-    connect(RightHeart_BloodFlow.y, busConnector.RightHeart_BloodFlow);
-    connect(LeftHeart_BloodFlow.y, busConnector.LeftHeart_BloodFlow);
-    connect(SkeletalMuscle_BloodFlow.y, busConnector.SkeletalMuscle_BloodFlow);
-    connect(Bone_BloodFlow.y, busConnector.Bone_BloodFlow);
+    connect(Brain_BloodFlow.y, busConnector.brain_BloodFlow);
+    connect(RespiratoryMuscle_BloodFlow.y, busConnector.respiratoryMuscle_BloodFlow);
+    connect(RightHeart_BloodFlow.y, busConnector.rightHeart_BloodFlow);
+    connect(LeftHeart_BloodFlow.y, busConnector.leftHeart_BloodFlow);
+    connect(SkeletalMuscle_BloodFlow.y, busConnector.skeletalMuscle_BloodFlow);
+    connect(Bone_BloodFlow.y, busConnector.bone_BloodFlow);
     connect(Liver_BloodFlow.y, busConnector.Liver_BloodFlow);
     connect(GITract_BloodFlow.y, busConnector.GITract_BloodFlow);
-    connect(Fat_BloodFlow.y, busConnector.Fat_BloodFlow);
-    connect(OtherTissue_BloodFlow.y, busConnector.OtherTissue_BloodFlow);
-    connect(Kidney_BloodFlow.y, busConnector.Kidney_BloodFlow);
-    connect(Skin_BloodFlow.y, busConnector.Skin_BloodFlow);
+    connect(Fat_BloodFlow.y, busConnector.fat_BloodFlow);
+    connect(OtherTissue_BloodFlow.y, busConnector.otherTissue_BloodFlow);
+    connect(Kidney_BloodFlow.y, busConnector.kidney_BloodFlow);
+    connect(Skin_BloodFlow.y, busConnector.skin_BloodFlow);
     connect(HepaticArty_BloodFlow.y, busConnector.HepaticArty_BloodFlow);
     connect(BloodVol_PVCrit.y, busConnector.BloodVol_PVCrit);
     connect(VasaRecta_Outflow.y, busConnector.VasaRecta_Outflow);
@@ -148,7 +148,7 @@ package Inputs
     connect(OtherTissue_StructureEffect.y, busConnector.OtherTissue_StructureEffect);
     connect(Kidney_StructureEffect.y, busConnector.Kidney_StructureEffect);
     connect(Skin_StructureEffect.y, busConnector.Skin_StructureEffect);
-    connect(ExerciseMetabolism_MotionWatts.y, busConnector.ExerciseMetabolism_MotionWatts);
+    connect(ExerciseMetabolism_MotionWatts.y, busConnector.Exercise_Metabolism_MotionWatts);
     connect(LiverFunctionEffect.y, busConnector.liver_FunctionEffect);
     connect(GITractFunctionEffect.y, busConnector.GITract_FunctionEffect);
     connect(brain_FunctionEffect.y, busConnector.brain_FunctionEffect);
