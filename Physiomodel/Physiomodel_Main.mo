@@ -30,10 +30,11 @@ model Physiomodel_Main "Main model"
       annotation (Placement(transformation(extent={{-76,-60},{-56,-40}})));
     Physiomodel.Heat.Heat2 heat
       annotation (Placement(transformation(extent={{-28,36},{-48,56}})));
+    Physiomodel.Setup.Setup setup;
     Physiolibrary.Types.BusConnector busConnector
     annotation (Placement(transformation(extent={{-34,64},{6,104}})));
 equation
-
+    connect(setup.busConnector, busConnector); 
     connect(status.busConnector, busConnector) annotation (Line(
         points={{43.2,-54.8},{7.6,-54.8},{7.6,84},{-14,84}},
         color={0,0,255},
