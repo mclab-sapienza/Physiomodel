@@ -1,6 +1,6 @@
 within Physiomodel.Metabolism.TissueMetabolism;
         model Liver
-            extends TissueMetabolismBase;//(Lactate(stateName="Liver-Lactate.Mass"));
+            extends Physiomodel.Metabolism.TissueMetabolism.TissueMetabolismBase;//(Lactate(stateName="Liver-Lactate.Mass"));
             extends Physiolibrary.Icons.Liver;
             Physiolibrary.Chemical.Interfaces.ChemicalPort_a fattyAcids
              annotation (

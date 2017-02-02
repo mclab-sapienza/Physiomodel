@@ -443,6 +443,10 @@ equation
     points={{-68,-60},{-20,-60},{-20,92},{-88,92}},
     color={0,0,127},
     smooth=Smooth.None));
+    connect(GITract.StructureEffect, busConnector.GITract_StructureEffect) annotation (Line(
+    points={{12,-4},{-20,-4},{-20,92},{-88,92}},
+    color={0,0,127},
+    smooth=Smooth.None));
     connect(kidney.StructureEffect, busConnector.Kidney_StructureEffect) annotation (Line(
     points={{12,-32},{-20,-32},{-20,92},{-88,92}},
     color={0,0,127},
