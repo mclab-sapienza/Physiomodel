@@ -1,40 +1,37 @@
 within Physiomodel;
 model Physiomodel_Main "Main model"
+
     import Physiomodel;
     extends Physiolibrary.Icons.Golem;
 
-    Physiomodel.CardioVascular.CardioVascularSystem cardioVascularSystem
-      annotation (Placement(transformation(extent={{58,74},{78,96}})));
-    Physiomodel.Metabolism.NutrientsAndMetabolism nutrientsAndMetabolism
-      annotation (Placement(transformation(extent={{-90,66},{-70,86}})));
-    Physiomodel.Electrolytes.Electrolytes electrolytes
-      annotation (Placement(transformation(extent={{74,-28},{94,-8}})));
-    Physiomodel.Hormones.Hormones
-                      hormones
-      annotation (Placement(transformation(extent={{40,12},{60,32}})));
-    Physiomodel.Nerves.Nerves       nerves
-      annotation (Placement(transformation(extent={{74,44},{94,64}})));
-    Physiomodel.Water.Water water
-      annotation (Placement(transformation(extent={{-86,0},{-66,20}})));
-    Physiomodel.Proteins.Proteins
-                      proteins
-      annotation (Placement(transformation(extent={{-48,-22},{-28,-2}})));
-    Physiomodel.Status.TissuesFitness status
-      annotation (Placement(transformation(extent={{42,-74},{62,-54}})));
-    Physiomodel.Gases.Gases          gases(oxygen(tissuesO2(skeletalMuscleO2(
-              O2Tissue(
+    Physiomodel.CardioVascular.CardioVascularSystem cardioVascularSystem annotation (Placement(transformation(extent={{58,74},{78,96}})));
+    Physiomodel.Metabolism.NutrientsAndMetabolism nutrientsAndMetabolism annotation (Placement(transformation(extent={{-90,66},{-70,86}})));
+    Physiomodel.Electrolytes.Electrolytes electrolytes annotation (Placement(transformation(extent={{74,-28},{94,-8}})));
+    Physiomodel.Hormones.Hormones hormones annotation (Placement(transformation(extent={{40,12},{60,32}})));
+    Physiomodel.Nerves.Nerves nerves annotation (Placement(transformation(extent={{74,44},{94,64}})));
+    Physiomodel.Water.Water water annotation (Placement(transformation(extent={{-86,0},{-66,20}})));
+    Physiomodel.Proteins.Proteins proteins annotation (Placement(transformation(extent={{-48,-22},{-28,-2}})));
+    Physiomodel.Status.TissuesFitness status annotation (Placement(transformation(extent={{42,-74},{62,-54}})));
+    Physiomodel.Gases.Gases gases(
+       oxygen(
+        tissuesO2(
+          skeletalMuscleO2(
+            O2Tissue(
               a(start=0.518),
               pCO2(displayUnit="mmHg"),
               sO2CO(start=0.367),
-              pO2(start=5332.8954966, displayUnit="mmHg"))))))
-      annotation (Placement(transformation(extent={{-76,-60},{-56,-40}})));
-    Physiomodel.Heat.Heat2 heat
-      annotation (Placement(transformation(extent={{-28,36},{-48,56}})));
-    Physiomodel.Setup.Setup setup;
-    Physiolibrary.Types.BusConnector busConnector
-    annotation (Placement(transformation(extent={{-34,64},{6,104}})));
+              pO2(start=5332.8954966, displayUnit="mmHg")
+            )
+          )
+        )
+      )
+    ) annotation (Placement(transformation(extent={{-76,-60},{-56,-40}})));
+    Physiomodel.Heat.Heat2 heat annotation (Placement(transformation(extent={{-28,36},{-48,56}})));
+    Physiomodel.Setup.Setup setup annotation(Placement(visible = true, transformation(origin = {0, -80}, extent = {{-10, -10}, {10, 10}}, rotation = 0)));   
+    Physiolibrary.Types.BusConnector busConnector annotation (Placement(transformation(extent={{-34,64},{6,104}})));
+    
 equation
-    connect(setup.busConnector, busConnector); 
+    connect(busConnector, setup.busConnector) annotation(Line(points = {{-14, 84}, {8, 84}, {8, -74}, {8, -74}, {8, -74}}));
     connect(status.busConnector, busConnector) annotation (Line(
         points={{43.2,-54.8},{7.6,-54.8},{7.6,84},{-14,84}},
         color={0,0,255},
@@ -89,11 +86,10 @@ equation
         thickness=0.5,
         smooth=Smooth.None));
     
-    annotation ( Documentation(info="<html>
+    annotation(Documentation(info = "<html>
     <p><h4><font color=\"#008000\">QHP Golem Edition</font></h4></p>
     <p>Signal bus connect all submodels with their signal inputs/outputs variables.</p>
-    </html>",
-          revisions="<html>
+    </html>", revisions = "<html>
     <table cellspacing=\"2\" cellpadding=\"0\" border=\"0\"><tr>
     <td><p>Author:</p></td>
     <td><p>Marek Matejak</p></td>
@@ -121,8 +117,5 @@ equation
     </table>
     <p><br>Copyright &copy; 2008-2015 Marek Matejak. Charles University in Prague. All rights reserved.</p>
     <pre> </pre>
-    </html>"),
-    
-    experiment(StopTime=1e+008, Tolerance=1e-005));
-
+    </html>"), experiment(StopTime = 1e+008, Tolerance = 1e-005), uses(Physiomodel(version = "1.0.0")));
 end Physiomodel_Main;
