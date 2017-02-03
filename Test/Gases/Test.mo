@@ -100,7 +100,7 @@ package Inputs
     T.Fraction Thorax_LungInflation(varName="Thorax.LungInflation", k=1);
     //Status
     T.Fraction RespiratoryMuscleFunctionEffect(varName="RespiratoryMuscle-Function.Effect", k=1);
-    T.Fraction brain_FunctionEffect(varName="Brain-Function.Effect");
+    T.Fraction brain_FunctionEffect(varName="Brain-Function.Effect", k=1);
     //Setup
     T.Pressure pCO(varName="pCO", k=0);
     T.Pressure BarometerPressure(varName="Barometer.Pressure", k=101325);
