@@ -104,30 +104,6 @@ within Physiomodel.Water;
         Physiolibrary.Types.TorsoBusConnector MT;
         Physiolibrary.Types.TorsoBusConnector UT;
     equation
-        connect(LT.Sweat_H2OOutflow, busConnector.LT_Sweat_H2OOutflow);
-        connect(MT.Sweat_H2OOutflow, busConnector.MT_Sweat_H2OOutflow);
-        connect(UT.Sweat_H2OOutflow, busConnector.UT_Sweat_H2OOutflow);
-        connect(LT.InsensibleSkin_H2O, busConnector.LT_InsensibleSkin_H2O);
-        connect(MT.InsensibleSkin_H2O, busConnector.MT_InsensibleSkin_H2O);
-        connect(UT.InsensibleSkin_H2O, busConnector.UT_InsensibleSkin_H2O);
-        connect(LT.InterstitialWater_Vol, busConnector.LT_InterstitialWater_Vol);
-        connect(MT.InterstitialWater_Vol, busConnector.MT_InterstitialWater_Vol);
-        connect(UT.InterstitialWater_Vol, busConnector.UT_InterstitialWater_Vol);
-        connect(LT.InterstitialProtein_Mass, busConnector.LT_InterstitialProtein_Mass);
-        connect(MT.InterstitialProtein_Mass, busConnector.MT_InterstitialProtein_Mass);
-        connect(UT.InterstitialProtein_Mass, busConnector.UT_InterstitialProtein_Mass);
-        connect(LT.LymphFlow, busConnector.LT_LymphFlow);
-        connect(MT.LymphFlow, busConnector.MT_LymphFlow);
-        connect(UT.LymphFlow, busConnector.UT_LymphFlow);
-        connect(LT.CapillaryRegionalPressure, busConnector.LT_CapillaryRegionalPressure);
-        connect(MT.CapillaryRegionalPressure, busConnector.MT_CapillaryRegionalPressure);
-        connect(UT.CapillaryRegionalPressure, busConnector.UT_CapillaryRegionalPressure);
-        connect(LT.Cell_H2O, busConnector.LT_Cell_H2O);
-        connect(MT.Cell_H2O, busConnector.MT_Cell_H2O);
-        connect(UT.Cell_H2O, busConnector.UT_Cell_H2O);
-        connect(LT.InterstitialOsmoles, busConnector.LT_InterstitialOsmoles);
-        connect(MT.InterstitialOsmoles, busConnector.MT_InterstitialOsmoles);
-        connect(UT.InterstitialOsmoles, busConnector.UT_InterstitialOsmoles);
 
 
         //   changePerMin = waterProperties.BodyH2O_Change.y;
@@ -325,6 +301,30 @@ within Physiomodel.Water;
         color={0,0,255},
         thickness=0.5,
         smooth=Smooth.None));
+        connect(LT.Sweat_H2OOutflow, busConnector.LT_Sweat_H2OOutflow);
+        connect(MT.Sweat_H2OOutflow, busConnector.MT_Sweat_H2OOutflow);
+        connect(UT.Sweat_H2OOutflow, busConnector.UT_Sweat_H2OOutflow);
+        connect(LT.InsensibleSkin_H2O, busConnector.LT_InsensibleSkin_H2O);
+        connect(MT.InsensibleSkin_H2O, busConnector.MT_InsensibleSkin_H2O);
+        connect(UT.InsensibleSkin_H2O, busConnector.UT_InsensibleSkin_H2O);
+        connect(LT.InterstitialWater_Vol, busConnector.LT_InterstitialWater_Vol);
+        connect(MT.InterstitialWater_Vol, busConnector.MT_InterstitialWater_Vol);
+        connect(UT.InterstitialWater_Vol, busConnector.UT_InterstitialWater_Vol);
+        connect(LT.InterstitialProtein_Mass, busConnector.LT_InterstitialProtein_Mass);
+        connect(MT.InterstitialProtein_Mass, busConnector.MT_InterstitialProtein_Mass);
+        connect(UT.InterstitialProtein_Mass, busConnector.UT_InterstitialProtein_Mass);
+        connect(LT.LymphFlow, busConnector.LT_LymphFlow);
+        connect(MT.LymphFlow, busConnector.MT_LymphFlow);
+        connect(UT.LymphFlow, busConnector.UT_LymphFlow);
+        connect(LT.CapillaryRegionalPressure, busConnector.LT_CapillaryRegionalPressure);
+        connect(MT.CapillaryRegionalPressure, busConnector.MT_CapillaryRegionalPressure);
+        connect(UT.CapillaryRegionalPressure, busConnector.UT_CapillaryRegionalPressure);
+        connect(LT.Cell_H2O, busConnector.LT_Cell_H2O);
+        connect(MT.Cell_H2O, busConnector.MT_Cell_H2O);
+        connect(UT.Cell_H2O, busConnector.UT_Cell_H2O);
+        connect(LT.InterstitialOsmoles, busConnector.LT_InterstitialOsmoles);
+        connect(MT.InterstitialOsmoles, busConnector.MT_InterstitialOsmoles);
+        connect(UT.InterstitialOsmoles, busConnector.UT_InterstitialOsmoles);
         annotation (
         Documentation(info="<HTML>
         <PRE>

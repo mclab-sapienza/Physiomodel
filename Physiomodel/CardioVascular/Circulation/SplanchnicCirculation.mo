@@ -41,10 +41,6 @@ model SplanchnicCirculation
         annotation (Placement(transformation(extent={{6,-42},{26,-22}})));
     Physiolibrary.Types.TissueBusConnector gitractConnector;
 equation
-    connect(gitractConnector.pO2, busConnector.gitract_pO2);
-    connect(gitractConnector.O2Need, busConnector.gitract_O2Need);
-    connect(gitractConnector.pCO2, busConnector.gitract_pCO2);
-    connect(gitractConnector.Function_Failed, busConnector.gitract_Function_Failed);
 
     connect(GITract.busConnector,busConnector)           annotation (Line(
         points={{55.6,7.2},{66,7.2},{66,-46}},
@@ -129,6 +125,10 @@ equation
       string="%second",
       index=1,
       extent={{6,3},{6,3}}));
+    connect(gitractConnector.pO2, busConnector.gitract_pO2);
+    connect(gitractConnector.O2Need, busConnector.gitract_O2Need);
+    connect(gitractConnector.pCO2, busConnector.gitract_pCO2);
+    connect(gitractConnector.Function_Failed, busConnector.gitract_Function_Failed);
     annotation (       Icon(coordinateSystem(
             preserveAspectRatio=true, extent={{-100,-100},{100,100}}),
           graphics={
